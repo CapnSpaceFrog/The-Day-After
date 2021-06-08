@@ -85,22 +85,51 @@ public class PlayerInteract
     {
         Collider2D hit = Physics2D.OverlapPoint(interactCheck.transform.position, p_data.whatIsInterObj);
 
-        if (hit != null)
-        {
+        if (hit != null) {
             interObj = hit.GetComponent<InterObj>();
+            OnInteract();
         }
     }
 
     public void OnInteract()
     {
-        if (interObj != null)
+        switch (interObj.Obj_Data.InterType)
         {
-            Debug.Log(interObj);
-            //What Object is this? What do we need to do with it?
-            CheckInteractCast().obj_Data.
-            GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("");
-        } else {
-            return;
+            case InterType.QuestEvent:
+                if (player.InvManager.FindItemInInv(interObj.Obj_Data.RequiredItem))
+                {
+                    Debug.Log("Item Found, Quest Progressed");
+                    //Found item in inventory, progress quest and display dialogue
+                }
+                else
+                {
+                    Debug.Log("Did not find item, quest not progressed");
+                    //Item was not found, do not progress quest and display correct dialogue
+                }
+                break;
+
+            case InterType.Storable:
+                if (player.InvManager.AddItemToInv(interObj.gameObject))
+                {
+                    Debug.Log("Added to inventory");
+                    interObj.gameObject.SetActive(false);
+                    //Item successfully added, do not display inventory is full
+                }
+                else
+                {
+                    Debug.Log("Did not store item, inventory full");
+                    //Inventory was full, display inventory full dialogue
+                }
+                break;
+
+            case InterType.Decoration:
+                Debug.Log("Displayed Dialogue");
+                //This object simply sends some dialogue to the Dialogue Handler
+                break;
         }
+
+        DumpInterObj();
     }
+
+    private void DumpInterObj() => interObj = null;
 }

@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98457f66ca5050f41b3926faef6d9e61, type: 3}
-  m_Name: PlayerData
+  m_Script: {fileID: 11500000, guid: 891b4a6fc961b944fa7d579264b76b5e, type: 3}
+  m_Name: TestQuestData
   m_EditorClassIdentifier: 
-  Movespeed: 0.65
-  whatIsInterObj:
-    serializedVersion: 2
-    m_Bits: 128
-  InteractTestCheckDistance: 0.17
-  InventorySize: 4
-  GizmoDrawRadius: 0.03
+  InterType: 2
+  DisplayName: 
+  Dialogue: []
+  DisplaySprite: {fileID: 0}
+  RequiredItem: {fileID: 1034830880951066920, guid: a57855530e9a1e54b878dd8d100ea73a, type: 3}

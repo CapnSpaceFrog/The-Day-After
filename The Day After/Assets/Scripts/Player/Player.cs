@@ -8,10 +8,12 @@ public class Player : MonoBehaviour
     public PlayerInputHandler InputHandler { get; private set; }
     [HideInInspector]
     public Rigidbody2D RB;
+
     public PlayerData P_Data;
 
     public PlayerMovement Movement { get; private set; }
     public PlayerInteract Interact { get; private set; }
+    public PlayerInventory InvManager { get; private set; }
     #endregion
 
     private void Awake()
@@ -21,6 +23,7 @@ public class Player : MonoBehaviour
 
         Movement = new PlayerMovement(RB, InputHandler);
         Interact = new PlayerInteract(this, P_Data, InputHandler);
+        InvManager = new PlayerInventory(P_Data);
     }
 
     private void Update()
@@ -32,7 +35,7 @@ public class Player : MonoBehaviour
         if (InputHandler.InteractInput)
         {
             InputHandler.UseInteractInput();
-            Interact.OnInteract();
+            Interact.CheckInteractCast();
         }
     }
 

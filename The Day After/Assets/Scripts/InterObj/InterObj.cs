@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class InterObj : MonoBehaviour
 {
-    [SerializeField]
-    public InterObjData obj_Data { get; private set; }
+    public InterObjData Obj_Data;
 }
