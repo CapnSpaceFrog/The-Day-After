@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public PlayerMovement Movement { get; private set; }
     public PlayerInteract Interact { get; private set; }
     public PlayerInventory InvManager { get; private set; }
+    public PlayerAnimator AnimManager { get; private set; }
     #endregion
 
     private void Awake()
@@ -24,13 +25,17 @@ public class Player : MonoBehaviour
         Movement = new PlayerMovement(RB, InputHandler);
         Interact = new PlayerInteract(this, P_Data, InputHandler);
         InvManager = new PlayerInventory(P_Data);
+        AnimManager = new PlayerAnimator(this, P_Data, InputHandler);
     }
 
-    private void Update()
+    public void Update()
+    {
+        AnimManager.UpdateAnims();
+    }
+
+    private void FixedUpdate()
     {
         Movement.SetVelocity(P_Data.Movespeed);
-
-        Interact.UpdateInteractCastPosition();
 
         if (InputHandler.InteractInput)
         {

@@ -13,12 +13,6 @@ public class PlayerInputHandler : MonoBehaviour
     public bool InteractInput { get; private set; }
     public bool PauseInput { get; private set; }
 
-    private void Start()
-    {
-
-    }
-
-
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         RawMovementInput = context.ReadValue<Vector2>();

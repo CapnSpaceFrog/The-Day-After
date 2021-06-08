@@ -50,14 +50,28 @@ public class PlayerInventoryDisplay : MonoBehaviour
 
         inventorySlot.transform.parent = transform;
         inventorySlot.transform.localPosition = Vector3.zero;
-
-        inventorySlot.GetComponent<RectTransform>().anchoredPosition = anchorPosition;
+        inventorySlot.transform.localScale = new Vector3(1, 1, 1);
 
         //Temporary Sprite Display
         Image slotSprite;
         slotSprite = inventorySlot.GetComponent<Image>();
         slotSprite.sprite = Resources.Load<Sprite>("Sprites/OutlineEmpty");
 
+        inventorySlot.GetComponent<RectTransform>().anchoredPosition = anchorPosition;
+        inventorySlot.GetComponent<RectTransform>().sizeDelta = new Vector2(100, 100);
+
         return slotSprite;
+    }
+
+    private Vector2 CalculateSlotSize(GameObject objToScale)
+    {
+        float height = Camera.main.orthographicSize * 2;
+        float width = height * Screen.width / Screen.height;
+
+        Sprite s = objToScale.GetComponent<Image>().sprite;
+        float unitWidth = s.textureRect.width / s.pixelsPerUnit;
+        float unitHeight = s.textureRect.height / s.pixelsPerUnit;
+
+        return new Vector2 (width / unitWidth, height / unitHeight);
     }
 }

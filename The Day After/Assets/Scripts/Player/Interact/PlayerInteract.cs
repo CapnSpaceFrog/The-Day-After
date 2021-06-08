@@ -4,21 +4,26 @@ using UnityEngine;
 
 public enum FacingDirection
 {
-    up,
-    down,
+    right,
     left,
-    right
+    up,
+    down
 }
-
 public class PlayerInteract
 {
     private PlayerData p_data;
     private PlayerInputHandler inputHandler;
     private Player player;
 
+    private InterObj interObj;
+
     private FacingDirection direction;
 
-    private InterObj interObj;
+    public FacingDirection Direction
+    {
+        get { return direction; }
+        set { direction = value; }
+    }
 
     //Reminder to set to private when done testing
     public GameObject interactCheck;
@@ -41,20 +46,6 @@ public class PlayerInteract
 
     public void UpdateInteractCastPosition()
     {
-        //Change to player facing direction once animations are added
-        //Or, incorporate "update cast position" into animation updator
-        //Put enum direction into player scripts, have other scripts pull and alter that direction
-        //Use direction property
-        if (inputHandler.NormInputX == 1) {
-            direction = FacingDirection.right;
-        } else if (inputHandler.NormInputX == -1) {
-            direction = FacingDirection.left;
-        } else if (inputHandler.NormInputY == 1) {
-            direction = FacingDirection.up;
-        } else if (inputHandler.NormInputY == -1) {
-            direction = FacingDirection.down;
-        }
-
         //Depending on direction of player, update where the hit casts
         switch (direction)
         {
@@ -64,7 +55,7 @@ public class PlayerInteract
                 break;
 
             case FacingDirection.left:
-                interactCheck.transform.localPosition = new Vector3(-p_data.InteractTestCheckDistance, 0, 0);
+                interactCheck.transform.localPosition = new Vector3(p_data.InteractTestCheckDistance, 0, 0);
                 Debug.Log("Check Set to left");
                 break;
 
