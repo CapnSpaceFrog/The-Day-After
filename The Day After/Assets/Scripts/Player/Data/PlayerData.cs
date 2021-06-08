@@ -12,6 +12,9 @@ public class PlayerData : ScriptableObject
     public LayerMask whatIsInterObj;
     public float InteractTestCheckDistance;
 
+    [Header("Inventory Variables")]
+    public int InventorySize;
+
     [Header("Test Variables")]
     public float GizmoDrawRadius;
 }

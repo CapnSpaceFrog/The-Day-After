@@ -6,10 +6,20 @@ using UnityEngine;
 public class InterObjData : ScriptableObject
 {
     [Header("InterObj Type")]
-    public bool IsStorable;
+    public InterType InterType;
 
     [Header("Dialogue")]
     public string DisplayName;
     public string[] Dialogue;
     public Sprite DisplaySprite;
+
+    [Header("Quest Event")]
+    public GameObject RequiredItem;
+}
+
+public enum InterType
+{
+    Decoration,
+    Storable,
+    QuestEvent
 }

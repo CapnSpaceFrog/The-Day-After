@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891b4a6fc961b944fa7d579264b76b5e, type: 3}
   m_Name: TestData
   m_EditorClassIdentifier: 
+  InterType: 1
   DisplayName: 
   Dialogue:
   - 
@@ -20,3 +21,4 @@ MonoBehaviour:
   - 
   - 
   DisplaySprite: {fileID: 0}
+  RequiredItem: {fileID: 0}
