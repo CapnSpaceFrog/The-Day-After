@@ -11,7 +11,7 @@ public class InterObjData : ScriptableObject
     [Header("Dialogue")]
     public string DisplayName;
     public string[] Dialogue;
-    public Sprite DisplaySprite;
+    public Sprite[] DialogueSprite;
 
     [Header("Quest Event")]
     public GameObject RequiredItem;

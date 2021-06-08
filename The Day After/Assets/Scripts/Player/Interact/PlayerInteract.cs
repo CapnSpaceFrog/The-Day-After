@@ -100,6 +100,7 @@ public class PlayerInteract
                 {
                     Debug.Log("Item Found, Quest Progressed");
                     //Found item in inventory, progress quest and display dialogue
+                    //Reminder to send dialogue handler inter object
                 }
                 else
                 {

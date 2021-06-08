@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Dialogue Handler
+  - Inventory Panel
   layers:
   - Default
   - TransparentFX

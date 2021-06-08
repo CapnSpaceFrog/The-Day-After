@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class PlayerInventory
 {
-    private PlayerData p_data;
     public GameObject[] Inventory { get; private set; }
 
     public PlayerInventory(PlayerData p_data)
     {
-        this.p_data = p_data;
-
         //Instantiate new Inventory on creation of class instance
         Inventory = new GameObject[p_data.InventorySize];
     }
@@ -22,6 +19,8 @@ public class PlayerInventory
             if (Inventory[i] == null) {
                 //Empty spot found, add item and break
                 Inventory[i] = itemToAdd;
+                //Send Message to invetory display to add item
+                GameObject.FindGameObjectWithTag("Inventory Panel").SendMessage("AddToDisplay", itemToAdd);
                 return true;
             }
         }
