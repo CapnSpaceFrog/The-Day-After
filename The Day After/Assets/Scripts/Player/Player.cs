@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public PlayerInputHandler InputHandler { get; private set; }
     [HideInInspector]
     public Rigidbody2D RB;
+    public GameManager GM { get; private set; }
 
     public PlayerData P_Data;
 
@@ -21,9 +22,10 @@ public class Player : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         InputHandler = GetComponent<PlayerInputHandler>();
+        GM = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
 
         Movement = new PlayerMovement(RB, InputHandler);
-        Interact = new PlayerInteract(this, P_Data);
+        Interact = new PlayerInteract(this, P_Data, GM);
         InvManager = new PlayerInventory(P_Data);
         AnimManager = new PlayerAnimator(this, P_Data, InputHandler);
     }

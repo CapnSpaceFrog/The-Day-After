@@ -13,6 +13,7 @@ public class PlayerInteract
 {
     private PlayerData p_data;
     private Player player;
+    private GameManager gm;
 
     private InterObj currentInterObj;
 
@@ -27,10 +28,11 @@ public class PlayerInteract
     //Reminder to set to private when done testing
     public GameObject interactCheck;
 
-    public PlayerInteract(Player player, PlayerData p_data)
+    public PlayerInteract(Player player, PlayerData p_data, GameManager gm)
     {
         this.p_data = p_data;
         this.player = player;
+        this.gm = gm;
 
         CreateInteractCheck();
     }
@@ -84,11 +86,12 @@ public class PlayerInteract
             case InterType.QuestEvent:
                 Debug.Log("QuestEvent Switch");
                 if (player.InvManager.FindItemInInv(currentInterObj.Obj_Data.RequiredItem)) {
+
                     //Found item in inventory, progress quest and display dialogue
                     currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.QuestEventDialogue);
-                    GameObject.FindGameObjectWithTag("Game Manager").SendMessage("ReceivedQuestRequirement", currentInterObj.gameObject);
 
                     //Send data to game manager, which will then send data to dialogue handler once quest is complete
+                    gm.SendMessage("ReceivedQuestRequirement", currentInterObj.gameObject);
                 } else {
                     //Item was not found, do not progress quest and display correct dialogue
                     currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.MissingQuestItemDialogue);
@@ -127,7 +130,11 @@ public class PlayerInteract
     private void SendObjToDialogueHandler(InterObj objToSend)
     {
         if (objToSend != null) {
+            player.UpdateBusyBool();
             GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", objToSend);
+
+            if (objToSend.Obj_Data.InterObjType == InterType.QuestEvent) 
+                gm.SendMessage("SendToActionHandler", currentInterObj);
         }
     }
 

@@ -40,8 +40,6 @@ public class DialogueHandler : MonoBehaviour
         currentInterObj = objToReference;
         dialogueToDisplay = currentInterObj.Obj_Data.DisplayDialogue;
 
-        GameObject.FindGameObjectWithTag("Player").SendMessage("UpdateBusyBool");
-
         anim.SetBool("fadein", true);
         BeginDialogueDisplay();
     }
@@ -49,6 +47,7 @@ public class DialogueHandler : MonoBehaviour
     //Once all variables are set, Begin to display the dialogue
     private void BeginDialogueDisplay()
     {
+        GameObject.FindGameObjectWithTag("Game Manager").SendMessage("UpdateDialogueFinish", false);
         StartCoroutine(DisplayDialogue());
     }
 
@@ -93,12 +92,12 @@ public class DialogueHandler : MonoBehaviour
     {
         StopAllCoroutines();
 
+        //Send message to post dialogue handler that the dialogue has finished
+
         anim.SetBool("fadein", false);
 
-        //If this object was a quest item, inform the game manager that we've finished the dialogue and an event can now occur
-        //Call Game Manger Post DIalogue Begin script, passing the inter obj
-        //GameObject.FindGameObjectWithTag("Game Manager").SendMessage("ReceiveObjPostDialogue", currentInterObj);
-        GameObject.FindGameObjectWithTag("Player").SendMessage("UpdateBusyBool");
+        //Tell the game manager that the dialogue has finished
+        GameObject.FindGameObjectWithTag("Game Manager").SendMessage("UpdateDialogueFinish", true);
     }
 
     private void ClearTextDisplay()

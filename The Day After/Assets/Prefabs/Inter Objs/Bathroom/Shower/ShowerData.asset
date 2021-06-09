@@ -10,15 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 891b4a6fc961b944fa7d579264b76b5e, type: 3}
-  m_Name: TestData
+  m_Name: ShowerData
   m_EditorClassIdentifier: 
-  InterType: 1
-  DisplayName: 
-  Dialogue:
-  - 
-  - 
-  - 
-  - 
-  - 
-  DisplaySprite: {fileID: 0}
+  InterObjType: 2
+  WhatToUpdate: 2
+  DisplayDialogue: []
+  DisplaySprite: []
+  QuestEventDialogue: []
+  MissingQuestItemDialogue: []
+  StoredItem: []
+  DecoDialogue: []
+  InventoryFullDialogue: []
+  AddedToInventoryDialogue: []
   RequiredItem: {fileID: 0}
+  InterObjAnim: {fileID: 0}
+  WhereToMove: 

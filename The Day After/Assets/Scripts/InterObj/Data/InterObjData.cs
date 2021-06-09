@@ -8,6 +8,7 @@ public class InterObjData : ScriptableObject
     [Header("Enum Variables")]
     public InterType InterObjType;
     public UpdateType WhatToUpdate;
+    public UpdateTime WhenToUpdate;
 
     [Header("Dialogue")]
     public List<string> DisplayDialogue;
@@ -50,5 +51,12 @@ public enum UpdateType
     player,
     itself,
     both,
-    none,
+    none
+}
+
+public enum UpdateTime
+{
+    before,
+    after,
+    both
 }
