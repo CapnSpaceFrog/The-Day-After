@@ -12,7 +12,6 @@ public enum FacingDirection
 public class PlayerInteract
 {
     private PlayerData p_data;
-    private PlayerInputHandler inputHandler;
     private Player player;
 
     private InterObj currentInterObj;
@@ -28,10 +27,9 @@ public class PlayerInteract
     //Reminder to set to private when done testing
     public GameObject interactCheck;
 
-    public PlayerInteract(Player player, PlayerData p_data, PlayerInputHandler inputHandler)
+    public PlayerInteract(Player player, PlayerData p_data)
     {
         this.p_data = p_data;
-        this.inputHandler = inputHandler;
         this.player = player;
 
         CreateInteractCheck();
@@ -80,13 +78,15 @@ public class PlayerInteract
 
     public void OnInteract()
     {
-        switch (currentInterObj.Obj_Data.InterType)
+        Debug.Log("OnInteract");
+        switch (currentInterObj.Obj_Data.InterObjType)
         {
             case InterType.QuestEvent:
+                Debug.Log("QuestEvent Switch");
                 if (player.InvManager.FindItemInInv(currentInterObj.Obj_Data.RequiredItem)) {
                     //Found item in inventory, progress quest and display dialogue
                     currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.QuestEventDialogue);
-                    GameObject.FindGameObjectWithTag("Game Manager").SendMessage("ReceivedRequirement", currentInterObj.gameObject);
+                    GameObject.FindGameObjectWithTag("Game Manager").SendMessage("ReceivedQuestRequirement", currentInterObj.gameObject);
 
                     //Send data to game manager, which will then send data to dialogue handler once quest is complete
                 } else {
@@ -96,6 +96,7 @@ public class PlayerInteract
                 break;
 
             case InterType.Storable:
+                Debug.Log("Storable Switch");
                 if (player.InvManager.AddItemToInv(currentInterObj.gameObject)) {
                     //Item successfully added, do not display inventory is full
                     currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.AddedToInventoryDialogue);
@@ -109,13 +110,18 @@ public class PlayerInteract
             case InterType.Decoration:
                 //This object simply sends some dialogue to the Dialogue Handler
                 currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DecoDialogue);
+                Debug.Log("Deco Switch");
+                break;
+
+            case InterType.Door:
+                Debug.Log("Door Not Added Yet");
                 break;
         }
         //Send the current inter object to the dialogue handler
         SendObjToDialogueHandler(currentInterObj);
 
         //Null the interobj variable reference
-        //DumpInterObj();
+        DumpInterObj();
     }
 
     private void SendObjToDialogueHandler(InterObj objToSend)

@@ -6,10 +6,12 @@ public class InterObj : MonoBehaviour
 {
     public InterObjData Obj_Data;
 
-    //Handle which dialogue string to display based on information fed from PLayer Interact Script
+    private void Awake()
+    {
+        Obj_Data.InterObjAnim = GetComponent<Animator>();
+    }
 
-    //Sets Display string to inventory full string
-
+    //Sets Display String to whatever string array overide we want
     public void OverrideDisplayString(string[] stringOverride)
     {
         Obj_Data.DisplayDialogue = new List<string>(new string[stringOverride.Length]);

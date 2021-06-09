@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891b4a6fc961b944fa7d579264b76b5e, type: 3}
   m_Name: TestStorableData
   m_EditorClassIdentifier: 
-  InterType: 1
+  InterObjType: 1
+  WhatToUpdate: 0
   DisplayDialogue: []
   DisplaySprite:
   - {fileID: 0}
@@ -26,3 +27,5 @@ MonoBehaviour:
   - Nice, I bet I'll need this for something.
   - I don't know what, but I bet I'll need it.
   RequiredItem: {fileID: 0}
+  InterObjAnim: {fileID: 0}
+  WhereToMove: 

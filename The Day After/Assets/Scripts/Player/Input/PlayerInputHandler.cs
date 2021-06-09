@@ -45,7 +45,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void OnInteractInput()
     {
-        if (!player.P_Data.InDialogue) {
+        if (!player.P_Data.IsBusy) {
             player.Interact.CheckInteractCast();
             UseInteractInput();
         } else {

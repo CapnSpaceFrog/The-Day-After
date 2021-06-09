@@ -226,11 +226,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb49803bdbae97344909b6efe9831399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questOneData: {fileID: 11400000, guid: f8132d24e9d847e4ea58d383870e5424, type: 2}
-  questTwoData: {fileID: 11400000, guid: 667cb62c0cc06e746aeeda1248ea7fbd, type: 2}
-  questThreeData: {fileID: 11400000, guid: 2d0239026da34614396d98e22fefb630, type: 2}
-  questFourData: {fileID: 11400000, guid: 8981ecc6515243f4483d59b53c46b8b3, type: 2}
-  questFiveData: {fileID: 11400000, guid: c90f1c0bfb15dc149ba3a5f1c6ff785a, type: 2}
+  questData:
+  - {fileID: 11400000, guid: f8132d24e9d847e4ea58d383870e5424, type: 2}
+  - {fileID: 11400000, guid: 667cb62c0cc06e746aeeda1248ea7fbd, type: 2}
+  - {fileID: 11400000, guid: 2d0239026da34614396d98e22fefb630, type: 2}
+  - {fileID: 11400000, guid: 8981ecc6515243f4483d59b53c46b8b3, type: 2}
+  - {fileID: 11400000, guid: c90f1c0bfb15dc149ba3a5f1c6ff785a, type: 2}
 --- !u!4 &164672971
 Transform:
   m_ObjectHideFlags: 0
@@ -630,7 +631,7 @@ Camera:
   far clip plane: 25
   field of view: 60
   orthographic: 1
-  orthographic size: 1.5466816
+  orthographic size: 1.5469723
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

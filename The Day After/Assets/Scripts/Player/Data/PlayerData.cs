@@ -19,5 +19,5 @@ public class PlayerData : ScriptableObject
     public float GizmoDrawRadius;
 
     [Header("Dialogue Variables")]
-    public bool InDialogue;
+    public bool IsBusy;
 }

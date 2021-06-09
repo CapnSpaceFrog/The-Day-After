@@ -23,19 +23,19 @@ public class Player : MonoBehaviour
         InputHandler = GetComponent<PlayerInputHandler>();
 
         Movement = new PlayerMovement(RB, InputHandler);
-        Interact = new PlayerInteract(this, P_Data, InputHandler);
+        Interact = new PlayerInteract(this, P_Data);
         InvManager = new PlayerInventory(P_Data);
         AnimManager = new PlayerAnimator(this, P_Data, InputHandler);
     }
 
     private void Start()
     {
-        P_Data.InDialogue = false;
+        P_Data.IsBusy = false;
     }
 
     public void Update()
     {
-        if (!P_Data.InDialogue)
+        if (!P_Data.IsBusy)
         {
             AnimManager.UpdateAnims();
             AnimManager.GotDressed();
@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!P_Data.InDialogue)
+        if (!P_Data.IsBusy)
         {
             Movement.SetVelocity(P_Data.Movespeed);
         } else
@@ -54,16 +54,16 @@ public class Player : MonoBehaviour
     }
 
     #region Other Functions
-    public void UpdateDialogueBool() 
+    public void UpdateBusyBool() 
     {
-        if (!P_Data.InDialogue)
+        if (!P_Data.IsBusy)
         {
-            P_Data.InDialogue = true;
+            P_Data.IsBusy = true;
             AnimManager.ChangeAnimationState(AnimManager.PLAYER_IDLE);
         }
         else
         {
-            P_Data.InDialogue = false;
+            P_Data.IsBusy = false;
         } 
     }
     #endregion

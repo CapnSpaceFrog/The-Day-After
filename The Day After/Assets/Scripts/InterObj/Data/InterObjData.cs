@@ -5,8 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newInterObjData", menuName = "Data/InterObj Data/Base Data")]
 public class InterObjData : ScriptableObject
 {
-    [Header("InterObj Type")]
-    public InterType InterType;
+    [Header("Enum Variables")]
+    public InterType InterObjType;
+    public UpdateType WhatToUpdate;
 
     [Header("Dialogue")]
     public List<string> DisplayDialogue;
@@ -28,11 +29,26 @@ public class InterObjData : ScriptableObject
 
     [Header("Quest Event")]
     public GameObject RequiredItem;
+
+    [Header("Anim Variables")]
+    public Animator InterObjAnim;
+
+    [Header("Door Variables")]
+    public string WhereToMove;
 }
 
 public enum InterType
 {
     Decoration,
     Storable,
-    QuestEvent
+    QuestEvent,
+    Door
+}
+
+public enum UpdateType
+{
+    player,
+    itself,
+    both,
+    none,
 }

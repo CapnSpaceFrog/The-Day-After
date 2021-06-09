@@ -5,34 +5,29 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameTimer Timer { get; private set; }
+    public PostDialogueHandler PostDialogue { get; private set; }
+    public Player PlayerRef { get; private set; }
 
     #region Quest Components
     public QuestManager QuestManager { get; private set; }
+
     [SerializeField]
-    private QuestData questOneData;
-    [SerializeField]
-    private QuestData questTwoData;
-    [SerializeField]
-    private QuestData questThreeData;
-    [SerializeField]
-    private QuestData questFourData;
-    [SerializeField]
-    private QuestData questFiveData;
+    private QuestData[] questData = new QuestData[5];
     #endregion
 
 
     private void Awake()
     {
+        PlayerRef = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
         Timer = new GameTimer();
 
-        QuestData[] questData = new QuestData[] { questOneData, questTwoData, questThreeData, questFourData, questFiveData };
-
         QuestManager = new QuestManager(questData);
+        PostDialogue = new PostDialogueHandler(PlayerRef);
     }
 
     private void Update()
     {
-        Debug.Log(QuestManager.CurrentQuest);
         QuestManager.IsQuestComplete();
 
         if (Timer.HasTimeExpired())
@@ -41,8 +36,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ReceivedRequirement(GameObject req)
+    public void ReceivedQuestRequirement(GameObject req)
     {
         QuestManager.ReceivedRequirement(req);
+    }
+
+    public void ReceiveObjPostDialogue(InterObj objToUpdate)
+    {
+        PostDialogue.CheckIfShouldUpdate(objToUpdate);
     }
 }

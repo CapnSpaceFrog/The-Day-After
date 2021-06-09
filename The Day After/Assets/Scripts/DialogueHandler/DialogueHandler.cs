@@ -29,7 +29,8 @@ public class DialogueHandler : MonoBehaviour
 
     private void Start()
     {
-        //Test Dialgoue
+        //Test Sprite Display
+        //Reminder to add sprite display update once we have sprites
         spriteDisplay.sprite = Resources.Load<Sprite>("Sprites/OutlineEmpty");
     }
 
@@ -39,7 +40,7 @@ public class DialogueHandler : MonoBehaviour
         currentInterObj = objToReference;
         dialogueToDisplay = currentInterObj.Obj_Data.DisplayDialogue;
 
-        GameObject.FindGameObjectWithTag("Player").SendMessage("UpdateDialogueBool");
+        GameObject.FindGameObjectWithTag("Player").SendMessage("UpdateBusyBool");
 
         anim.SetBool("fadein", true);
         BeginDialogueDisplay();
@@ -91,11 +92,13 @@ public class DialogueHandler : MonoBehaviour
     private void EndDialogueDisplay()
     {
         StopAllCoroutines();
-        GameObject.FindGameObjectWithTag("Player").SendMessage("UpdateDialogueBool");
 
         anim.SetBool("fadein", false);
 
         //If this object was a quest item, inform the game manager that we've finished the dialogue and an event can now occur
+        //Call Game Manger Post DIalogue Begin script, passing the inter obj
+        //GameObject.FindGameObjectWithTag("Game Manager").SendMessage("ReceiveObjPostDialogue", currentInterObj);
+        GameObject.FindGameObjectWithTag("Player").SendMessage("UpdateBusyBool");
     }
 
     private void ClearTextDisplay()
