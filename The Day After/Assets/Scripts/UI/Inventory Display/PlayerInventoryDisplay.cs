@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerInventoryDisplay : MonoBehaviour
 {
     private Player player;
+    private Sprite emptySprite;
 
     //Reminder to adjust the array amount to player data inventory var
     [SerializeField]
@@ -14,6 +15,7 @@ public class PlayerInventoryDisplay : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        emptySprite = Resources.Load<Sprite>("Sprites/Empty");
     }
 
     private void Start()
@@ -28,6 +30,17 @@ public class PlayerInventoryDisplay : MonoBehaviour
             if (player.InvManager.Inventory[i].name == itemToUpdate.name)
             {
                 inventorySlots[i].sprite = itemToUpdate.GetComponent<SpriteRenderer>().sprite;
+            }
+        }
+    }
+
+    private void RemoveFromDisplay(GameObject itemToUpdate)
+    {
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            if (player.InvManager.Inventory[i].name == itemToUpdate.name)
+            {
+                inventorySlots[i].sprite = emptySprite;
             }
         }
     }

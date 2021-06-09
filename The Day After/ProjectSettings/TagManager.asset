@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Dialogue Handler
   - Inventory Panel
+  - Game Manager
   layers:
   - Default
   - TransparentFX

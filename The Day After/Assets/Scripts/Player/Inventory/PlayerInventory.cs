@@ -9,7 +9,7 @@ public class PlayerInventory
     public PlayerInventory(PlayerData p_data)
     {
         //Instantiate new Inventory on creation of class instance
-        Debug.Log(Inventory);
+        Inventory = new GameObject[p_data.InventorySize];
     }
 
     public bool AddItemToInv(GameObject itemToAdd)
@@ -24,7 +24,6 @@ public class PlayerInventory
                 return true;
             }
         }
-
         //No empty spot was found, inventory is full
         return false;
     }
@@ -33,17 +32,15 @@ public class PlayerInventory
     {
         for (int i = 0; i < Inventory.Length; i++)
         {
-            Debug.Log("Are we looking for the item?");
             if (Inventory[i] == null)
             {
                 continue;
             } else if (Inventory[i].name == itemToFind.name)
             {
-                Debug.Log("do we find the item?");
+                GameObject.FindGameObjectWithTag("Inventory Panel").SendMessage("RemoveFromDisplay", itemToFind);
                 return true;
             }
         }
-
         //Item was not found
         return false;
     }

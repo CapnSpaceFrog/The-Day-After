@@ -47,6 +47,7 @@ public class PlayerInteract
     public void UpdateInteractCastPosition()
     {
         //Depending on direction of player, update where the hit casts
+        //Reminder to double check this distance once we are play testing inside the environment
         switch (direction)
         {
             case FacingDirection.right:
@@ -57,7 +58,6 @@ public class PlayerInteract
                 interactCheck.transform.localPosition = new Vector3(p_data.InteractTestCheckDistance, 0, 0);
                 break;
 
-            //Reminder to double check this distance once we are play testing inside the environment
             case FacingDirection.up:
                 interactCheck.transform.localPosition = new Vector3(0, p_data.InteractTestCheckDistance, 0);
                 break;
@@ -83,52 +83,46 @@ public class PlayerInteract
         switch (currentInterObj.Obj_Data.InterType)
         {
             case InterType.QuestEvent:
-                if (player.InvManager.FindItemInInv(currentInterObj.Obj_Data.RequiredItem))
-                {
+                if (player.InvManager.FindItemInInv(currentInterObj.Obj_Data.RequiredItem)) {
                     //Found item in inventory, progress quest and display dialogue
                     currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.QuestEventDialogue);
-                    SendOnjToDialogueHandler(currentInterObj);
+                    GameObject.FindGameObjectWithTag("Game Manager").SendMessage("ReceivedRequirement", currentInterObj.gameObject);
 
-                    //Ask the game manager what we're supposed to do since this was progressed.
-                }
-                else
-                {
+                    //Send data to game manager, which will then send data to dialogue handler once quest is complete
+                } else {
                     //Item was not found, do not progress quest and display correct dialogue
                     currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.MissingQuestItemDialogue);
-                    SendOnjToDialogueHandler(currentInterObj);
                 }
                 break;
 
             case InterType.Storable:
-                if (player.InvManager.AddItemToInv(currentInterObj.gameObject))
-                {
+                if (player.InvManager.AddItemToInv(currentInterObj.gameObject)) {
                     //Item successfully added, do not display inventory is full
                     currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.AddedToInventoryDialogue);
-                    SendOnjToDialogueHandler(currentInterObj);
                     currentInterObj.gameObject.SetActive(false);
-                }
-                else
-                {
+                } else {
                     //Inventory was full, display inventory full dialogue
                     currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.InventoryFullDialogue);
-                    SendOnjToDialogueHandler(currentInterObj);
                 }
                 break;
 
             case InterType.Decoration:
                 //This object simply sends some dialogue to the Dialogue Handler
                 currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DecoDialogue);
-                SendOnjToDialogueHandler(currentInterObj);
-                
                 break;
         }
+        //Send the current inter object to the dialogue handler
+        SendObjToDialogueHandler(currentInterObj);
 
-        DumpInterObj();
+        //Null the interobj variable reference
+        //DumpInterObj();
     }
 
-    private void SendOnjToDialogueHandler(InterObj objToSend)
+    private void SendObjToDialogueHandler(InterObj objToSend)
     {
-        GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", objToSend);
+        if (objToSend != null) {
+            GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", objToSend);
+        }
     }
 
     private void DumpInterObj() => currentInterObj = null;

@@ -31,7 +31,6 @@ public class Player : MonoBehaviour
     private void Start()
     {
         P_Data.InDialogue = false;
-        InvManager.Inventory = new GameObject[P_Data.InventorySize];
     }
 
     public void Update()
@@ -39,9 +38,8 @@ public class Player : MonoBehaviour
         if (!P_Data.InDialogue)
         {
             AnimManager.UpdateAnims();
+            AnimManager.GotDressed();
         }
-
-
     }
 
     private void FixedUpdate()
@@ -55,6 +53,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    #region Other Functions
     public void UpdateDialogueBool() 
     {
         if (!P_Data.InDialogue)
@@ -67,4 +66,5 @@ public class Player : MonoBehaviour
             P_Data.InDialogue = false;
         } 
     }
+    #endregion
 }

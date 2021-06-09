@@ -70,6 +70,12 @@ public class PlayerAnimator
         currentState = newState;
     }
 
+    public void GotDressed()
+    {
+        PLAYER_IDLE = "PLAYER_CLOTHEDIDLE";
+        PLAYER_MOVE = "PLAYER_CLOTHEDMOVE";
+    }
+
     public void CheckIfShouldFlip()
     {
         if (inputHandler.NormInputX != 0 && inputHandler.NormInputX != lookDirection)

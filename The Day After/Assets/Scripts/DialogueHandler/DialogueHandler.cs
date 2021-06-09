@@ -103,6 +103,15 @@ public class DialogueHandler : MonoBehaviour
         displayText.text = "";
     }
 
+    private void QuestDialogueAdd(string[] dialogueToAdd)
+    {
+        Debug.Log("added quest finish dialogue");
+        for (int i = 0; i < dialogueToAdd.Length; i++)
+        {
+            dialogueToDisplay.Add(dialogueToAdd[i]);
+        }
+    }
+
     /*
     Dialogue display box needs to display
     A) Update player sprite based on dialogue string
