@@ -23,6 +23,7 @@ public class PlayerInputHandler : MonoBehaviour
         if (InteractInput)
         {
             OnInteractInput();
+            UseInteractInput();
         }
     }
 
@@ -46,11 +47,13 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (!player.P_Data.InDialogue) {
             player.Interact.CheckInteractCast();
-            InteractInput = false;
+            UseInteractInput();
         } else {
-            InteractInput = false;
+            UseInteractInput();
         }
     }
+
+    private void UseInteractInput() => InteractInput = false;
 
     public void OnPauseInput(InputAction.CallbackContext context)
     {

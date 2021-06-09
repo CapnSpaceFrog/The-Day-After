@@ -254,10 +254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies,
-    tellus ac ultrices bibendum, purus neque cursus magna, eu porttitor magna sem
-    vitae risus. In lorem ex, fringilla vel maximus quis, suscipit nec ligula. Nam
-    aliquam congue felis vitae varius. '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1276,7 +1273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc004b237de07bd49b604a3c69adbe34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDisplayDelay: 0
+  textDisplayDelay: 0.006
   dialogueToDisplay: []
 --- !u!114 &1885017496
 MonoBehaviour:

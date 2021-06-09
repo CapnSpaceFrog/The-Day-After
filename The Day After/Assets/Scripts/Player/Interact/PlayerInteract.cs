@@ -87,15 +87,15 @@ public class PlayerInteract
                 {
                     //Found item in inventory, progress quest and display dialogue
                     currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.QuestEventDialogue);
-                    GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", currentInterObj);
+                    SendOnjToDialogueHandler(currentInterObj);
 
-                    //Progress quest via game manager
+                    //Ask the game manager what we're supposed to do since this was progressed.
                 }
                 else
                 {
                     //Item was not found, do not progress quest and display correct dialogue
                     currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.MissingQuestItemDialogue);
-                    GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", currentInterObj);
+                    SendOnjToDialogueHandler(currentInterObj);
                 }
                 break;
 
@@ -104,25 +104,31 @@ public class PlayerInteract
                 {
                     //Item successfully added, do not display inventory is full
                     currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.AddedToInventoryDialogue);
-                    GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", currentInterObj);
+                    SendOnjToDialogueHandler(currentInterObj);
                     currentInterObj.gameObject.SetActive(false);
                 }
                 else
                 {
                     //Inventory was full, display inventory full dialogue
                     currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.InventoryFullDialogue);
-                    GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", currentInterObj);
+                    SendOnjToDialogueHandler(currentInterObj);
                 }
                 break;
 
             case InterType.Decoration:
                 //This object simply sends some dialogue to the Dialogue Handler
                 currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DecoDialogue);
-                GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", currentInterObj);
+                SendOnjToDialogueHandler(currentInterObj);
+                
                 break;
         }
 
-        //DumpInterObj();
+        DumpInterObj();
+    }
+
+    private void SendOnjToDialogueHandler(InterObj objToSend)
+    {
+        GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", objToSend);
     }
 
     private void DumpInterObj() => currentInterObj = null;
