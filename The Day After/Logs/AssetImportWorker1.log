@@ -1828,3 +1828,4 @@ Received Import Request.
 Start importing Assets/Scripts/Game Manager/Quest Manager/Data/QuestOneData.asset using Guid(f8132d24e9d847e4ea58d383870e5424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40da7cfc3e4a53685390536173a3a60e') in 0.003216 seconds
   Import took 0.007035 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
