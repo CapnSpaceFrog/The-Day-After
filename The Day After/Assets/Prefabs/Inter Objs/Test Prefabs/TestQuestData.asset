@@ -13,7 +13,20 @@ MonoBehaviour:
   m_Name: TestQuestData
   m_EditorClassIdentifier: 
   InterType: 2
-  DisplayName: 
-  Dialogue: []
-  DisplaySprite: {fileID: 0}
+  DisplayDialogue: []
+  DisplaySprite:
+  - {fileID: 0}
+  QuestEventDialogue:
+  - Looks like that sphere below me is what I needed.
+  - Nice.
+  - Did this even do anything?
+  - Doesn't look like it.
+  - I bet that feature isn't in yet.
+  MissingQuestItemDialogue:
+  - Looks like I need something to use this.
+  - I wonder if one of these white spheres can help me?
+  StoredItem: []
+  DecoDialogue: []
+  InventoryFullDialogue: []
+  AddedToInventoryDialogue: []
   RequiredItem: {fileID: 1034830880951066920, guid: a57855530e9a1e54b878dd8d100ea73a, type: 3}

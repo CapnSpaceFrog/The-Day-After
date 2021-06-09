@@ -13,12 +13,25 @@ public class PlayerInputHandler : MonoBehaviour
     public bool InteractInput { get; private set; }
     public bool PauseInput { get; private set; }
 
+    public void Start()
+    {
+        player = GetComponent<Player>();
+    }
+
+    public void FixedUpdate()
+    {
+        if (InteractInput)
+        {
+            OnInteractInput();
+        }
+    }
+
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         RawMovementInput = context.ReadValue<Vector2>();
 
-        NormInputX = (int) (RawMovementInput * Vector2.right).normalized.x;
-        NormInputY = (int) (RawMovementInput * Vector2.up).normalized.y;
+        NormInputX = (int)(RawMovementInput * Vector2.right).normalized.x;
+        NormInputY = (int)(RawMovementInput * Vector2.up).normalized.y;
     }
 
     public void OnInteractInput(InputAction.CallbackContext context)
@@ -29,7 +42,15 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
-    public void UseInteractInput() => InteractInput = false;
+    private void OnInteractInput()
+    {
+        if (!player.P_Data.InDialogue) {
+            player.Interact.CheckInteractCast();
+            InteractInput = false;
+        } else {
+            InteractInput = false;
+        }
+    }
 
     public void OnPauseInput(InputAction.CallbackContext context)
     {

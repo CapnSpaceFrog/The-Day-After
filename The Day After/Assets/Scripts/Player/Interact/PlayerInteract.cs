@@ -15,7 +15,7 @@ public class PlayerInteract
     private PlayerInputHandler inputHandler;
     private Player player;
 
-    private InterObj interObj;
+    private InterObj currentInterObj;
 
     private FacingDirection direction;
 
@@ -51,23 +51,19 @@ public class PlayerInteract
         {
             case FacingDirection.right:
                 interactCheck.transform.localPosition = new Vector3(p_data.InteractTestCheckDistance, 0, 0);
-                Debug.Log("Check Set to Right");
                 break;
 
             case FacingDirection.left:
                 interactCheck.transform.localPosition = new Vector3(p_data.InteractTestCheckDistance, 0, 0);
-                Debug.Log("Check Set to left");
                 break;
 
             //Reminder to double check this distance once we are play testing inside the environment
             case FacingDirection.up:
                 interactCheck.transform.localPosition = new Vector3(0, p_data.InteractTestCheckDistance, 0);
-                Debug.Log("Check Set to up");
                 break;
 
             case FacingDirection.down:
                 interactCheck.transform.localPosition = new Vector3(0, -p_data.InteractTestCheckDistance, 0);
-                Debug.Log("Check Set to down");
                 break;
         }
     }
@@ -77,51 +73,57 @@ public class PlayerInteract
         Collider2D hit = Physics2D.OverlapPoint(interactCheck.transform.position, p_data.whatIsInterObj);
 
         if (hit != null) {
-            interObj = hit.GetComponent<InterObj>();
+            currentInterObj = hit.GetComponent<InterObj>();
             OnInteract();
         }
     }
 
     public void OnInteract()
     {
-        switch (interObj.Obj_Data.InterType)
+        switch (currentInterObj.Obj_Data.InterType)
         {
             case InterType.QuestEvent:
-                if (player.InvManager.FindItemInInv(interObj.Obj_Data.RequiredItem))
+                if (player.InvManager.FindItemInInv(currentInterObj.Obj_Data.RequiredItem))
                 {
-                    Debug.Log("Item Found, Quest Progressed");
                     //Found item in inventory, progress quest and display dialogue
-                    //Reminder to send dialogue handler inter object
+                    currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.QuestEventDialogue);
+                    GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", currentInterObj);
+
+                    //Progress quest via game manager
                 }
                 else
                 {
-                    Debug.Log("Did not find item, quest not progressed");
                     //Item was not found, do not progress quest and display correct dialogue
+                    currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.MissingQuestItemDialogue);
+                    GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", currentInterObj);
                 }
                 break;
 
             case InterType.Storable:
-                if (player.InvManager.AddItemToInv(interObj.gameObject))
+                if (player.InvManager.AddItemToInv(currentInterObj.gameObject))
                 {
-                    Debug.Log("Added to inventory");
-                    interObj.gameObject.SetActive(false);
                     //Item successfully added, do not display inventory is full
+                    currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.AddedToInventoryDialogue);
+                    GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", currentInterObj);
+                    currentInterObj.gameObject.SetActive(false);
                 }
                 else
                 {
-                    Debug.Log("Did not store item, inventory full");
                     //Inventory was full, display inventory full dialogue
+                    currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.InventoryFullDialogue);
+                    GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", currentInterObj);
                 }
                 break;
 
             case InterType.Decoration:
-                Debug.Log("Displayed Dialogue");
                 //This object simply sends some dialogue to the Dialogue Handler
+                currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DecoDialogue);
+                GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", currentInterObj);
                 break;
         }
 
-        DumpInterObj();
+        //DumpInterObj();
     }
 
-    private void DumpInterObj() => interObj = null;
+    private void DumpInterObj() => currentInterObj = null;
 }

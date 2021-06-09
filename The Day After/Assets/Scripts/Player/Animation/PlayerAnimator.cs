@@ -58,10 +58,10 @@ public class PlayerAnimator
         }
 
         player.Interact.UpdateInteractCastPosition();
-        CheckIfFlip();
+        CheckIfShouldFlip();
     }
 
-    private void ChangeAnimationState(string newState)
+    public void ChangeAnimationState(string newState)
     {
         if (currentState == newState) return;
 
@@ -70,7 +70,7 @@ public class PlayerAnimator
         currentState = newState;
     }
 
-    public void CheckIfFlip()
+    public void CheckIfShouldFlip()
     {
         if (inputHandler.NormInputX != 0 && inputHandler.NormInputX != lookDirection)
         {

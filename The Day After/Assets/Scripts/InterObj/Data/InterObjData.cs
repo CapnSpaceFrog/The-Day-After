@@ -9,9 +9,22 @@ public class InterObjData : ScriptableObject
     public InterType InterType;
 
     [Header("Dialogue")]
-    public string DisplayName;
-    public string[] Dialogue;
-    public Sprite[] DialogueSprite;
+    public List<string> DisplayDialogue;
+    public Sprite[] DisplaySprite;
+
+    [Header("QuestEvent Dialogue")]
+    public string[] QuestEventDialogue;
+    public string[] MissingQuestItemDialogue;
+
+    [Header("Storable Dialogue")]
+    public string[] StoredItem;
+
+    [Header("Deco Dialogue")]
+    public string[] DecoDialogue;
+
+    [Header("Misc Dialogue")]
+    public string[] InventoryFullDialogue;
+    public string[] AddedToInventoryDialogue;
 
     [Header("Quest Event")]
     public GameObject RequiredItem;

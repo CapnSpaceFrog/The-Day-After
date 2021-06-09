@@ -13,7 +13,22 @@ MonoBehaviour:
   m_Name: TestDecoData
   m_EditorClassIdentifier: 
   InterType: 0
-  DisplayName: 
-  Dialogue: []
-  DisplaySprite: {fileID: 0}
+  DisplayDialogue:
+  - 
+  - 
+  - 
+  - 
+  - 
+  DisplaySprite: []
+  QuestEventDialogue: []
+  MissingQuestItemDialogue: []
+  StoredItem: []
+  DecoDialogue:
+  - This sphere simply exists.
+  - It doesn't really do anything.
+  - Apparently I can walk through it too.
+  - I wonder what it's thinking.
+  - Does it even think?
+  InventoryFullDialogue: []
+  AddedToInventoryDialogue: []
   RequiredItem: {fileID: 0}

@@ -17,4 +17,7 @@ public class PlayerData : ScriptableObject
 
     [Header("Test Variables")]
     public float GizmoDrawRadius;
+
+    [Header("Dialogue Variables")]
+    public bool InDialogue;
 }

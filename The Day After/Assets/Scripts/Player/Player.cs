@@ -28,24 +28,43 @@ public class Player : MonoBehaviour
         AnimManager = new PlayerAnimator(this, P_Data, InputHandler);
     }
 
+    private void Start()
+    {
+        P_Data.InDialogue = false;
+        InvManager.Inventory = new GameObject[P_Data.InventorySize];
+    }
+
     public void Update()
     {
-        AnimManager.UpdateAnims();
+        if (!P_Data.InDialogue)
+        {
+            AnimManager.UpdateAnims();
+        }
+
+
     }
 
     private void FixedUpdate()
     {
-        Movement.SetVelocity(P_Data.Movespeed);
-
-        if (InputHandler.InteractInput)
+        if (!P_Data.InDialogue)
         {
-            InputHandler.UseInteractInput();
-            Interact.CheckInteractCast();
+            Movement.SetVelocity(P_Data.Movespeed);
+        } else
+        {
+            Movement.SetVelocity(0);
         }
     }
 
-    private void OnDrawGizmos()
+    public void UpdateDialogueBool() 
     {
-        Gizmos.DrawWireSphere(Interact.interactCheck.transform.position, P_Data.GizmoDrawRadius);
+        if (!P_Data.InDialogue)
+        {
+            P_Data.InDialogue = true;
+            AnimManager.ChangeAnimationState(AnimManager.PLAYER_IDLE);
+        }
+        else
+        {
+            P_Data.InDialogue = false;
+        } 
     }
 }

@@ -13,7 +13,16 @@ MonoBehaviour:
   m_Name: TestStorableData
   m_EditorClassIdentifier: 
   InterType: 1
-  DisplayName: 
-  Dialogue: []
-  DisplaySprite: {fileID: 0}
+  DisplayDialogue: []
+  DisplaySprite:
+  - {fileID: 0}
+  QuestEventDialogue: []
+  MissingQuestItemDialogue: []
+  StoredItem: []
+  DecoDialogue: []
+  InventoryFullDialogue:
+  - I've got too many white balls I guess.
+  AddedToInventoryDialogue:
+  - Nice, I bet I'll need this for something.
+  - I don't know what, but I bet I'll need it.
   RequiredItem: {fileID: 0}
