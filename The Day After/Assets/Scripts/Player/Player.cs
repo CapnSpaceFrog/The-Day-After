@@ -69,4 +69,9 @@ public class Player : MonoBehaviour
         } 
     }
     #endregion
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawRay(transform.position, Interact.rayDirection * Interact.InteractCheckDistance);
+    }
 }

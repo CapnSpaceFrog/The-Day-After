@@ -16,6 +16,9 @@ MonoBehaviour:
   whatIsInterObj:
     serializedVersion: 2
     m_Bits: 128
-  InteractTestCheckDistance: 0.15
+  InteractCheckDistanceHorizontal: 0.15
+  InteractCheckDistanceDown: 0.365
+  InteractCheckDistanceUp: 0.27
   InventorySize: 4
   GizmoDrawRadius: 0.03
+  IsBusy: 0

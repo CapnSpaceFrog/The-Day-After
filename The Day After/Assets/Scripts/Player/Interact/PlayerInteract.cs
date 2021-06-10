@@ -20,6 +20,9 @@ public class PlayerInteract
     private bool canSendQuest;
 
     private FacingDirection direction;
+    
+    public Vector2 rayDirection;
+    public float InteractCheckDistance;
 
     public FacingDirection Direction
     {
@@ -35,15 +38,6 @@ public class PlayerInteract
         this.p_data = p_data;
         this.player = player;
         this.gm = gm;
-
-        CreateInteractCheck();
-    }
-
-    private void CreateInteractCheck()
-    {
-        interactCheck = new GameObject("Interact Check");
-        interactCheck.transform.parent = player.transform;
-        interactCheck.transform.localPosition = Vector3.zero;
     }
 
     public void UpdateInteractCastPosition()
@@ -53,29 +47,34 @@ public class PlayerInteract
         switch (direction)
         {
             case FacingDirection.right:
-                interactCheck.transform.localPosition = new Vector3(p_data.InteractTestCheckDistance, 0, 0);
+                rayDirection = Vector2.right;
+                InteractCheckDistance = p_data.InteractCheckDistanceHorizontal;
                 break;
 
             case FacingDirection.left:
-                interactCheck.transform.localPosition = new Vector3(p_data.InteractTestCheckDistance, 0, 0);
+                rayDirection = Vector2.left;
+                InteractCheckDistance = p_data.InteractCheckDistanceHorizontal;
                 break;
 
             case FacingDirection.up:
-                interactCheck.transform.localPosition = new Vector3(0, p_data.InteractTestCheckDistance, 0);
+                rayDirection = Vector2.up;
+                InteractCheckDistance = p_data.InteractCheckDistanceUp;
                 break;
 
             case FacingDirection.down:
-                interactCheck.transform.localPosition = new Vector3(0, -p_data.InteractTestCheckDistance, 0);
+                rayDirection = Vector2.down;
+                InteractCheckDistance = p_data.InteractCheckDistanceDown;
                 break;
         }
     }
 
     public void CheckInteractCast()
     {
-        Collider2D hit = Physics2D.OverlapPoint(interactCheck.transform.position, p_data.whatIsInterObj);
+        RaycastHit2D hit = Physics2D.Raycast(player.transform.position, rayDirection, InteractCheckDistance, p_data.whatIsInterObj);
+        Collider2D obj = hit.collider;
 
-        if (hit != null) {
-            currentInterObj = hit.GetComponent<InterObj>();
+        if (obj != null) {
+            currentInterObj = obj.GetComponent<InterObj>();
             OnInteract();
         }
     }
@@ -100,14 +99,26 @@ public class PlayerInteract
                 break;
 
             case InterType.Door:
-                Debug.Log("Door Not Added Yet");
+                Debug.Log("Door Switch");
+                //Is this door unlocked? 
+                if (currentInterObj.Obj_Data.IsOpen)
+                {
+                    gm.DoorHandler.DoorInteraction(currentInterObj);
+
+                    //Dump inter object to prevent any strange dialogue interactions
+                    DumpInterObj();
+                }
+                else 
+                {
+                    //Display door locked dialogue
+                    currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DoorLockedDialogue);
+                }
+                
                 break;
         }
+
         //Send the current inter object to the dialogue handler
         SendObjToDialogueHandler(currentInterObj);
-
-        //Null the interobj variable reference
-        DumpInterObj();
     }
 
     private void SendObjToDialogueHandler(InterObj objToSend)
@@ -117,6 +128,8 @@ public class PlayerInteract
             GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", objToSend);
 
             SendObjToActionHandler();
+
+            DumpInterObj();
         }
     }
 

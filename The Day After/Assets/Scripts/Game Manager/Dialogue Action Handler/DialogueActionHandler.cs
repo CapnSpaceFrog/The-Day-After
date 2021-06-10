@@ -49,8 +49,8 @@ public class DialogueActionHandler
                 break;
 
             case UpdateTime.before:
-                animsToPlay[0] = currentInterObj.Obj_Data.AfterAnimsToPlay[0];
-                animsToPlay[1] = currentInterObj.Obj_Data.AfterAnimsToPlay[1];
+                animsToPlay[0] = currentInterObj.Obj_Data.BeforeAnimsToPlay[0];
+                animsToPlay[1] = currentInterObj.Obj_Data.BeforeAnimsToPlay[1];
                 Debug.Log("Switch Before Dialogue");
                 CheckWhatToUpdate(animsToPlay);
                 break;

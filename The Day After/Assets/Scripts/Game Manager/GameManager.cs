@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public GameTimer Timer { get; private set; }
     public DialogueActionHandler DialogueActionHandler { get; private set; }
     public Player PlayerRef { get; private set; }
+    public DoorHandler DoorHandler { get; private set; }
 
     #region Quest Components
     public QuestManager QuestManager { get; private set; }
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
 
         QuestManager = new QuestManager(questData);
         DialogueActionHandler = new DialogueActionHandler(PlayerRef, this);
+        DoorHandler = new DoorHandler(PlayerRef, this);
     }
 
     private void Update()

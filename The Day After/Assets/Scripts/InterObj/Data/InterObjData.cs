@@ -19,15 +19,12 @@ public class InterObjData : ScriptableObject
     public string[] MissingQuestItemDialogue;
     public string[] FinishedQuestDialogue;
 
-    [Header("Storable Dialogue")]
-    public string[] StoredItem;
+    [Header("Stored Dialogue")]
+    public string[] InventoryFullDialogue;
+    public string[] AddedToInventoryDialogue;
 
     [Header("Deco Dialogue")]
     public string[] DecoDialogue;
-
-    [Header("Misc Dialogue")]
-    public string[] InventoryFullDialogue;
-    public string[] AddedToInventoryDialogue;
 
     [Header("Quest Event")]
     public GameObject RequiredItem;
@@ -39,7 +36,9 @@ public class InterObjData : ScriptableObject
     public Animator InterObjAnim;
 
     [Header("Door Variables")]
-    public string WhereToMove;
+    public bool IsOpen;
+    public string TargetDoor;
+    public string[] DoorLockedDialogue;
 }
 
 public enum InterType
