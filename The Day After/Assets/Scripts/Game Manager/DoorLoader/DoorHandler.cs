@@ -25,16 +25,16 @@ public class DoorHandler
 
     private IEnumerator ChangeRoom(InterObj door)
     {
+        playerRef.UpdateBusyBool();
         door.ChangeAnimationState("DOOR_OPEN");
-        playerRef.AnimManager.ChangeAnimationState("PLAYER_EMPTY");
         transitionAnim.Play("ROOM_FADEIN");
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(transitionAnim.GetCurrentAnimatorStateInfo(0).length);
         door.ChangeAnimationState("DOOR_CLOSED");
-
-        //Some code that changes to the room we want
         MovePlayerPos(FindTargetPos(door.Obj_Data.TargetDoor));
         transitionAnim.Play("ROOM_FADEOUT");
+        yield return new WaitForSeconds(transitionAnim.GetCurrentAnimatorStateInfo(0).length);
+        playerRef.UpdateBusyBool();
     }
 
     private Vector3 FindTargetPos(string targetDoor)
