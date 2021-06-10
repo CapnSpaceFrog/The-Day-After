@@ -19,42 +19,47 @@ public class DialogueActionHandler
         this.gm = gm;
     }
 
-    public void CheckWhatToUpdate(InterObj objToUpdate)
+    public void CheckWhatToUpdate(string[] animToPlay)
     {
-        //For this game, only QuestEvents trigger updates, but can be changed for other types
-        //Could call a "NeedToUpdate" function to check through a switch statement
-        switch (objToUpdate.Obj_Data.WhatToUpdate)
+        switch (currentInterObj.Obj_Data.WhatToUpdate)
         {
-            case UpdateType.none:
-                break;
-
             case UpdateType.itself:
-                UpdateObj(objToUpdate);
+                UpdateObj(animToPlay[1]);
                 break;
 
             case UpdateType.player:
-                UpdatePlayer();
+                UpdatePlayer(animToPlay[0]);
                 break;
 
             case UpdateType.both:
-                UpdateObj(objToUpdate);
-                UpdatePlayer();
+                UpdateObj(animToPlay[1]);
+                UpdatePlayer(animToPlay[0]);
                 break;
         }
     }
 
     public void CheckWhenToUpdate(InterObj objToUpdate)
     {
-        switch (objToUpdate.Obj_Data.WhenToUpdate)
+        currentInterObj = objToUpdate;
+        string[] animsToPlay = new string[2];
+
+        switch (currentInterObj.Obj_Data.WhenToUpdate)
         {
+            case UpdateTime.none:
+                break;
+
             case UpdateTime.before:
+                animsToPlay[0] = currentInterObj.Obj_Data.AfterAnimsToPlay[0];
+                animsToPlay[1] = currentInterObj.Obj_Data.AfterAnimsToPlay[1];
                 Debug.Log("Switch Before Dialogue");
-                CheckWhatToUpdate(objToUpdate);
+                CheckWhatToUpdate(animsToPlay);
                 break;
 
             case UpdateTime.after:
+                animsToPlay[0] = currentInterObj.Obj_Data.AfterAnimsToPlay[0];
+                animsToPlay[1] = currentInterObj.Obj_Data.AfterAnimsToPlay[1];
                 Debug.Log("Switch After Dialogue");
-                gm.StartCoroutine(UpdateAfterDialogue());
+                gm.StartCoroutine(UpdateAfterDialogue(animsToPlay));
                 break;
 
             case UpdateTime.both:
@@ -63,25 +68,26 @@ public class DialogueActionHandler
         }
     }
 
-    private void UpdatePlayer()
-    {
-        Debug.Log("Updated Player");
-    }
-
-    private void UpdateObj(InterObj objToUpdate)
-    {
-        //Do we need to play an animation?
-
-        //Do we need to update a collider?
-        Debug.Log("Updated Obj");
-    }
-
-    private IEnumerator UpdateAfterDialogue()
+    private IEnumerator UpdateAfterDialogue(string[] animsToPlay)
     {
         yield return new WaitUntil(() => dialogueFinished == true);
+        CheckWhatToUpdate(animsToPlay);
         Debug.Log("Dialogue Finished Trigger");
     }
 
+    private void UpdatePlayer(string animToPlay)
+    {
+        playerRef.AnimManager.ChangeAnimationState(animToPlay);
+        Debug.Log("Updated Player");
+    }
+
+    private void UpdateObj(string animToPlay)
+    {
+        currentInterObj.ChangeAnimationState(animToPlay);
+        Debug.Log("Updated Obj");
+    }
+
+    #region Misc Methods
     public void UpdateDialogueFinish(bool isDialogueFinished)
     {
         dialogueFinished = isDialogueFinished;
@@ -91,4 +97,5 @@ public class DialogueActionHandler
             playerRef.UpdateBusyBool();
         }
     }
+    #endregion
 }

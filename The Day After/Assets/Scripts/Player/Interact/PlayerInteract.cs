@@ -17,6 +17,8 @@ public class PlayerInteract
 
     private InterObj currentInterObj;
 
+    private bool canSendQuest;
+
     private FacingDirection direction;
 
     public FacingDirection Direction
@@ -84,30 +86,11 @@ public class PlayerInteract
         switch (currentInterObj.Obj_Data.InterObjType)
         {
             case InterType.QuestEvent:
-                Debug.Log("QuestEvent Switch");
-                if (player.InvManager.FindItemInInv(currentInterObj.Obj_Data.RequiredItem)) {
-
-                    //Found item in inventory, progress quest and display dialogue
-                    currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.QuestEventDialogue);
-
-                    //Send data to game manager, which will then send data to dialogue handler once quest is complete
-                    gm.SendMessage("ReceivedQuestRequirement", currentInterObj.gameObject);
-                } else {
-                    //Item was not found, do not progress quest and display correct dialogue
-                    currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.MissingQuestItemDialogue);
-                }
+                VerifyQuestEventSwitch();
                 break;
 
             case InterType.Storable:
-                Debug.Log("Storable Switch");
-                if (player.InvManager.AddItemToInv(currentInterObj.gameObject)) {
-                    //Item successfully added, do not display inventory is full
-                    currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.AddedToInventoryDialogue);
-                    currentInterObj.gameObject.SetActive(false);
-                } else {
-                    //Inventory was full, display inventory full dialogue
-                    currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.InventoryFullDialogue);
-                }
+                VerifyStorableSwitch();
                 break;
 
             case InterType.Decoration:
@@ -133,10 +116,56 @@ public class PlayerInteract
             player.UpdateBusyBool();
             GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("InitializeDialogue", objToSend);
 
-            if (objToSend.Obj_Data.InterObjType == InterType.QuestEvent) 
-                gm.SendMessage("SendToActionHandler", currentInterObj);
+            SendObjToActionHandler();
         }
     }
+
+    #region Verify Switch Cases
+    private void VerifyQuestEventSwitch()
+    {
+        Debug.Log("QuestEvent Switch");
+        if (player.InvManager.FindItemInInv(currentInterObj.Obj_Data.RequiredItem))
+        {
+            //Found item in inventory, progress quest and display dialogue
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.QuestEventDialogue);
+
+            //Send data to game manager, which will then send data to dialogue handler once quest is complete
+            gm.SendMessage("ReceivedQuestRequirement", currentInterObj.gameObject);
+
+            canSendQuest = true;
+        }
+        else
+        {
+            //Item was not found, do not progress quest and display correct dialogue
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.MissingQuestItemDialogue);
+            canSendQuest = false;
+        }
+    }
+
+    private void SendObjToActionHandler()
+    {
+        if (canSendQuest)
+        {
+            gm.SendMessage("SendToActionHandler", currentInterObj);
+        }
+    }
+
+    private void VerifyStorableSwitch()
+    {
+        Debug.Log("Storable Switch");
+        if (player.InvManager.AddItemToInv(currentInterObj.gameObject))
+        {
+            //Item successfully added, do not display inventory is full
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.AddedToInventoryDialogue);
+            currentInterObj.gameObject.SetActive(false);
+        }
+        else
+        {
+            //Inventory was full, display inventory full dialogue
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.InventoryFullDialogue);
+        }
+    }
+    #endregion
 
     private void DumpInterObj() => currentInterObj = null;
 }

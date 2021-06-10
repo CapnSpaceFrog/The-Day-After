@@ -13,8 +13,17 @@ MonoBehaviour:
   m_Name: TestQuestData
   m_EditorClassIdentifier: 
   InterObjType: 2
-  WhatToUpdate: 0
-  DisplayDialogue: []
+  WhatToUpdate: 1
+  WhenToUpdate: 1
+  DisplayDialogue:
+  - Looks like that sphere below me is what I needed.
+  - Nice.
+  - Did this even do anything?
+  - Doesn't look like it.
+  - I bet that feature isn't in yet.
+  - Looks like he actually added the next part
+  - That's pretty neat. But there's still nothing to do.
+  - Are you gonna finish in time?
   DisplaySprite:
   - {fileID: 0}
   QuestEventDialogue:
@@ -26,10 +35,15 @@ MonoBehaviour:
   MissingQuestItemDialogue:
   - Looks like I need something to use this.
   - I wonder if one of these white spheres can help me?
+  FinishedQuestDialogue: []
   StoredItem: []
   DecoDialogue: []
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
   RequiredItem: {fileID: 1034830880951066920, guid: a57855530e9a1e54b878dd8d100ea73a, type: 3}
+  BeforeAnimsToPlay: []
+  AfterAnimsToPlay:
+  - 
+  - TEST_AFTER
   InterObjAnim: {fileID: 0}
   WhereToMove: 

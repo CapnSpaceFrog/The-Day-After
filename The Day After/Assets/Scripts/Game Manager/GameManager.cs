@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(DialogueActionHandler.dialogueFinished);
         QuestManager.IsQuestComplete();
 
         if (Timer.HasTimeExpired())

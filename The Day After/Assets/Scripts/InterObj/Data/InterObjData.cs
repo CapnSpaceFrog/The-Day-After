@@ -17,6 +17,7 @@ public class InterObjData : ScriptableObject
     [Header("QuestEvent Dialogue")]
     public string[] QuestEventDialogue;
     public string[] MissingQuestItemDialogue;
+    public string[] FinishedQuestDialogue;
 
     [Header("Storable Dialogue")]
     public string[] StoredItem;
@@ -32,6 +33,9 @@ public class InterObjData : ScriptableObject
     public GameObject RequiredItem;
 
     [Header("Anim Variables")]
+    public string[] BeforeAnimsToPlay;
+    public string[] AfterAnimsToPlay;
+    [HideInInspector]
     public Animator InterObjAnim;
 
     [Header("Door Variables")]
@@ -50,13 +54,13 @@ public enum UpdateType
 {
     player,
     itself,
-    both,
-    none
+    both
 }
 
 public enum UpdateTime
 {
     before,
     after,
-    both
+    both,
+    none
 }

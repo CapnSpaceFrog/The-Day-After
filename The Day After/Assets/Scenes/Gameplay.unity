@@ -435,8 +435,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1149304489
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: abc79615481eec241941b665fd556f2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -860,6 +860,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1034830880951066919, guid: 5b5d0fa34cfbd1b4eb820644db0598c4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034830880951066919, guid: 5b5d0fa34cfbd1b4eb820644db0598c4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034830880951066919, guid: 5b5d0fa34cfbd1b4eb820644db0598c4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1034830880951066920, guid: 5b5d0fa34cfbd1b4eb820644db0598c4, type: 3}
       propertyPath: m_Name
       value: Test QuestEvent
@@ -1097,7 +1109,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1386701151
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 8585577555588607970, guid: 2a28e39789028c9419013b276eded4d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1604,6 +1616,14 @@ PrefabInstance:
     - target: {fileID: 5833964544174170375, guid: dafbfda9a95d5794390df3a141cc5ebd, type: 3}
       propertyPath: m_Name
       value: Shower
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833964544174170377, guid: dafbfda9a95d5794390df3a141cc5ebd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833964544174170377, guid: dafbfda9a95d5794390df3a141cc5ebd, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1328226939
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dafbfda9a95d5794390df3a141cc5ebd, type: 3}

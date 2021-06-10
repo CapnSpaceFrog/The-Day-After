@@ -6,6 +6,8 @@ public class InterObj : MonoBehaviour
 {
     public InterObjData Obj_Data;
 
+    private string currentState;
+
     private void Awake()
     {
         Obj_Data.InterObjAnim = GetComponent<Animator>();
@@ -19,5 +21,14 @@ public class InterObj : MonoBehaviour
         {
             Obj_Data.DisplayDialogue[i] = stringOverride[i];
         }
+    }
+
+    public void ChangeAnimationState(string newState)
+    {
+        if (currentState == newState) return;
+
+        Obj_Data.InterObjAnim.Play(newState);
+
+        currentState = newState;
     }
 }

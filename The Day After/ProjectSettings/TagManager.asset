@@ -44,6 +44,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Room
+    uniqueID: 3145662807
+    locked: 0
+  - name: Room Background Decoration
+    uniqueID: 2966740357
+    locked: 0
   - name: Player
     uniqueID: 1386701151
+    locked: 0
+  - name: Room Foreground Decoration
+    uniqueID: 3253530717
     locked: 0
