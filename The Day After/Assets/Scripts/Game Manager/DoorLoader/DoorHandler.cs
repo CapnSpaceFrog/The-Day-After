@@ -56,6 +56,12 @@ public class DoorHandler
 
     public void UnlockDoor(string doorToUnlock)
     {
-
+        foreach (GameObject door in GameObject.FindGameObjectsWithTag("Door"))
+        {
+            if (door.name == doorToUnlock)
+            {
+                door.GetComponent<InterObj>().Obj_Data.IsOpen = true;
+            }
+        }
     }
 }

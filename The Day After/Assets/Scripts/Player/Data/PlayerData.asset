@@ -17,7 +17,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   InteractCheckDistanceHorizontal: 0.15
-  InteractCheckDistanceDown: 0.365
+  InteractCheckDistanceDown: 0.19
   InteractCheckDistanceUp: 0.11
   InventorySize: 4
   GizmoDrawRadius: 0.03

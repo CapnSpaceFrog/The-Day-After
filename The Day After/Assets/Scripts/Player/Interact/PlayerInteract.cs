@@ -39,6 +39,14 @@ public class PlayerInteract
         this.p_data = p_data;
         this.player = player;
         this.gm = gm;
+
+        CreateInteractHitbox();
+    }
+
+    private void CreateInteractHitbox()
+    {
+        GameObject hitbox = new GameObject();
+        hitbox.transform.parent = player.transform;
     }
 
     public void UpdateInteractCastPosition()
@@ -50,13 +58,13 @@ public class PlayerInteract
             case FacingDirection.right:
                 rayDirection = Vector2.right;
                 InteractCheckDistance = p_data.InteractCheckDistanceHorizontal;
-                castPosition = player.transform.position;
+                castPosition = new Vector2(player.transform.position.x + 0.05f, player.transform.position.y - 0.05f);
                 break;
 
             case FacingDirection.left:
                 rayDirection = Vector2.left;
                 InteractCheckDistance = p_data.InteractCheckDistanceHorizontal;
-                castPosition = player.transform.position;
+                castPosition = new Vector2(player.transform.position.x - 0.05f, player.transform.position.y - 0.05f);
                 break;
 
             case FacingDirection.up:
@@ -68,7 +76,7 @@ public class PlayerInteract
             case FacingDirection.down:
                 rayDirection = Vector2.down;
                 InteractCheckDistance = p_data.InteractCheckDistanceDown;
-                castPosition = player.transform.position;
+                castPosition = new Vector2(player.transform.position.x, player.transform.position.y - 0.175f); ;
                 break;
         }
     }

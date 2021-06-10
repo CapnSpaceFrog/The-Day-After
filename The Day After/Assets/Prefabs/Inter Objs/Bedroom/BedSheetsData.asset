@@ -16,7 +16,8 @@ MonoBehaviour:
   WhatToUpdate: 1
   WhenToUpdate: 1
   DisplayDialogue:
-  - debug quest dialogue exhausted
+  - Finished Bedsheets
+  - debug bedroom door unlocked
   DisplaySprite: []
   QuestEventDialogue:
   - Finished Bedsheets
@@ -32,7 +33,7 @@ MonoBehaviour:
   BeforeAnimsToPlay: []
   AfterAnimsToPlay:
   - 
-  - 
+  - SHEETS_CLEAN
   InterObjAnim: {fileID: 0}
   IsOpen: 0
   TargetDoor: 

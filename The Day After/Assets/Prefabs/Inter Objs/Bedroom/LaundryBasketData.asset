@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: LaundryBasketData
   m_EditorClassIdentifier: 
   InterObjType: 2
-  WhatToUpdate: 0
+  WhatToUpdate: 1
   WhenToUpdate: 1
   DisplayDialogue:
-  - debug exhauste dialogue
+  - debug quest finished
   DisplaySprite: []
   QuestEventDialogue:
   - debug quest finished
@@ -31,8 +31,8 @@ MonoBehaviour:
   IsExhausted: 1
   BeforeAnimsToPlay: []
   AfterAnimsToPlay:
-  - debug anim filler
-  - debug anim filler
+  - 
+  - LAUNDRY_FULL
   InterObjAnim: {fileID: 0}
   IsOpen: 0
   TargetDoor: 

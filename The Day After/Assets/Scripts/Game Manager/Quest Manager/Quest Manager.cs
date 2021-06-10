@@ -55,12 +55,12 @@ public class QuestManager
         {
             if (door.name == questData[currentQuestInt].DoorToUnlock)
             {
-                door.GetComponent<InterObj>().Obj_Data.IsOpen = true;
-
+                gm.DoorHandler.UnlockDoor(door.name);
                 //failsafe open door that this object is attached too as well
                 gm.DoorHandler.UnlockDoor(door.GetComponent<InterObj>().Obj_Data.TargetDoor);
                 
                 Debug.Log($"Door { questData[currentQuestInt].DoorToUnlock } was unlocked");
+                Debug.Log($"Failsafe Target Door { door.GetComponent<InterObj>().Obj_Data.TargetDoor } was unlocked");
             }
         }
 

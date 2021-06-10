@@ -19,11 +19,12 @@ MonoBehaviour:
   DisplaySprite: []
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
-  FinishedQuestDialogue: []
+  QuestExhaustedDialogue: []
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
   DecoDialogue: []
   RequiredItem: {fileID: 0}
+  IsExhausted: 0
   BeforeAnimsToPlay: []
   AfterAnimsToPlay: []
   InterObjAnim: {fileID: 0}
