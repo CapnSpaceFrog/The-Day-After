@@ -1617,13 +1617,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shower
       objectReference: {fileID: 0}
-    - target: {fileID: 5833964544174170377, guid: dafbfda9a95d5794390df3a141cc5ebd, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5833964544174170377, guid: dafbfda9a95d5794390df3a141cc5ebd, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1328226939
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dafbfda9a95d5794390df3a141cc5ebd, type: 3}
