@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: QuestOneData
   m_EditorClassIdentifier: 
   QuestRequirements:
-  - {fileID: 1034830880951066920, guid: 5b5d0fa34cfbd1b4eb820644db0598c4, type: 3}
+  - {fileID: 5884239028614387916, guid: 3e467677050a1d443bfa1a3d128e7e75, type: 3}
+  - {fileID: 7869723042455926050, guid: 86543b3019e50064b92518281393fa67, type: 3}
+  - {fileID: 1085723653428616407, guid: f81086122e6dff04db3ca3171771835e, type: 3}
+  DoorToUnlock: Bedroom Door
   QuestCompleteDialogue:
-  - Looks like he actually added the next part
-  - That's pretty neat. But there's still nothing to do.
-  - Are you gonna finish in time?
+  - debug bedroom door unlocked

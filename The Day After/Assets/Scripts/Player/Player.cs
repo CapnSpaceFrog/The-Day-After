@@ -72,6 +72,6 @@ public class Player : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawRay(transform.position, Interact.rayDirection * Interact.InteractCheckDistance);
+        Gizmos.DrawRay(Interact.castPosition, Interact.rayDirection * Interact.InteractCheckDistance);
     }
 }

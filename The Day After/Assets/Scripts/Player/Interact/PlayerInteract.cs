@@ -23,6 +23,7 @@ public class PlayerInteract
     
     public Vector2 rayDirection;
     public float InteractCheckDistance;
+    public Vector2 castPosition;
 
     public FacingDirection Direction
     {
@@ -49,28 +50,32 @@ public class PlayerInteract
             case FacingDirection.right:
                 rayDirection = Vector2.right;
                 InteractCheckDistance = p_data.InteractCheckDistanceHorizontal;
+                castPosition = player.transform.position;
                 break;
 
             case FacingDirection.left:
                 rayDirection = Vector2.left;
                 InteractCheckDistance = p_data.InteractCheckDistanceHorizontal;
+                castPosition = player.transform.position;
                 break;
 
             case FacingDirection.up:
                 rayDirection = Vector2.up;
                 InteractCheckDistance = p_data.InteractCheckDistanceUp;
+                castPosition = new Vector2(player.transform.position.x, player.transform.position.y - 0.15f);
                 break;
 
             case FacingDirection.down:
                 rayDirection = Vector2.down;
                 InteractCheckDistance = p_data.InteractCheckDistanceDown;
+                castPosition = player.transform.position;
                 break;
         }
     }
 
     public void CheckInteractCast()
     {
-        RaycastHit2D hit = Physics2D.Raycast(player.transform.position, rayDirection, InteractCheckDistance, p_data.whatIsInterObj);
+        RaycastHit2D hit = Physics2D.Raycast(castPosition, rayDirection, InteractCheckDistance, p_data.whatIsInterObj);
         Collider2D obj = hit.collider;
 
         if (obj != null) {
