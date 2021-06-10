@@ -142,6 +142,13 @@ public class PlayerInteract
     private void VerifyQuestEventSwitch()
     {
         Debug.Log("QuestEvent Switch");
+        if (currentInterObj.Obj_Data.IsExhausted)
+        {
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.QuestExhaustedDialogue);
+            canSendQuest = false;
+            return;
+        }
+        
         if (player.InvManager.FindItemInInv(currentInterObj.Obj_Data.RequiredItem))
         {
             //Found item in inventory, progress quest and display dialogue
@@ -149,8 +156,9 @@ public class PlayerInteract
 
             //Send data to game manager, which will then send data to dialogue handler once quest is complete
             gm.SendMessage("ReceivedQuestRequirement", currentInterObj.gameObject);
-
+            
             canSendQuest = true;
+            currentInterObj.Obj_Data.IsExhausted = true;
         }
         else
         {

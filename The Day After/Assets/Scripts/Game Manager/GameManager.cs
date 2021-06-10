@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
         Timer = new GameTimer();
 
-        QuestManager = new QuestManager(questData);
+        QuestManager = new QuestManager(questData, this);
         DialogueActionHandler = new DialogueActionHandler(PlayerRef, this);
         DoorHandler = new DoorHandler(PlayerRef, this);
     }

@@ -17,6 +17,7 @@ public class InterObjData : ScriptableObject
     [Header("QuestEvent Dialogue")]
     public string[] QuestEventDialogue;
     public string[] MissingQuestItemDialogue;
+    public string[] QuestExhaustedDialogue;
 
     [Header("Stored Dialogue")]
     public string[] InventoryFullDialogue;
@@ -27,6 +28,7 @@ public class InterObjData : ScriptableObject
 
     [Header("Quest Event")]
     public GameObject RequiredItem;
+    public bool IsExhausted;
 
     [Header("Anim Variables")]
     public string[] BeforeAnimsToPlay;

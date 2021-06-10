@@ -16,16 +16,19 @@ MonoBehaviour:
   WhatToUpdate: 1
   WhenToUpdate: 1
   DisplayDialogue:
-  - debug
+  - debug quest dialogue exhausted
   DisplaySprite: []
   QuestEventDialogue:
-  - debug quest finished
+  - Finished Bedsheets
   MissingQuestItemDialogue:
-  - debug dialogue since no object is required
+  - Missing Requirement for Quest (Debug)
+  QuestExhaustedDialogue:
+  - The Bedsheets have been exhausted
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
   DecoDialogue: []
   RequiredItem: {fileID: 0}
+  IsExhausted: 1
   BeforeAnimsToPlay: []
   AfterAnimsToPlay:
   - 

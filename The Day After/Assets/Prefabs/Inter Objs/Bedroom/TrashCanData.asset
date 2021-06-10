@@ -10,29 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 891b4a6fc961b944fa7d579264b76b5e, type: 3}
-  m_Name: DresserData
+  m_Name: TrashCanData
   m_EditorClassIdentifier: 
   InterObjType: 2
   WhatToUpdate: 1
   WhenToUpdate: 1
-  DisplayDialogue:
-  - debug already interacted stop trying
+  DisplayDialogue: []
   DisplaySprite: []
   QuestEventDialogue:
-  - debug quest finished
+  - debug quest event triggered
   MissingQuestItemDialogue:
-  - debug quest missing item
-  QuestExhaustedDialogue:
-  - The Dressers is exhausted
+  - debug missing quest item
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
   DecoDialogue: []
-  RequiredItem: {fileID: 0}
-  IsExhausted: 1
+  RequiredItem: {fileID: 5273741588962683389, guid: bcfce5e2b23a9d746870d5316a2006d1, type: 3}
   BeforeAnimsToPlay: []
   AfterAnimsToPlay:
   - 
-  - DRESSER_CLEAN
+  - TRASHCAN_FULL
   InterObjAnim: {fileID: 0}
   IsOpen: 0
   TargetDoor: 

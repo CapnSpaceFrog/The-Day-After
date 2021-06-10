@@ -6,7 +6,7 @@ public class Quest
 {
     private GameObject[] requirements;
 
-    private bool[] completedReq;
+    private GameObject[] completedReq;
 
     public bool QuestComplete { get; private set; }
     
@@ -14,7 +14,7 @@ public class Quest
     {
         this.requirements = requirements;
 
-        completedReq = new bool[requirements.Length];
+        completedReq = new GameObject[requirements.Length];
     }
 
     public void CheckIfRequirementMatch(GameObject requiredObj)
@@ -25,19 +25,18 @@ public class Quest
             if (req.name == requiredObj.name)
             {
                 Debug.Log("Received Requirement Matches");
-                CompletedRequirement();
+                CompletedRequirement(requiredObj);
             }
         }
     }
 
-    private void CompletedRequirement()
+    private void CompletedRequirement(GameObject requiredObj)
     {
         for (int i = 0; i < completedReq.Length; i++)
         {
-            if (completedReq[i] == false)
+            if (completedReq[i] == null)
             {
-                completedReq[i] = true;
-                Debug.Log("Updated Completed Array");
+                completedReq[i] = requiredObj;
                 break;
             }
         }
@@ -48,7 +47,7 @@ public class Quest
     {
         for (int i = 0; i < completedReq.Length; i++)
         {
-            if (completedReq[i] == false)
+            if (completedReq[i] == null)
             {
                 Debug.Log("Failsafe Was Triggered");
                 return;

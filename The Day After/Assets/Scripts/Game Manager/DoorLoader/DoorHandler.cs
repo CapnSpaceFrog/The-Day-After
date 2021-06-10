@@ -53,4 +53,9 @@ public class DoorHandler
     {
         playerRef.transform.position = posToMove;
     }
+
+    public void UnlockDoor(string doorToUnlock)
+    {
+
+    }
 }

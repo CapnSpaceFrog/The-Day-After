@@ -11,6 +11,8 @@ public class InterObj : MonoBehaviour
     private void Awake()
     {
         Obj_Data.InterObjAnim = GetComponent<Animator>();
+        Obj_Data.IsOpen = false;
+        Obj_Data.IsExhausted = false;
     }
 
     //Sets Display String to whatever string array overide we want

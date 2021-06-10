@@ -41,6 +41,7 @@ public class PlayerInventoryDisplay : MonoBehaviour
             if (player.InvManager.Inventory[i].name == itemToUpdate.name)
             {
                 inventorySlots[i].sprite = emptySprite;
+                player.InvManager.Inventory[i] = null;
             }
         }
     }

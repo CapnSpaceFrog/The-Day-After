@@ -15,16 +15,20 @@ MonoBehaviour:
   InterObjType: 2
   WhatToUpdate: 0
   WhenToUpdate: 1
-  DisplayDialogue: []
+  DisplayDialogue:
+  - debug exhauste dialogue
   DisplaySprite: []
   QuestEventDialogue:
   - debug quest finished
   MissingQuestItemDialogue:
   - debug quest missing item
+  QuestExhaustedDialogue:
+  - debug exhauste dialogue
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
   DecoDialogue: []
-  RequiredItem: {fileID: 0}
+  RequiredItem: {fileID: 8946449250678850536, guid: f4ada897d62c8544da44a1328fc50660, type: 3}
+  IsExhausted: 1
   BeforeAnimsToPlay: []
   AfterAnimsToPlay:
   - debug anim filler

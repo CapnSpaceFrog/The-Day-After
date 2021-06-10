@@ -25,7 +25,7 @@ TextureImporter:
     second: Dresser_Clean
   - first:
       213: 2999314889563498432
-    second: Desk_Dirty
+    second: Desk_Trash
   - first:
       213: 7076975519431748071
     second: Desk_Clean
@@ -289,13 +289,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Desk_Dirty
+      name: Desk_Trash
       rect:
         serializedVersion: 2
         x: 0
-        y: 36
-        width: 79
-        height: 47
+        y: 48
+        width: 78
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

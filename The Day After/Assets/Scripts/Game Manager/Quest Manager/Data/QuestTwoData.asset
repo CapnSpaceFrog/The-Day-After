@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8986b72a4c136b4d872f2f11ec78b9f, type: 3}
   m_Name: QuestTwoData
   m_EditorClassIdentifier: 
-  QuestRequirements: []
+  QuestRequirements:
+  - {fileID: 0}
+  DoorToUnlock: 
+  QuestCompleteDialogue:
+  - debug stairs accessible
