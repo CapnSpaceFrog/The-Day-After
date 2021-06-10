@@ -41,6 +41,15 @@ public class QuestManager
             //Tack on End of Quest Dialogue 
             GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("QuestDialogueAdd", questData[currentQuestInt].QuestCompleteDialogue);
 
+            foreach (GameObject door in GameObject.FindGameObjectsWithTag("Door"))
+            {
+                if (door.name == questData[currentQuestInt].DoorToUnlock)
+                {
+                    door.GetComponent<InterObj>().Obj_Data.IsOpen = true;
+                    Debug.Log($"Door { questData[currentQuestInt].DoorToUnlock } was unlocked");
+                }
+            }
+
             //Change current quest and update current int
             Debug.Log("Quest Complete In Quest Manager");
             ChangeActiveQuest(quests[currentQuestInt + 1]);

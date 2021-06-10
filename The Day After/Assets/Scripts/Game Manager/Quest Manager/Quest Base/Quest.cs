@@ -34,30 +34,27 @@ public class Quest
     {
         for (int i = 0; i < completedReq.Length; i++)
         {
-            if (!completedReq[i])
+            if (completedReq[i] == false)
             {
-                Debug.Log("Updated Completed Array");
                 completedReq[i] = true;
+                Debug.Log("Updated Completed Array");
                 break;
             }
         }
-
         CheckIfQuestComplete();
     }
 
     private void CheckIfQuestComplete()
     {
-        foreach (bool req in completedReq)
+        for (int i = 0; i < completedReq.Length; i++)
         {
-            if (!req)
+            if (completedReq[i] == false)
             {
-                break;
-            }
-            else
-            {
-                Debug.Log("Quest Completed in Quest Class");
-                QuestComplete = true;
+                Debug.Log("Failsafe Was Triggered");
+                return;
             }
         }
+        QuestComplete = true;
+        Debug.Log("Quest Completed in Quest Class");
     }
 }

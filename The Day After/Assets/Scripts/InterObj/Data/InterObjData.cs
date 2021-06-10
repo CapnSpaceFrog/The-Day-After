@@ -17,7 +17,6 @@ public class InterObjData : ScriptableObject
     [Header("QuestEvent Dialogue")]
     public string[] QuestEventDialogue;
     public string[] MissingQuestItemDialogue;
-    public string[] FinishedQuestDialogue;
 
     [Header("Stored Dialogue")]
     public string[] InventoryFullDialogue;

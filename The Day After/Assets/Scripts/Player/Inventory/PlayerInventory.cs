@@ -30,6 +30,10 @@ public class PlayerInventory
 
     public bool FindItemInInv(GameObject itemToFind)
     {
+        if (itemToFind == null)
+        {
+            return true;
+        }
         for (int i = 0; i < Inventory.Length; i++)
         {
             if (Inventory[i] == null)

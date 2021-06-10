@@ -18,7 +18,7 @@ MonoBehaviour:
     m_Bits: 128
   InteractCheckDistanceHorizontal: 0.15
   InteractCheckDistanceDown: 0.365
-  InteractCheckDistanceUp: 0.27
+  InteractCheckDistanceUp: 0.11
   InventorySize: 4
   GizmoDrawRadius: 0.03
   IsBusy: 0
