@@ -27,6 +27,6 @@ MonoBehaviour:
   BeforeAnimsToPlay: []
   AfterAnimsToPlay: []
   InterObjAnim: {fileID: 0}
-  IsOpen: 0
+  IsOpen: 1
   TargetDoor: Bathroom Hall Door
   DoorLockedDialogue: []
