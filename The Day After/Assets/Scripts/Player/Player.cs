@@ -40,7 +40,6 @@ public class Player : MonoBehaviour
         if (!P_Data.IsBusy)
         {
             AnimManager.UpdateAnims();
-            AnimManager.GotDressed();
         }
     }
 
@@ -72,6 +71,12 @@ public class Player : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawRay(Interact.castPosition, Interact.rayDirection * Interact.InteractCheckDistance);
+        Vector2 botleft = new Vector2(Interact.hitbox.position.x - (P_Data.InteractBoxWidth / 2), Interact.hitbox.position.y - (P_Data.InteractBoxHeight / 2));
+        Vector2 topRight = new Vector2(Interact.hitbox.position.x + (P_Data.InteractBoxWidth / 2), Interact.hitbox.position.y + (P_Data.InteractBoxHeight / 2));
+
+        Gizmos.DrawLine(botleft, Interact.castPositionBotRight);
+        Gizmos.DrawLine(Interact.castPositionBotRight, topRight);
+        Gizmos.DrawLine(topRight, Interact.castPositionTopLeft);
+        Gizmos.DrawLine(Interact.castPositionTopLeft, botleft);
     }
 }

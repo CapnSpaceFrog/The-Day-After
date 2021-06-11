@@ -22,6 +22,7 @@ public class InterObjData : ScriptableObject
     [Header("Stored Dialogue")]
     public string[] InventoryFullDialogue;
     public string[] AddedToInventoryDialogue;
+    public Sprite InventoryIcon;
 
     [Header("Deco Dialogue")]
     public string[] DecoDialogue;

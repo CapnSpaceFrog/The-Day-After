@@ -9,6 +9,7 @@ TagManager:
   - Game Manager
   - Door
   - Room Transition Panel
+  - Main Menu Handler
   layers:
   - Default
   - TransparentFX

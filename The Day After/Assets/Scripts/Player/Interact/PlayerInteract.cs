@@ -5,9 +5,7 @@ using UnityEngine;
 public enum FacingDirection
 {
     right,
-    left,
-    up,
-    down
+    left
 }
 public class PlayerInteract
 {
@@ -21,9 +19,9 @@ public class PlayerInteract
 
     private FacingDirection direction;
     
-    public Vector2 rayDirection;
-    public float InteractCheckDistance;
-    public Vector2 castPosition;
+    public Vector2 castPositionBotRight;
+    public Vector2 castPositionTopLeft;
+    public Transform hitbox;
 
     public FacingDirection Direction
     {
@@ -45,8 +43,10 @@ public class PlayerInteract
 
     private void CreateInteractHitbox()
     {
-        GameObject hitbox = new GameObject();
+        GameObject hitbox = new GameObject("Interact Hitbox");
         hitbox.transform.parent = player.transform;
+        hitbox.transform.localPosition = p_data.HitBoxPos;
+        this.hitbox = hitbox.transform;
     }
 
     public void UpdateInteractCastPosition()
@@ -56,38 +56,25 @@ public class PlayerInteract
         switch (direction)
         {
             case FacingDirection.right:
-                rayDirection = Vector2.right;
-                InteractCheckDistance = p_data.InteractCheckDistanceHorizontal;
-                castPosition = new Vector2(player.transform.position.x + 0.05f, player.transform.position.y - 0.05f);
+                hitbox.transform.localPosition = p_data.HitBoxPos;
+                castPositionBotRight = new Vector2(hitbox.transform.position.x + (p_data.InteractBoxWidth / 2), hitbox.transform.position.y - (p_data.InteractBoxHeight / 2));
+                castPositionTopLeft = new Vector2(hitbox.transform.position.x - (p_data.InteractBoxWidth / 2), hitbox.transform.position.y + (p_data.InteractBoxHeight / 2));
                 break;
 
             case FacingDirection.left:
-                rayDirection = Vector2.left;
-                InteractCheckDistance = p_data.InteractCheckDistanceHorizontal;
-                castPosition = new Vector2(player.transform.position.x - 0.05f, player.transform.position.y - 0.05f);
-                break;
-
-            case FacingDirection.up:
-                rayDirection = Vector2.up;
-                InteractCheckDistance = p_data.InteractCheckDistanceUp;
-                castPosition = new Vector2(player.transform.position.x, player.transform.position.y - 0.15f);
-                break;
-
-            case FacingDirection.down:
-                rayDirection = Vector2.down;
-                InteractCheckDistance = p_data.InteractCheckDistanceDown;
-                castPosition = new Vector2(player.transform.position.x, player.transform.position.y - 0.175f); ;
+                hitbox.transform.localPosition = p_data.HitBoxPos;
+                castPositionBotRight = new Vector2(hitbox.transform.position.x + (p_data.InteractBoxWidth / 2), hitbox.transform.position.y - (p_data.InteractBoxHeight / 2));
+                castPositionTopLeft = new Vector2(hitbox.transform.position.x - (p_data.InteractBoxWidth / 2), hitbox.transform.position.y + (p_data.InteractBoxHeight / 2));
                 break;
         }
     }
 
     public void CheckInteractCast()
     {
-        RaycastHit2D hit = Physics2D.Raycast(castPosition, rayDirection, InteractCheckDistance, p_data.whatIsInterObj);
-        Collider2D obj = hit.collider;
+        Collider2D hit = Physics2D.OverlapArea(castPositionBotRight, castPositionTopLeft, p_data.whatIsInterObj);
 
-        if (obj != null) {
-            currentInterObj = obj.GetComponent<InterObj>();
+        if (hit != null) {
+            currentInterObj = hit.GetComponent<InterObj>();
             OnInteract();
         }
     }

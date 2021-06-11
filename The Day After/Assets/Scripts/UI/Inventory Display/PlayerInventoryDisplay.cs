@@ -29,7 +29,14 @@ public class PlayerInventoryDisplay : MonoBehaviour
         {
             if (player.InvManager.Inventory[i].name == itemToUpdate.name)
             {
-                inventorySlots[i].sprite = itemToUpdate.GetComponent<SpriteRenderer>().sprite;
+                Sprite temp = itemToUpdate.GetComponent<InterObj>().Obj_Data.InventoryIcon;
+                if (temp == null)
+                {
+                    inventorySlots[i].sprite = itemToUpdate.GetComponent<SpriteRenderer>().sprite;
+                } else
+                {
+                    inventorySlots[i].sprite = temp;
+                }
             }
         }
     }

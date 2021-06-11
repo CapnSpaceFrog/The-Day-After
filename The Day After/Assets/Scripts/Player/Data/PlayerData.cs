@@ -10,9 +10,9 @@ public class PlayerData : ScriptableObject
 
     [Header("Interact Variables")]
     public LayerMask whatIsInterObj;
-    public float InteractCheckDistanceHorizontal;
-    public float InteractCheckDistanceDown;
-    public float InteractCheckDistanceUp;
+    public float InteractBoxWidth;
+    public float InteractBoxHeight;
+    public Vector2 HitBoxPos;
 
     [Header("Inventory Variables")]
     public int InventorySize;

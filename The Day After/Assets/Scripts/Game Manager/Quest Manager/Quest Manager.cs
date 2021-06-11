@@ -50,17 +50,16 @@ public class QuestManager
     {
         //Tack on End of Quest Dialogue 
         GameObject.FindGameObjectWithTag("Dialogue Handler").SendMessage("QuestDialogueAdd", questData[currentQuestInt].QuestCompleteDialogue);
-
-        foreach (GameObject door in GameObject.FindGameObjectsWithTag("Door"))
+        
+        //open doors that we need too
+        GameObject[] temp = GameObject.FindGameObjectsWithTag("Door");
+        for (int i = 0; i < temp.Length; i++)
         {
-            if (door.name == questData[currentQuestInt].DoorToUnlock)
+            if (temp[i].name == questData[currentQuestInt].DoorToUnlock[i])
             {
-                gm.DoorHandler.UnlockDoor(door.name);
-                //failsafe open door that this object is attached too as well
-                gm.DoorHandler.UnlockDoor(door.GetComponent<InterObj>().Obj_Data.TargetDoor);
-                
-                Debug.Log($"Door { questData[currentQuestInt].DoorToUnlock } was unlocked");
-                Debug.Log($"Failsafe Target Door { door.GetComponent<InterObj>().Obj_Data.TargetDoor } was unlocked");
+                gm.DoorHandler.UnlockDoor(temp[i].name);
+
+                Debug.Log($"Door { temp[i].name } was unlocked");
             }
         }
 

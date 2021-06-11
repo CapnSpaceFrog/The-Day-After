@@ -15,16 +15,20 @@ MonoBehaviour:
   InterObjType: 1
   WhatToUpdate: 1
   WhenToUpdate: 3
-  DisplayDialogue: []
+  DisplayDialogue:
+  - debug added item
   DisplaySprite: []
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
+  QuestExhaustedDialogue: []
   InventoryFullDialogue:
   - debug inv full
   AddedToInventoryDialogue:
   - debug added item
+  InventoryIcon: {fileID: 21300000, guid: 106b418e241d71c4ea1ecc40fb52993d, type: 3}
   DecoDialogue: []
   RequiredItem: {fileID: 0}
+  IsExhausted: 0
   BeforeAnimsToPlay: []
   AfterAnimsToPlay: []
   InterObjAnim: {fileID: 0}

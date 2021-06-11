@@ -48,16 +48,9 @@ public class PlayerAnimator
         {
             player.Interact.Direction = FacingDirection.left;
         }
-        else if (inputHandler.NormInputY == 1)
-        {
-            player.Interact.Direction = FacingDirection.up;
-        }
-        else if (inputHandler.NormInputY == -1)
-        {
-            player.Interact.Direction = FacingDirection.down;
-        }
 
         player.Interact.UpdateInteractCastPosition();
+        Debug.Log("Updated Interact Cast Position");
         CheckIfShouldFlip();
     }
 
@@ -65,15 +58,15 @@ public class PlayerAnimator
     {
         if (currentState == newState) return;
 
+        if (newState == "PLAYER_CLOTHEDMOVE")
+        {
+            PLAYER_IDLE = "PLAYER_CLOTHEDIDLE";
+            PLAYER_MOVE = "PLAYER_CLOTHEDMOVE";
+        }
+
         playerAnim.Play(newState);
 
         currentState = newState;
-    }
-
-    public void GotDressed()
-    {
-        PLAYER_IDLE = "PLAYER_CLOTHEDIDLE";
-        PLAYER_MOVE = "PLAYER_CLOTHEDMOVE";
     }
 
     public void CheckIfShouldFlip()

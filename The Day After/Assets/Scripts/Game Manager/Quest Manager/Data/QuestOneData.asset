@@ -17,6 +17,10 @@ MonoBehaviour:
   - {fileID: 5884239028614387916, guid: 3e467677050a1d443bfa1a3d128e7e75, type: 3}
   - {fileID: 1085723653428616407, guid: f81086122e6dff04db3ca3171771835e, type: 3}
   - {fileID: 2300236930459176386, guid: 8c4b6ca0141bb584291caa8e42f8fca0, type: 3}
-  DoorToUnlock: Bedroom Door
+  DoorToUnlock:
+  - Bedroom Door
+  - Bedroom Hall Door
+  - Bathroom Hall Door
+  - Bathroom Door
   QuestCompleteDialogue:
   - debug bedroom door unlocked

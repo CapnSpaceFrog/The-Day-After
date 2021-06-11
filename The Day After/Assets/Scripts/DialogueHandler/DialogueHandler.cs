@@ -107,7 +107,7 @@ public class DialogueHandler : MonoBehaviour
 
     private void QuestDialogueAdd(string[] dialogueToAdd)
     {
-        Debug.Log("added quest finish dialogue");
+        Debug.Log("Added quest finish dialogue");
         for (int i = 0; i < dialogueToAdd.Length; i++)
         {
             dialogueToDisplay.Add(dialogueToAdd[i]);
