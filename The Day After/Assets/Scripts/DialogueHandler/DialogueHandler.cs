@@ -56,8 +56,9 @@ public class DialogueHandler : MonoBehaviour
         //Display dialogue in for loop and await user input to continue dialogue
         for (int i = 0; i < dialogueToDisplay.Count; i++)
         {
-            //How are we going to feed in different dialogue strings depending on interaction?
+            spriteDisplay.sprite = currentInterObj.Obj_Data.DisplaySprite[i];
             StartCoroutine(ShowText(dialogueToDisplay[i]));
+            
 
             //Wait for "Show Text" to finish before continuing
             yield return new WaitUntil(() => textDisplaying == false);
@@ -78,7 +79,7 @@ public class DialogueHandler : MonoBehaviour
         {
             currentText = fullText.Substring(0, i);
             displayText.text = currentText;
-            yield return new WaitForSeconds(textDisplayDelay);
+            yield return new WaitForSeconds(StaticGameData.CurrentDisplaySpeed);
         }
         textDisplaying = false;
     }

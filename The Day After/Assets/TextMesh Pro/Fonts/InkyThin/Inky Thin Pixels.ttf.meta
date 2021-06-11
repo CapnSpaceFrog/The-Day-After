@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f4c03225e8f49b047b184cf55475affd
+guid: beb7280b5b4b598418b4dc0f63a65adf
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - ThaleahFat
+  - Inky Thin Pixels
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

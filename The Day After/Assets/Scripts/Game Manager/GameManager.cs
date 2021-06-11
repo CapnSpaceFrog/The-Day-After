@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         if (Timer.HasTimeExpired())
         {
             Debug.Log("Game Time Expired");
-            StaticGameCompleteData.CompletedWithinTime = false;
+            StaticGameData.CompletedWithinTime = false;
 
             sceneLoader.LoadGameOver();
         }

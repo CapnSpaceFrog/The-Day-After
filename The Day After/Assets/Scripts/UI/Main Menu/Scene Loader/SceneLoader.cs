@@ -26,14 +26,24 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadGameplayLevel(0));
     }
 
-    public void LoadGameplay()
+    public void LoadPreGameplay()
     {
         StartCoroutine(LoadGameplayLevel(1));
     }
 
-    public void LoadGameOver()
+    public void LoadGameplay()
     {
         StartCoroutine(LoadGameplayLevel(2));
+    }
+
+    public void LoadGameOver()
+    {
+        StartCoroutine(LoadGameplayLevel(3));
+    }
+
+    public void LoadSceneByIndex(int sceneIndex)
+    {
+        StartCoroutine(LoadGameplayLevel(sceneIndex));
     }
     #endregion
 }
