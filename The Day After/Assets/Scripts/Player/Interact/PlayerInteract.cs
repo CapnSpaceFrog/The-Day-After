@@ -93,23 +93,24 @@ public class PlayerInteract
                 break;
 
             case InterType.Decoration:
-                //This object simply sends some dialogue to the Dialogue Handler
-                currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DecoDialogue);
                 Debug.Log("Deco Switch");
+                if (!currentInterObj.Obj_Data.IsExhausted) {
+                    currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DecoDialogue);
+                    currentInterObj.Obj_Data.IsExhausted = true;
+                } else {
+                    currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.ExhaustedDialogue);
+                }
                 break;
 
             case InterType.Door:
                 Debug.Log("Door Switch");
                 //Is this door unlocked? 
-                if (currentInterObj.Obj_Data.IsOpen)
-                {
+                if (currentInterObj.Obj_Data.IsOpen) {
                     gm.DoorHandler.DoorInteraction(currentInterObj);
 
                     //Dump inter object to prevent any strange dialogue interactions
                     DumpInterObj();
-                }
-                else 
-                {
+                } else {
                     //Display door locked dialogue
                     currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DoorLockedDialogue);
                 }
@@ -139,7 +140,7 @@ public class PlayerInteract
         Debug.Log("QuestEvent Switch");
         if (currentInterObj.Obj_Data.IsExhausted)
         {
-            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.QuestExhaustedDialogue);
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.ExhaustedDialogue);
             canSendQuest = false;
             return;
         }

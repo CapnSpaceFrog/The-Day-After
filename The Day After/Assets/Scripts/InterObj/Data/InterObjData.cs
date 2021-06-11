@@ -13,11 +13,11 @@ public class InterObjData : ScriptableObject
     [Header("Dialogue")]
     public List<string> DisplayDialogue;
     public Sprite[] DisplaySprite;
+    public string[] ExhaustedDialogue;
 
     [Header("QuestEvent Dialogue")]
     public string[] QuestEventDialogue;
     public string[] MissingQuestItemDialogue;
-    public string[] QuestExhaustedDialogue;
 
     [Header("Stored Dialogue")]
     public string[] InventoryFullDialogue;

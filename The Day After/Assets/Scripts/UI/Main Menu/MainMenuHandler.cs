@@ -39,12 +39,15 @@ public class MainMenuHandler : MonoBehaviour
 
     [SerializeField]
     private GameObject sceneLoader;
+    [SerializeField]
+    private GameObject skipButton;
 
     private IEnumerator OnGameStart()
     {
         UpdateMainButtonInteraction(false);
         mainButtonPanelAnim.Play("SUBMENU_FADEOUT");
         yield return new WaitForSeconds(3f);
+        skipButton.SetActive(true);
 
         //Begin player move animation
         meunPlayerAnim.Play("PLAYER_MENUANIM");
@@ -157,6 +160,11 @@ public class MainMenuHandler : MonoBehaviour
     public void OnQuitPress()
     {
         Application.Quit();
+    }
+
+    public void OnSkipPress()
+    {
+        SendMessageToScreenLoader();
     }
 
     private void UpdateMainButtonInteraction(bool ifInteractable)
