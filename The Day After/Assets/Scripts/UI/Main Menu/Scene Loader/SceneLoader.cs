@@ -11,29 +11,28 @@ public class SceneLoader : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
-    private IEnumerator LoadGameplayLevel()
+    private IEnumerator LoadGameplayLevel(int sceneIndex)
     {
         anim.Play("SCENELOADER_FADEIN");
-        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
-        SceneManager.LoadSceneAsync("Gameplay", LoadSceneMode.Single);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.25f);
+        SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Single);
     }
 
 
     #region Message Receivers
-    private void LoadGameplay()
+    public void LoadMainMenu()
     {
-        StartCoroutine(LoadGameplayLevel());
+        StartCoroutine(LoadGameplayLevel(0));
     }
 
-    private void LoadMainMenu()
+    public void LoadGameplay()
     {
-        SceneManager.LoadScene("Main Menu");
+        StartCoroutine(LoadGameplayLevel(1));
     }
 
-    private void LoadGameOver()
+    public void LoadGameOver()
     {
-        SceneManager.LoadScene("Game Over");
+        StartCoroutine(LoadGameplayLevel(2));
     }
     #endregion
 }
