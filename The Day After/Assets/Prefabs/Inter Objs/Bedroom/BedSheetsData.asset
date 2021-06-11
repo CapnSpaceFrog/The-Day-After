@@ -13,26 +13,26 @@ MonoBehaviour:
   m_Name: BedSheetsData
   m_EditorClassIdentifier: 
   InterObjType: 2
-  WhatToUpdate: 1
+  WhatToUpdate: 2
   WhenToUpdate: 1
   DisplayDialogue:
   - Finished Bedsheets
-  - debug bedroom door unlocked
-  DisplaySprite: []
+  DisplaySprite:
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  ExhaustedDialogue: []
   QuestEventDialogue:
   - Finished Bedsheets
   MissingQuestItemDialogue:
   - Missing Requirement for Quest (Debug)
-  QuestExhaustedDialogue:
-  - The Bedsheets have been exhausted
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
+  InventoryIcon: {fileID: 0}
   DecoDialogue: []
   RequiredItem: {fileID: 0}
   IsExhausted: 1
   BeforeAnimsToPlay: []
   AfterAnimsToPlay:
-  - 
+  - PLAYER_CLOTHEDIDLE
   - SHEETS_CLEAN
   InterObjAnim: {fileID: 0}
   IsOpen: 0

@@ -58,7 +58,7 @@ public class PlayerAnimator
     {
         if (currentState == newState) return;
 
-        if (newState == "PLAYER_CLOTHEDMOVE")
+        if (newState == "PLAYER_CLOTHEDIDLE")
         {
             PLAYER_IDLE = "PLAYER_CLOTHEDIDLE";
             PLAYER_MOVE = "PLAYER_CLOTHEDMOVE";

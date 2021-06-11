@@ -71,7 +71,7 @@ public class PlayerInteract
 
     public void CheckInteractCast()
     {
-        Collider2D hit = Physics2D.OverlapArea(castPositionBotRight, castPositionTopLeft, p_data.whatIsInterObj);
+        Collider2D hit = Physics2D.OverlapArea(castPositionBotRight, castPositionTopLeft, p_data.whatIsInterObj, 1, 5);
 
         if (hit != null) {
             currentInterObj = hit.GetComponent<InterObj>();

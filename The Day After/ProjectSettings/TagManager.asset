@@ -10,6 +10,7 @@ TagManager:
   - Door
   - Room Transition Panel
   - Main Menu Handler
+  - UI Handler
   layers:
   - Default
   - TransparentFX

@@ -29,7 +29,7 @@ public class MainMenuHandler : MonoBehaviour
     [SerializeField]
     private float textDisplayDelay;
     [SerializeField]
-    private float betweenTextDisplayTime;
+    private float betweenTextDisplayDelay;
     [SerializeField]
     private string[] dialogueToDisplay;
 
@@ -79,7 +79,7 @@ public class MainMenuHandler : MonoBehaviour
 
         textDisplayAnim.Play("SUBMENU_FADEIN");
 
-        yield return new WaitForSeconds(betweenTextDisplayTime);
+        yield return new WaitForSeconds(betweenTextDisplayDelay);
 
         textDisplayAnim.Play("SUBMENU_FADEOUT");
         yield return new WaitForSeconds(1.85f);
@@ -90,7 +90,7 @@ public class MainMenuHandler : MonoBehaviour
     private void SendMessageToScreenLoader()
     {
         //Send a message to the scene loader to transition scenes
-        sceneLoader.SendMessage("LoadGameplay");
+        sceneLoader.SendMessage("LoadPreGameplay");
         Debug.Log("Moving to Gameplay Scene");
     }
 
