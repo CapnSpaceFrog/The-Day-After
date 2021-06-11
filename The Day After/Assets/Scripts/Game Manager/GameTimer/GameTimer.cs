@@ -7,9 +7,10 @@ public class GameTimer
     private float startTime;
     private float gameplayLength;
 
-    public GameTimer()
+    public GameTimer(float gameTime)
     {
         startTime = Time.time;
+        gameplayLength = gameTime;
     }
 
     public bool HasTimeExpired()
