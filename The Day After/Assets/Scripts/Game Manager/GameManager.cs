@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private SceneLoader sceneLoader;
 
+    [SerializeField]
+    private float gameTime;
+
     #region Quest Components
     public QuestManager QuestManager { get; private set; }
 
@@ -24,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerRef = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
-        Timer = new GameTimer();
+        Timer = new GameTimer(gameTime);
 
         QuestManager = new QuestManager(questData, this);
         DialogueActionHandler = new DialogueActionHandler(PlayerRef, this);
@@ -37,6 +40,7 @@ public class GameManager : MonoBehaviour
 
         if (Timer.HasTimeExpired())
         {
+            Debug.Log("Game Time Expired");
             StaticGameCompleteData.CompletedWithinTime = false;
 
             sceneLoader.LoadGameOver();
