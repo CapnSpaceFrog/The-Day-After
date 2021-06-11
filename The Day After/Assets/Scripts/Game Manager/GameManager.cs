@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public Player PlayerRef { get; private set; }
     public DoorHandler DoorHandler { get; private set; }
 
+    [SerializeField]
+    private SceneLoader sceneLoader;
+
     #region Quest Components
     public QuestManager QuestManager { get; private set; }
 
@@ -34,7 +37,9 @@ public class GameManager : MonoBehaviour
 
         if (Timer.HasTimeExpired())
         {
-            //Trigger Game Over Sequence Regardless of players current interaction
+            StaticGameCompleteData.CompletedWithinTime = false;
+
+            sceneLoader.LoadGameOver();
         }
     }
 
