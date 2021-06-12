@@ -16,12 +16,14 @@ public class InterObj : MonoBehaviour
     }
 
     //Sets Display String to whatever string array overide we want
-    public void OverrideDisplayString(string[] stringOverride)
+    public void OverrideDisplayString(string[] stringOverride, Sprite[] spriteOverride)
     {
         Obj_Data.DisplayDialogue = new List<string>(new string[stringOverride.Length]);
+        Obj_Data.DisplaySprite = new List<Sprite>(new Sprite[spriteOverride.Length]);
         for (int i = 0; i < stringOverride.Length; i++)
         {
             Obj_Data.DisplayDialogue[i] = stringOverride[i];
+            Obj_Data.DisplaySprite[i] = spriteOverride[i];
         }
     }
 

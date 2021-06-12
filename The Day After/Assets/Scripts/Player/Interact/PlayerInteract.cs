@@ -15,7 +15,7 @@ public class PlayerInteract
 
     private InterObj currentInterObj;
 
-    private bool canSendQuest;
+    private bool sendToActionHandler;
 
     private FacingDirection direction;
     
@@ -93,28 +93,11 @@ public class PlayerInteract
                 break;
 
             case InterType.Decoration:
-                Debug.Log("Deco Switch");
-                if (!currentInterObj.Obj_Data.IsExhausted) {
-                    currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DecoDialogue);
-                    currentInterObj.Obj_Data.IsExhausted = true;
-                } else {
-                    currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.ExhaustedDialogue);
-                }
+                VerifyDecoSwitch();
                 break;
 
             case InterType.Door:
-                Debug.Log("Door Switch");
-                //Is this door unlocked? 
-                if (currentInterObj.Obj_Data.IsOpen) {
-                    gm.DoorHandler.DoorInteraction(currentInterObj);
-
-                    //Dump inter object to prevent any strange dialogue interactions
-                    DumpInterObj();
-                } else {
-                    //Display door locked dialogue
-                    currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DoorLockedDialogue);
-                }
-                
+                VerifyDoorSwitch();
                 break;
         }
 
@@ -140,33 +123,33 @@ public class PlayerInteract
         Debug.Log("QuestEvent Switch");
         if (currentInterObj.Obj_Data.IsExhausted)
         {
-            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.ExhaustedDialogue);
-            canSendQuest = false;
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.ExhaustedDialogue, currentInterObj.Obj_Data.ExhaustedSprites);
+            sendToActionHandler = false;
             return;
         }
         
         if (player.InvManager.FindItemInInv(currentInterObj.Obj_Data.RequiredItem))
         {
             //Found item in inventory, progress quest and display dialogue
-            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.QuestEventDialogue);
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.QuestEventDialogue, currentInterObj.Obj_Data.QuestEventSprites);
 
             //Send data to game manager, which will then send data to dialogue handler once quest is complete
             gm.SendMessage("ReceivedQuestRequirement", currentInterObj.gameObject);
             
-            canSendQuest = true;
+            sendToActionHandler = true;
             currentInterObj.Obj_Data.IsExhausted = true;
         }
         else
         {
             //Item was not found, do not progress quest and display correct dialogue
-            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.MissingQuestItemDialogue);
-            canSendQuest = false;
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.MissingQuestItemDialogue, currentInterObj.Obj_Data.MissingQuestItemSprites);
+            sendToActionHandler = false;
         }
     }
 
     private void SendObjToActionHandler()
     {
-        if (canSendQuest)
+        if (sendToActionHandler)
         {
             gm.SendMessage("SendToActionHandler", currentInterObj);
         }
@@ -175,16 +158,61 @@ public class PlayerInteract
     private void VerifyStorableSwitch()
     {
         Debug.Log("Storable Switch");
-        if (player.InvManager.AddItemToInv(currentInterObj.gameObject))
+        if (!currentInterObj.Obj_Data.IsExhausted && player.InvManager.AddItemToInv(currentInterObj.gameObject))
         {
-            //Item successfully added, do not display inventory is full
-            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.AddedToInventoryDialogue);
-            currentInterObj.gameObject.SetActive(false);
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.AddedToInventoryDialogue, currentInterObj.Obj_Data.AddedToInvSprites);
+
+            if (currentInterObj.Obj_Data.ShouldBeDisabled)
+            {
+                currentInterObj.gameObject.SetActive(false);
+            }
+
+            sendToActionHandler = true;
+            currentInterObj.Obj_Data.IsExhausted = true;
         }
         else
         {
-            //Inventory was full, display inventory full dialogue
-            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.InventoryFullDialogue);
+            if (currentInterObj.Obj_Data.IsExhausted)
+            {
+                currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.ExhaustedDialogue, currentInterObj.Obj_Data.ExhaustedSprites);
+            }
+            else
+            {
+                currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.InventoryFullDialogue, currentInterObj.Obj_Data.InventoryFullSprites);
+            }
+            sendToActionHandler = false;
+        }
+    }
+
+    private void VerifyDecoSwitch()
+    {
+        Debug.Log("Deco Switch");
+        if (!currentInterObj.Obj_Data.IsExhausted)
+        {
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DecoDialogue, currentInterObj.Obj_Data.DecoSprites);
+            currentInterObj.Obj_Data.IsExhausted = true;
+        }
+        else
+        {
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.ExhaustedDialogue, currentInterObj.Obj_Data.ExhaustedSprites);
+        }
+    }
+
+    private void VerifyDoorSwitch()
+    {
+        Debug.Log("Door Switch");
+        //Is this door unlocked? 
+        if (currentInterObj.Obj_Data.IsOpen)
+        {
+            gm.DoorHandler.DoorInteraction(currentInterObj);
+
+            //Dump inter object to prevent any strange dialogue interactions
+            DumpInterObj();
+        }
+        else
+        {
+            //Display door locked dialogue
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DoorLockedDialogue, currentInterObj.Obj_Data.DoorLockedSprites);
         }
     }
     #endregion

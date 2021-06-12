@@ -17,9 +17,10 @@ MonoBehaviour:
   WhenToUpdate: 3
   DisplayDialogue: []
   DisplaySprite: []
+  ExhaustedDialogue: []
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
-  QuestExhaustedDialogue: []
+  ShouldBeDisabled: 1
   InventoryFullDialogue:
   - debug inv full
   AddedToInventoryDialogue:

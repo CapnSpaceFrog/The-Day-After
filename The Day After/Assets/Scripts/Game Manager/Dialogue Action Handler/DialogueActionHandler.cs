@@ -64,6 +64,12 @@ public class DialogueActionHandler
 
             case UpdateTime.both:
                 Debug.Log("Switch Before and After Dialogue");
+                animsToPlay[0] = currentInterObj.Obj_Data.BeforeAnimsToPlay[0];
+                animsToPlay[1] = currentInterObj.Obj_Data.BeforeAnimsToPlay[1];
+                CheckWhatToUpdate(animsToPlay);
+                animsToPlay[0] = currentInterObj.Obj_Data.AfterAnimsToPlay[0];
+                animsToPlay[1] = currentInterObj.Obj_Data.AfterAnimsToPlay[1];
+                gm.StartCoroutine(UpdateAfterDialogue(animsToPlay));
                 break;
         }
     }

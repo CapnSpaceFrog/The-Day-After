@@ -10,29 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 891b4a6fc961b944fa7d579264b76b5e, type: 3}
-  m_Name: ClothesPileData
+  m_Name: DownstairsHallwayStairData
   m_EditorClassIdentifier: 
-  InterObjType: 1
-  WhatToUpdate: 1
+  InterObjType: 3
+  WhatToUpdate: 0
   WhenToUpdate: 3
-  DisplayDialogue:
-  - debug added item
+  DisplayDialogue: []
   DisplaySprite: []
   ExhaustedDialogue: []
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
-  ShouldBeDisabled: 1
-  InventoryFullDialogue:
-  - debug inv full
-  AddedToInventoryDialogue:
-  - debug added item
-  InventoryIcon: {fileID: 21300000, guid: 106b418e241d71c4ea1ecc40fb52993d, type: 3}
+  InventoryFullDialogue: []
+  AddedToInventoryDialogue: []
+  InventoryIcon: {fileID: 0}
   DecoDialogue: []
   RequiredItem: {fileID: 0}
   IsExhausted: 0
   BeforeAnimsToPlay: []
   AfterAnimsToPlay: []
   InterObjAnim: {fileID: 0}
-  IsOpen: 0
-  TargetDoor: 
+  IsOpen: 1
+  TargetDoor: Upstairs Hallway Stairs
   DoorLockedDialogue: []
