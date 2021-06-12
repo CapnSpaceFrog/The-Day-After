@@ -18,6 +18,7 @@ public class QuestManager
     private QuestData[] questData;
 
     public Quest CurrentQuest { get; private set; }
+    public Quest FinalQuest { get; private set; }
     private int currentQuestInt;
 
     //Currently no information being passed into the quests to know if they are completed or not
@@ -31,6 +32,7 @@ public class QuestManager
 
         
         quests = new Quest[] { QuestOne, QuestTwo, QuestThree, QuestFour, QuestFive };
+        FinalQuest = quests[quests.Length - 1];
 
         this.questData = questData;
         this.gm = gm;
@@ -42,6 +44,11 @@ public class QuestManager
     {
         if (CurrentQuest.QuestComplete)
         {
+            if (CurrentQuest == FinalQuest)
+            {
+                gm.GameCompleted();
+                return;
+            }
             UpdateActiveQuest();
         }
     }

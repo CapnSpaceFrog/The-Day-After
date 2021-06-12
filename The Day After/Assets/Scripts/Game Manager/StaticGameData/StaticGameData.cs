@@ -19,9 +19,9 @@ public static class StaticGameData
         }
     }
 
-    public static float SlowTextSpeed;
-    public static float MediumTextSpeed;
-    public static float FastTextSpeed;
+    public static float SlowTextSpeed = 0.050f;
+    public static float MediumTextSpeed = 0.025f;
+    public static float FastTextSpeed = 0.005f;
 
     public static float CurrentDisplaySpeed = 0.025f;
 }

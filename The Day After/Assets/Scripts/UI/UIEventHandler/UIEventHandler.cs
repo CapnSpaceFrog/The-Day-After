@@ -25,6 +25,8 @@ public class UIEventHandler : MonoBehaviour
     [SerializeField]
     private int sceneIndexToLoad;
 
+    private List<string> dialogueToDisplay;
+    private List<Sprite> spritesToDisplay;
     //Should turn this into a constant we can access
 
     private bool textDisplaying;
@@ -32,16 +34,23 @@ public class UIEventHandler : MonoBehaviour
     private void Awake()
     {
         StartCoroutine(BeginEvent());
+        if (StaticGameData.CompletedWithinTime == true)
+        {
+            OverrideDisplay(eventData.FinishedInTimeDialogue, eventData.FinishedInTimeSpriteDisplay);
+        } else {
+            OverrideDisplay(eventData.DialogueToDisplay, eventData.SpritesToDisplay);
+        } 
         skipButton.SetActive(true);
     }
 
     private IEnumerator BeginEvent()
     {
+        yield return new WaitForSeconds(1.25f);
         dialogueAnim.SetBool("fadein", true);
-        for (int i = 0; i < eventData.DialogueToDisplay.Length; i++)
+        for (int i = 0; i < dialogueToDisplay.Count; i++)
         {
-            displaySprite.sprite = eventData.SpritesToDisplay[i];
-            StartCoroutine(ShowText(eventData.DialogueToDisplay[i]));
+            displaySprite.sprite = spritesToDisplay[i];
+            StartCoroutine(ShowText(dialogueToDisplay[i]));
 
             //Wait for "Show Text" to finish before continuing
             yield return new WaitUntil(() => textDisplaying == false);
@@ -86,13 +95,24 @@ public class UIEventHandler : MonoBehaviour
     {
         if (loadSceneAfterFinish)
         {
+            yield return new WaitForSeconds(2f);
             sceneLoader.LoadSceneByIndex(sceneIndexToLoad);
             yield break;
         }
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(2f);
 
         //since we aren't loading another scene yet, this is the end game
         sceneLoader.LoadMainMenu();
+    }
+    private void OverrideDisplay(string[] stringOverride, Sprite[] spriteOverride)
+    {
+        dialogueToDisplay = new List<string>(new string[stringOverride.Length]);
+        spritesToDisplay = new List<Sprite>(new Sprite[spriteOverride.Length]);
+        for (int i = 0; i < stringOverride.Length; i++)
+        {
+            dialogueToDisplay[i] = stringOverride[i];
+            spritesToDisplay[i] = spriteOverride[i];
+        }
     }
 
     private void ClearText()

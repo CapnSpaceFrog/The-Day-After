@@ -885,7 +885,7 @@ GameObject:
   - component: {fileID: 1331134645}
   m_Layer: 0
   m_Name: UIHandler
-  m_TagString: Untagged
+  m_TagString: UI Handler
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1220,6 +1220,7 @@ GameObject:
   - component: {fileID: 1996938022}
   - component: {fileID: 1996938021}
   - component: {fileID: 1996938020}
+  - component: {fileID: 1996938024}
   m_Layer: 5
   m_Name: Dialogue Panel
   m_TagString: Dialogue Handler
@@ -1317,3 +1318,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996938018}
   m_CullTransparentMesh: 1
+--- !u!114 &1996938024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996938018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feed1013c0668f14690a6f0ae9d5da54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
