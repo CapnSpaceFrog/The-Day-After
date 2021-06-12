@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: -7610248077789949484
     second: Kitchen
+  - first:
+      213: 1805239239011040371
+    second: Downstairs Hallway
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -114,7 +117,7 @@ TextureImporter:
         width: 242
         height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -122,6 +125,27 @@ TextureImporter:
       bones: []
       spriteID: 4d11bbea1b7f26690800000000000000
       internalID: -7610248077789949484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Downstairs Hallway
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 145
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c79d7f58f7d0910800000000000000
+      internalID: 1805239239011040371
       vertices: []
       indices: 
       edges: []
