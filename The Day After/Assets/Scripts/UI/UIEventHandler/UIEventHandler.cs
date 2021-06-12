@@ -10,6 +10,7 @@ public class UIEventHandler : MonoBehaviour
 {
     [SerializeField]
     private SceneLoader sceneLoader;
+    [SerializeField] private Animator sceneLoaderAnim;
     [SerializeField]
     private GameObject skipButton;
     [SerializeField]
@@ -41,6 +42,11 @@ public class UIEventHandler : MonoBehaviour
 
     private bool textDisplaying;
 
+    [Header("Post Game Anims")]
+    public Animator playerAnim;
+    public Animator momAnim;
+    public Animator cameraAnim;
+
     private void Awake()
     {
         StartCoroutine(BeginEvent());
@@ -66,12 +72,29 @@ public class UIEventHandler : MonoBehaviour
             //Fade in at this certain dialogue mark if its the pre event
             if (eventData.IsPreEvent && dialogueToDisplay[i] == dialogueToDisplay[3])
             {
-                sceneLoader.GetComponent<Animator>().Play("SCENELOADER_FADEOUT");
+                sceneLoaderAnim.Play("SCENELOADER_FADEOUT");
                 preGameplayAnim.Play("PreGameplayEvent");
             }
+
+            if (!eventData.IsPreEvent && dialogueToDisplay[i] == dialogueToDisplay[3])
+            {
+                sceneLoaderAnim.Play("SCENELOADER_FADEOUT");
+                cameraAnim.Play("CAMERA_MOVE");
+                playerAnim.Play("PLAYER_STARTMOVE");
+            }
+            
             //Wait for "Show Text" to finish before continuing
             yield return new WaitUntil(() => textDisplaying == false);
 
+            if (!eventData.IsPreEvent && dialogueToDisplay[i] == dialogueToDisplay[6])
+            {
+                momAnim.Play("MOM_DROPBAGS");
+            }
+
+            if (!eventData.IsPreEvent && dialogueToDisplay[i] == dialogueToDisplay[8])
+            {
+                playerAnim.Play("PLAYER_MOVETOHUG");
+            }
             //Disply "press space to continue" once dialogue has displayed
 
             yield return WaitForKeyPress(Key.Space);
@@ -123,8 +146,9 @@ public class UIEventHandler : MonoBehaviour
 
     private IEnumerator EndGameFinish()
     {
-        sceneLoader.GetComponent<Animator>().Play("SCENELOADER_FADEIN");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3.5f);
+        sceneLoaderAnim.Play("SCENELOADER_FADEIN");
+        yield return new WaitForSeconds(5f);
 
         for (int i = 0; i < endDialogue.Length; i++)
         {
