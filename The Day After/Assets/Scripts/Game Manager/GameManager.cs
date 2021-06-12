@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
         QuestManager = new QuestManager(questData, this);
         DialogueActionHandler = new DialogueActionHandler(PlayerRef, this);
         DoorHandler = new DoorHandler(PlayerRef, this);
+
+        sceneLoader.GetComponent<Animator>().Play("SCENELOADER_FADEOUT");
     }
 
     private void Update()

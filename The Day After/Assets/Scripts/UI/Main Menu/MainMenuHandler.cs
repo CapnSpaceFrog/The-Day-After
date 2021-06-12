@@ -46,6 +46,11 @@ public class MainMenuHandler : MonoBehaviour
     [SerializeField]
     private GameObject skipButton;
 
+
+    private void Awake()
+    {
+        sceneLoader.GetComponent<Animator>().Play("SCENELOADER_FADEOUT");
+    }
     private IEnumerator OnGameStart()
     {
         UpdateMainButtonInteraction(false);

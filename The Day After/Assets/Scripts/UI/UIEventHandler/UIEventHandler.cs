@@ -24,6 +24,8 @@ public class UIEventHandler : MonoBehaviour
     private bool loadSceneAfterFinish;
     [SerializeField]
     private int sceneIndexToLoad;
+    [SerializeField]
+    private Animator preGameplayAnim;
 
     private List<string> dialogueToDisplay;
     private List<Sprite> spritesToDisplay;
@@ -54,12 +56,19 @@ public class UIEventHandler : MonoBehaviour
     private IEnumerator BeginEvent()
     {
         yield return new WaitForSeconds(1.25f);
+        dialogueAnim.GetComponent<Canvas>().sortingOrder = 6;
         dialogueAnim.SetBool("fadein", true);
         for (int i = 0; i < dialogueToDisplay.Count; i++)
         {
-            displaySprite.sprite = spritesToDisplay[i];
+            displaySprite.sprite = spritesToDisplay[i]; 
             StartCoroutine(ShowText(dialogueToDisplay[i]));
 
+            //Fade in at this certain dialogue mark if its the pre event
+            if (eventData.IsPreEvent && dialogueToDisplay[i] == dialogueToDisplay[3])
+            {
+                sceneLoader.GetComponent<Animator>().Play("SCENELOADER_FADEOUT");
+                preGameplayAnim.Play("PreGameplayEvent");
+            }
             //Wait for "Show Text" to finish before continuing
             yield return new WaitUntil(() => textDisplaying == false);
 
