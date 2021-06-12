@@ -1306,6 +1306,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c05523e34cee83b4784e9fb9c99b466e, type: 3}
+--- !u!95 &1407136302 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4737595440573560756, guid: c05523e34cee83b4784e9fb9c99b466e, type: 3}
+  m_PrefabInstance: {fileID: 1407136301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1653780287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,6 +1823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 60257298}
+  sceneLoaderAnim: {fileID: 1407136302}
   skipButton: {fileID: 367950576}
   eventData: {fileID: 11400000, guid: ff6f586ce014e844786b5177c5184fc9, type: 2}
   dialogueAnim: {fileID: 198959922}
@@ -1829,6 +1835,9 @@ MonoBehaviour:
   endDialogueAnim: {fileID: 0}
   endDialogue: []
   endText: {fileID: 0}
+  playerAnim: {fileID: 0}
+  momAnim: {fileID: 0}
+  cameraAnim: {fileID: 0}
 --- !u!4 &1854110031
 Transform:
   m_ObjectHideFlags: 0
