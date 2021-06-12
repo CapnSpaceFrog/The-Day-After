@@ -142,5 +142,6 @@ public class UIEventHandler : MonoBehaviour
     private void ClearText()
     {
         displayText.text = "";
+        displaySprite.sprite = Resources.Load<Sprite>("Sprites/Empty");
     }
 }

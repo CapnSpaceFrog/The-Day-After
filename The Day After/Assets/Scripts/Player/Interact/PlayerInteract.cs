@@ -123,7 +123,7 @@ public class PlayerInteract
         Debug.Log("QuestEvent Switch");
         if (currentInterObj.Obj_Data.IsExhausted)
         {
-            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.ExhaustedDialogue, currentInterObj.Obj_Data.ExhaustedSprites);
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.ExhaustedDialogue);
             sendToActionHandler = false;
             return;
         }
@@ -131,7 +131,7 @@ public class PlayerInteract
         if (player.InvManager.FindItemInInv(currentInterObj.Obj_Data.RequiredItem))
         {
             //Found item in inventory, progress quest and display dialogue
-            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.QuestEventDialogue, currentInterObj.Obj_Data.QuestEventSprites);
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.QuestEventDialogue);
 
             //Send data to game manager, which will then send data to dialogue handler once quest is complete
             gm.SendMessage("ReceivedQuestRequirement", currentInterObj.gameObject);
@@ -142,7 +142,7 @@ public class PlayerInteract
         else
         {
             //Item was not found, do not progress quest and display correct dialogue
-            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.MissingQuestItemDialogue, currentInterObj.Obj_Data.MissingQuestItemSprites);
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.MissingQuestItemDialogue);
             sendToActionHandler = false;
         }
     }
@@ -160,7 +160,7 @@ public class PlayerInteract
         Debug.Log("Storable Switch");
         if (!currentInterObj.Obj_Data.IsExhausted && player.InvManager.AddItemToInv(currentInterObj.gameObject))
         {
-            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.AddedToInventoryDialogue, currentInterObj.Obj_Data.AddedToInvSprites);
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.AddedToInventoryDialogue);
 
             if (currentInterObj.Obj_Data.ShouldBeDisabled)
             {
@@ -174,11 +174,11 @@ public class PlayerInteract
         {
             if (currentInterObj.Obj_Data.IsExhausted)
             {
-                currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.ExhaustedDialogue, currentInterObj.Obj_Data.ExhaustedSprites);
+                currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.ExhaustedDialogue);
             }
             else
             {
-                currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.InventoryFullDialogue, currentInterObj.Obj_Data.InventoryFullSprites);
+                currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.InventoryFullDialogue);
             }
             sendToActionHandler = false;
         }
@@ -189,12 +189,12 @@ public class PlayerInteract
         Debug.Log("Deco Switch");
         if (!currentInterObj.Obj_Data.IsExhausted)
         {
-            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DecoDialogue, currentInterObj.Obj_Data.DecoSprites);
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DecoDialogue);
             currentInterObj.Obj_Data.IsExhausted = true;
         }
         else
         {
-            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.ExhaustedDialogue, currentInterObj.Obj_Data.ExhaustedSprites);
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.ExhaustedDialogue);
         }
     }
 
@@ -212,7 +212,7 @@ public class PlayerInteract
         else
         {
             //Display door locked dialogue
-            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DoorLockedDialogue, currentInterObj.Obj_Data.DoorLockedSprites);
+            currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DoorLockedDialogue);
         }
     }
     #endregion

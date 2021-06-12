@@ -12,22 +12,20 @@ public class InterObjData : ScriptableObject
 
     [Header("Dialogue")]
     public List<string> DisplayDialogue;
-    public List<Sprite> DisplaySprite;
+    [HideInInspector]
+    public Sprite DisplaySprite;
+    public bool HasPJSprite;
     public string[] ExhaustedDialogue;
-    public Sprite[] ExhaustedSprites;
 
     [Header("QuestEvent Dialogue")]
     public string[] QuestEventDialogue;
     public Sprite[] QuestEventSprites;
     public string[] MissingQuestItemDialogue;
-    public Sprite[] MissingQuestItemSprites;
 
     [Header("Stored Dialogue")]
     public bool ShouldBeDisabled;
     public string[] InventoryFullDialogue;
-    public Sprite[] InventoryFullSprites;
     public string[] AddedToInventoryDialogue;
-    public Sprite[] AddedToInvSprites;
     public Sprite InventoryIcon;
 
     [Header("Deco Dialogue")]
@@ -48,7 +46,6 @@ public class InterObjData : ScriptableObject
     public bool IsOpen;
     public string TargetDoor;
     public string[] DoorLockedDialogue;
-    public Sprite[] DoorLockedSprites;
 }
 
 public enum InterType

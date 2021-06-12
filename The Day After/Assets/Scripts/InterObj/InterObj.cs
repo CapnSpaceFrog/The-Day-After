@@ -13,17 +13,22 @@ public class InterObj : MonoBehaviour
         Obj_Data.InterObjAnim = GetComponent<Animator>();
         Obj_Data.IsOpen = false;
         Obj_Data.IsExhausted = false;
+        if (Obj_Data.HasPJSprite)
+        {
+            Obj_Data.DisplaySprite = Resources.Load<Sprite>("Sprites/PJSprite");
+        } else
+        {
+            Obj_Data.DisplaySprite = Resources.Load<Sprite>("Sprites/ClothedSprite");
+        }
     }
 
     //Sets Display String to whatever string array overide we want
-    public void OverrideDisplayString(string[] stringOverride, Sprite[] spriteOverride)
+    public void OverrideDisplayString(string[] stringOverride)
     {
         Obj_Data.DisplayDialogue = new List<string>(new string[stringOverride.Length]);
-        Obj_Data.DisplaySprite = new List<Sprite>(new Sprite[spriteOverride.Length]);
         for (int i = 0; i < stringOverride.Length; i++)
         {
             Obj_Data.DisplayDialogue[i] = stringOverride[i];
-            Obj_Data.DisplaySprite[i] = spriteOverride[i];
         }
     }
 

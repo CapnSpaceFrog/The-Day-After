@@ -46,13 +46,11 @@ public class DialogueHandler : MonoBehaviour
 
     private IEnumerator DisplayDialogue()
     {
+        spriteDisplay.sprite = currentInterObj.Obj_Data.DisplaySprite;
         //Display dialogue in for loop and await user input to continue dialogue
         for (int i = 0; i < dialogueToDisplay.Count; i++)
         {
-            spriteDisplay.sprite = currentInterObj.Obj_Data.DisplaySprite[i];
             StartCoroutine(ShowText(dialogueToDisplay[i]));
-            
-
             //Wait for "Show Text" to finish before continuing
             yield return new WaitUntil(() => textDisplaying == false);
 
@@ -108,10 +106,4 @@ public class DialogueHandler : MonoBehaviour
             dialogueToDisplay.Add(dialogueToAdd[i]);
         }
     }
-
-    /*
-    Dialogue display box needs to display
-    A) Update player sprite based on dialogue string
-    B) Inform game manager of quest completion and to progress quest requirements
-    */
 }
