@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891b4a6fc961b944fa7d579264b76b5e, type: 3}
+  m_Name: FridgeData
+  m_EditorClassIdentifier: 
+  InterObjType: 1
+  WhatToUpdate: 1
+  WhenToUpdate: 2
+  DisplayDialogue:
+  - debug added item to inv
+  DisplaySprite:
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  ExhaustedDialogue:
+  - debug exhausted dialogue
+  ExhaustedSprites:
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  QuestEventDialogue: []
+  QuestEventSprites: []
+  MissingQuestItemDialogue: []
+  MissingQuestItemSprites: []
+  ShouldBeDisabled: 0
+  InventoryFullDialogue:
+  - debug inv full
+  InventoryFullSprites:
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  AddedToInventoryDialogue:
+  - debug added item to inv
+  AddedToInvSprites:
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  InventoryIcon: {fileID: 21300000, guid: 134627b4e734c664b85a0bdc5641bb20, type: 3}
+  DecoDialogue: []
+  DecoSprites: []
+  RequiredItem: {fileID: 0}
+  IsExhausted: 1
+  BeforeAnimsToPlay:
+  - 
+  - FRIDGE_OPEN
+  AfterAnimsToPlay:
+  - 
+  - FRIDGE_CLOSED
+  InterObjAnim: {fileID: 0}
+  IsOpen: 0
+  TargetDoor: 
+  DoorLockedDialogue: []
+  DoorLockedSprites: []

@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 891b4a6fc961b944fa7d579264b76b5e, type: 3}
-  m_Name: BathHallDoorData
+  m_Name: UpstairsHallwayStairData
   m_EditorClassIdentifier: 
   InterObjType: 3
   WhatToUpdate: 0
   WhenToUpdate: 3
   DisplayDialogue:
-  - This dialogue should tell me to do something else before I try to enter this
-    room.
-  DisplaySprite: []
+  - 'quest 2 incomplete (debug line) '
+  DisplaySprite:
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  ExhaustedDialogue: []
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
-  FinishedQuestDialogue: []
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
+  InventoryIcon: {fileID: 0}
   DecoDialogue: []
   RequiredItem: {fileID: 0}
+  IsExhausted: 0
   BeforeAnimsToPlay: []
   AfterAnimsToPlay: []
   InterObjAnim: {fileID: 0}
   IsOpen: 1
-  TargetDoor: Bathroom Door
+  TargetDoor: Downstairs Hallway Stairs
   DoorLockedDialogue:
-  - This dialogue should tell me to do something else before I try to enter this
-    room.
-  PlayerSpawnPos: {fileID: 0}
+  - 'quest 2 incomplete (debug line) '

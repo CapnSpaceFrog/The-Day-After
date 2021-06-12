@@ -27,6 +27,14 @@ public class UIEventHandler : MonoBehaviour
 
     private List<string> dialogueToDisplay;
     private List<Sprite> spritesToDisplay;
+
+    [Header("End Dialogue")]
+    [SerializeField]
+    private Animator endDialogueAnim;
+    [SerializeField]
+    private string[] endDialogue;
+    [SerializeField]
+    private TextMeshProUGUI endText;
     //Should turn this into a constant we can access
 
     private bool textDisplaying;
@@ -99,11 +107,27 @@ public class UIEventHandler : MonoBehaviour
             sceneLoader.LoadSceneByIndex(sceneIndexToLoad);
             yield break;
         }
+
+        //Not loading a scene, so this is the "end game" scene
+        StartCoroutine(EndGameFinish());
+    }
+
+    private IEnumerator EndGameFinish()
+    {
+        sceneLoader.GetComponent<Animator>().Play("SCENELOADER_FADEIN");
         yield return new WaitForSeconds(2f);
 
-        //since we aren't loading another scene yet, this is the end game
+        for (int i = 0; i < endDialogue.Length; i++)
+        {
+            endText.text = endDialogue[i];
+            endDialogueAnim.Play("SUBMENU_FADEIN");
+            yield return new WaitForSeconds(4f);
+            endDialogueAnim.Play("SUBMENU_FADEOUT");
+            yield return new WaitForSeconds(1.45f);
+        }
         sceneLoader.LoadMainMenu();
     }
+
     private void OverrideDisplay(string[] stringOverride, Sprite[] spriteOverride)
     {
         dialogueToDisplay = new List<string>(new string[stringOverride.Length]);
