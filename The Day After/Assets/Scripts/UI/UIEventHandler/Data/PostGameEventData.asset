@@ -13,11 +13,21 @@ MonoBehaviour:
   m_Name: PostGameEventData
   m_EditorClassIdentifier: 
   DialogueToDisplay:
-  - player talks to mom here
-  - player and mom exchange words
-  - this scene ends in a nice hug
-  - fade to black and credits roll
+  - you did not finish in time
+  - you did not finish in time
+  - you did not finish in time
+  - you did not finish in time
   SpritesToDisplay:
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  FinishedInTimeDialogue:
+  - YOU DID IT IN TIEM!
+  - YOU DID IT IN TIEM!
+  - YOU DID IT IN TIEM!
+  FinishedInTimeSpriteDisplay:
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}

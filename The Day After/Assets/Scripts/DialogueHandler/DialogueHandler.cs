@@ -27,13 +27,6 @@ public class DialogueHandler : MonoBehaviour
         displayText = GetComponentInChildren<TextMeshProUGUI>();
     }
 
-    private void Start()
-    {
-        //Test Sprite Display
-        //Reminder to add sprite display update once we have sprites
-        spriteDisplay.sprite = Resources.Load<Sprite>("Sprites/OutlineEmpty");
-    }
-
     //needs to receive inter obj item from player interact script
     public void InitializeDialogue(InterObj objToReference)
     {
@@ -104,6 +97,7 @@ public class DialogueHandler : MonoBehaviour
     private void ClearTextDisplay()
     {
         displayText.text = "";
+        spriteDisplay.sprite = Resources.Load<Sprite>("Sprites/Empty");
     }
 
     private void QuestDialogueAdd(string[] dialogueToAdd)

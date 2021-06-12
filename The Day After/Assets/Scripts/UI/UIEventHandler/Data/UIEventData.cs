@@ -7,4 +7,8 @@ public class UIEventData : ScriptableObject
 {
     public string[] DialogueToDisplay;
     public Sprite[] SpritesToDisplay;
+
+    [Header("Post Game Dialogue")]
+    public string[] FinishedInTimeDialogue;
+    public Sprite[] FinishedInTimeSpriteDisplay;
 }

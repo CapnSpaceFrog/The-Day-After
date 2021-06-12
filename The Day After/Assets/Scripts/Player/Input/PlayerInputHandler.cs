@@ -35,7 +35,7 @@ public class PlayerInputHandler : MonoBehaviour
         NormInputY = (int)(RawMovementInput * Vector2.up).normalized.y;
     }
 
-    public void OnInteractInput(InputAction.CallbackContext context)
+    public void OnInterInput(InputAction.CallbackContext context)
     {
         if (context.started)
         {
@@ -61,10 +61,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             PauseInput = true;
         }
-
-        if (context.canceled)
-        {
-            PauseInput = false;
-        }
     }
+
+    public void UsePauseInput() => PauseInput = false;
 }

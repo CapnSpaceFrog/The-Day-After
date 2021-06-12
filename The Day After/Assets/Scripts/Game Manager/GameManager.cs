@@ -42,9 +42,16 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Game Time Expired");
             StaticGameData.CompletedWithinTime = false;
-
+            Debug.Log(StaticGameData.CompletedWithinTime);
             sceneLoader.LoadGameOver();
         }
+    }
+
+    public void GameCompleted()
+    {
+        StaticGameData.CompletedWithinTime = true;
+        Debug.Log(StaticGameData.CompletedWithinTime);
+        sceneLoader.LoadGameOver();
     }
 
     #region Quest Manager Methods

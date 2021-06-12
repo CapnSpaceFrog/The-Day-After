@@ -13,9 +13,13 @@ public class MainMenuHandler : MonoBehaviour
     private Animator mainButtonPanelAnim;
     [SerializeField]
     private Button[] mainButtons;
-    private Animator currentMenu;
     [SerializeField]
     private Animator meunPlayerAnim;
+    [SerializeField]
+    private Animator disclaimerAnim;
+
+
+    private Animator currentMenu;
     #endregion
 
     #region Game Start Variables
@@ -27,9 +31,9 @@ public class MainMenuHandler : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI displayText;
     [SerializeField]
-    private float textDisplayDelay;
+    private float textDisplayTime;
     [SerializeField]
-    private float betweenTextDisplayDelay;
+    private float betweenTextTime;
     [SerializeField]
     private string[] dialogueToDisplay;
 
@@ -46,6 +50,7 @@ public class MainMenuHandler : MonoBehaviour
     {
         UpdateMainButtonInteraction(false);
         mainButtonPanelAnim.Play("SUBMENU_FADEOUT");
+        disclaimerAnim.Play("SUBMENU_FADEOUT");
         yield return new WaitForSeconds(3f);
         skipButton.SetActive(true);
 
@@ -79,10 +84,10 @@ public class MainMenuHandler : MonoBehaviour
 
         textDisplayAnim.Play("SUBMENU_FADEIN");
 
-        yield return new WaitForSeconds(betweenTextDisplayDelay);
+        yield return new WaitForSeconds(textDisplayTime);
 
         textDisplayAnim.Play("SUBMENU_FADEOUT");
-        yield return new WaitForSeconds(1.85f);
+        yield return new WaitForSeconds(betweenTextTime);
 
         textDisplaying = false;
     }
@@ -165,6 +170,27 @@ public class MainMenuHandler : MonoBehaviour
     public void OnSkipPress()
     {
         SendMessageToScreenLoader();
+    }
+
+    public void HandleInput(int val)
+    {
+        switch (val)
+        {
+            case 0:
+                StaticGameData.CurrentDisplaySpeed = StaticGameData.SlowTextSpeed;
+                Debug.Log(StaticGameData.CurrentDisplaySpeed);
+                break;
+
+            case 1:
+                StaticGameData.CurrentDisplaySpeed = StaticGameData.MediumTextSpeed;
+                Debug.Log(StaticGameData.CurrentDisplaySpeed);
+                break;
+
+            case 2:
+                StaticGameData.CurrentDisplaySpeed = StaticGameData.FastTextSpeed;
+                Debug.Log(StaticGameData.CurrentDisplaySpeed);
+                break;
+        }
     }
 
     private void UpdateMainButtonInteraction(bool ifInteractable)
