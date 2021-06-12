@@ -26,6 +26,9 @@ TextureImporter:
   - first:
       213: -4022200394872353925
     second: KitchenTrash Full
+  - first:
+      213: -7801419291122635075
+    second: Dog Pee Stain
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -258,7 +261,7 @@ TextureImporter:
         serializedVersion: 2
         x: 34
         y: 138
-        width: 19
+        width: 20
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -279,7 +282,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 138
-        width: 19
+        width: 20
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -290,6 +293,27 @@ TextureImporter:
       bones: []
       spriteID: b7b82382d064e28c0800000000000000
       internalID: -4022200394872353925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog Pee Stain
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 13
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe61c80d7acbb390800000000000000
+      internalID: -7801419291122635075
       vertices: []
       indices: 
       edges: []
