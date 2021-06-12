@@ -24,6 +24,8 @@ public class UIEventHandler : MonoBehaviour
     private bool loadSceneAfterFinish;
     [SerializeField]
     private int sceneIndexToLoad;
+    [SerializeField]
+    private Animator preGameplayAnim;
 
     private List<string> dialogueToDisplay;
     private List<Sprite> spritesToDisplay;
@@ -65,6 +67,7 @@ public class UIEventHandler : MonoBehaviour
             if (eventData.IsPreEvent && dialogueToDisplay[i] == dialogueToDisplay[3])
             {
                 sceneLoader.GetComponent<Animator>().Play("SCENELOADER_FADEOUT");
+                preGameplayAnim.Play("PreGameplayEvent");
             }
             //Wait for "Show Text" to finish before continuing
             yield return new WaitUntil(() => textDisplaying == false);

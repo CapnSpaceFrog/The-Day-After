@@ -30,29 +30,29 @@ MonoBehaviour:
   - "A simple thought, but it unleashes feelings you don\u2019t have the energy to
     handle."
   - Tears began to well, but this time you didn't cry.
-  - You wipe your eyes, let out a sorry sniffle, and sit yourself up.
+  - You wipe your eyes, take a deep breath, and sit yourself up.
   - You notice, for the thousandth time, that the state of your room is... well...
     disgusting.
   - And today, perhaps, you might just have the energy to do something about it.
   SpritesToDisplay:
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  - {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
   IsPreEvent: 1
   FinishedInTimeDialogue: []
   FinishedInTimeSpriteDisplay: []
