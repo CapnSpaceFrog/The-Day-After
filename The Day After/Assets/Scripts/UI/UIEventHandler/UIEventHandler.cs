@@ -74,6 +74,8 @@ public class UIEventHandler : MonoBehaviour
             {
                 sceneLoaderAnim.Play("SCENELOADER_FADEOUT");
                 preGameplayAnim.Play("PreGameplayEvent");
+                yield return new WaitForSeconds(sceneLoaderAnim.GetCurrentAnimatorStateInfo(0).length + 0.25f);
+                dialogueAnim.GetComponent<Canvas>().sortingOrder = 4;
             }
 
             if (!eventData.IsPreEvent && dialogueToDisplay[i] == dialogueToDisplay[3])
@@ -81,6 +83,8 @@ public class UIEventHandler : MonoBehaviour
                 sceneLoaderAnim.Play("SCENELOADER_FADEOUT");
                 cameraAnim.Play("CAMERA_MOVE");
                 playerAnim.Play("PLAYER_STARTMOVE");
+                yield return new WaitForSeconds(sceneLoaderAnim.GetCurrentAnimatorStateInfo(0).length + 0.25f);
+                dialogueAnim.GetComponent<Canvas>().sortingOrder = 4;
             }
             
             //Wait for "Show Text" to finish before continuing
