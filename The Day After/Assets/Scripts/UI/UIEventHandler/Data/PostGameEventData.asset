@@ -14,14 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueToDisplay:
   - you did not finish in time
-  - you did not finish in time
-  - you did not finish in time
-  - you did not finish in time
+  - test
+  - test2
+  - test3
+  - asdadsads
+  - SDgsdgf
+  - whrthetrh
+  - sgesrgesgr
+  - asghgdsfh
+  - dfhdghffdghj
   SpritesToDisplay:
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  IsPreEvent: 0
   FinishedInTimeDialogue:
   - YOU DID IT IN TIEM!
   - YOU DID IT IN TIEM!
