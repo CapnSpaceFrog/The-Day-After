@@ -39,6 +39,7 @@ public class MainMenuHandler : MonoBehaviour
 
     [SerializeField]
     private Animator textDisplayAnim;
+    [SerializeField] private GameObject dayAfterText;
     #endregion
 
     [SerializeField]
@@ -76,6 +77,11 @@ public class MainMenuHandler : MonoBehaviour
             textDisplayAnim.SetBool("fadeout", false);
 
             StartCoroutine(ShowText(dialogueToDisplay[i]));
+
+            if (dialogueToDisplay[i] == dialogueToDisplay[5])
+            {
+                dayAfterText.SetActive(true);
+            }
             
             yield return new WaitUntil(() => textDisplaying == false);
         }

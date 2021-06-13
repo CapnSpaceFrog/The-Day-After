@@ -82,7 +82,7 @@ public class PlayerInventoryDisplay : MonoBehaviour
         //Temporary Sprite Display
         Image slotSprite;
         slotSprite = inventorySlot.GetComponent<Image>();
-        slotSprite.sprite = Resources.Load<Sprite>("Sprites/OutlineEmpty");
+        slotSprite.sprite = emptySprite;
 
         inventorySlot.GetComponent<RectTransform>().anchoredPosition = anchorPosition;
         inventorySlot.GetComponent<RectTransform>().sizeDelta = new Vector2(100, 100);
