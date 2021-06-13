@@ -15,7 +15,7 @@ public class SceneLoader : MonoBehaviour
     {
         anim.Play("SCENELOADER_FADEIN");
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
-        SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Single);
+        SceneManager.LoadScene(sceneIndex);
         yield return new WaitForSeconds(1.75f);
     }
 
