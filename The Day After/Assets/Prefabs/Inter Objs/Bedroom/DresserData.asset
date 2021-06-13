@@ -17,20 +17,10 @@ MonoBehaviour:
   WhenToUpdate: 1
   IsCollidable: 1
   DisplayDialogue:
-  - Old pills, a half smoked joint, a random shirt with a hole clearly burned in
-    it, nyquil, and a pack of joints.
-  - "You don\u2019t recall smoking that joint, but it smells pretty fresh."
-  - "You think hard for a moment and remember that\u2019s how you fell asleep last
-    night."
-  - Maybe you should stop smoking so much...
-  - You toss the pills, nyquil, and shirt into the drawer. You pick up the pack of
-    joints and decide to finish the joint you started the night before.
-  - Smoking used to be a big issue for you.
-  - Well, it still is, if you're honest.
-  - You smoke for a bit longer before putting the pack in the drawer.
+  - "Tempting to smoke more, but you\u2019ve had enough for today."
   DisplaySprite: {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
   ExhaustedDialogue:
-  - "Tempting to smoke more, but you\u2019ve had enough for today."
+  - "Tempting to smoke more, but you\u2019ve had enough for now."
   QuestEventDialogue:
   - Old pills, a half smoked joint, a random shirt with a hole clearly burned in
     it, nyquil, and a pack of joints.
@@ -40,11 +30,13 @@ MonoBehaviour:
   - Maybe you should stop smoking so much...
   - You toss the pills, nyquil, and shirt into the drawer.
   - You pick up the pack of joints and feel the temptation.
-  - 'To your better judgement, you decide to finish the joint you started the night
-    before. '
-  - Smoking used to be a big issue for you.
+  - 'To your better judgement, you decide to finish the joint. '
+  - You pull a ligher out from your pocket and light up.  Smoking used to be a big
+    issue for you.
   - "Well, it still is, if you're honest, but you\u2019ve gotten better."
-  - You smoke for a bit longer before putting the pack in the drawer.
+  - Smoking always puts you at ease. For the most part.
+  - 'You quietly enjoy the rest of the joint before putting the pack into the drawer
+    too. '
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 0
   InventoryFullDialogue: []

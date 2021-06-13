@@ -16,16 +16,7 @@ MonoBehaviour:
   WhatToUpdate: 0
   WhenToUpdate: 3
   IsCollidable: 1
-  DisplayDialogue: []
-  DisplaySprite: {fileID: 0}
-  ExhaustedDialogue:
-  - Your ragedy old closet. One of the hinges is coming loose.
-  QuestEventDialogue: []
-  MissingQuestItemDialogue: []
-  ShouldBeDisabled: 0
-  InventoryFullDialogue:
-  - debug inv full
-  AddedToInventoryDialogue:
+  DisplayDialogue:
   - Out of everything in your room, somehow your closest is the cleanest.
   - "Probably because you\u2019ve thrown your clothes everywhere else but here."
   - "Aside from sorting some shoes and other bits and bobs, there wasn\u2019t much
@@ -43,6 +34,34 @@ MonoBehaviour:
   - "You grumble it up and shoot it at your trash can from across the room. It\u2019s
     a swish."
   - You grab a change of clothes too. Your PJs are starting to smell.
+  DisplaySprite: {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
+  ExhaustedDialogue:
+  - Your ragedy old closet. One of the hinges is coming loose.
+  QuestEventDialogue: []
+  MissingQuestItemDialogue: []
+  ShouldBeDisabled: 0
+  InventoryFullDialogue:
+  - debug inv full
+  AddedToInventoryDialogue:
+  - Out of everything in your room, somehow your closest is the cleanest.
+  - "Probably because you\u2019ve thrown your clothes everywhere else but here."
+  - "Aside from sorting some shoes and other bits and bobs, there wasn\u2019t much
+    to clean."
+  - As you close the doors, you notice an old work shirt grumbled in the corner.
+  - "It\u2019s from your latest job. You can\u2019t quite recall the name, but it
+    rhymes with carpet."
+  - You pull it out and take a look. It still has your name badge on it.
+  - "There were some fun coworkers there, and the job wasn\u2019t half bad, but... "
+  - Man the mistakes...
+  - You wonder how Alex and Drew are doing after you three were arrested. Last you
+    heard they were still working at the same store.
+  - "You almost toss the shirt back into the closest, but realize there\u2019s no
+    reason for you to keep it."
+  - "You grumble it up and shoot it at your trash can from across the room. It\u2019s
+    a swish."
+  - Despite how comfy the pair of PJs you're currently wearing are, they happen to
+    have a solid amount of stains.
+  - You grab the cleanest looking pair of clothes you can find.
   InventoryIcon: {fileID: 21300000, guid: 86cf1f32e95993f4c8f7512b4b27fa1b, type: 3}
   DecoDialogue: []
   RequiredItem: {fileID: 0}
