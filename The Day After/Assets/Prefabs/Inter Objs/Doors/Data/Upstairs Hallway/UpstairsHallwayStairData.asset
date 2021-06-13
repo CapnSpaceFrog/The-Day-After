@@ -15,10 +15,10 @@ MonoBehaviour:
   InterObjType: 3
   WhatToUpdate: 0
   WhenToUpdate: 3
+  IsCollidable: 1
   DisplayDialogue:
   - 'quest 2 incomplete (debug line) '
   DisplaySprite: {fileID: 21300000, guid: 38c3c10487aee9740acae84b31c76fcf, type: 3}
-  HasPJSprite: 0
   ExhaustedDialogue: []
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
@@ -35,4 +35,5 @@ MonoBehaviour:
   IsOpen: 1
   TargetDoor: Downstairs Hallway Stairs
   DoorLockedDialogue:
-  - debug quest 2 incomplete
+  - I don't think I want to go downstairs.
+  - I still need to shower too.

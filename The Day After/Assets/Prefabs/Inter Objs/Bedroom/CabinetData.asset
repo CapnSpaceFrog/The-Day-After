@@ -19,7 +19,7 @@ MonoBehaviour:
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
   ExhaustedDialogue:
-  - Your old ragedy closet. One of the hinges is coming loose.
+  - Your ragedy old closet. One of the hinges is coming loose.
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 0
@@ -42,9 +42,9 @@ MonoBehaviour:
     reason for you to keep it."
   - "You grumble it up and shoot it at your trash can from across the room. It\u2019s
     a swish."
+  - You grab a change of clothes too. Your PJs are starting to smell.
   InventoryIcon: {fileID: 21300000, guid: 86cf1f32e95993f4c8f7512b4b27fa1b, type: 3}
-  DecoDialogue:
-  - debug deco dialogue
+  DecoDialogue: []
   RequiredItem: {fileID: 0}
   IsExhausted: 0
   BeforeAnimsToPlay: []

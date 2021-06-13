@@ -21,4 +21,4 @@ MonoBehaviour:
   - {fileID: 7586675838002976050, guid: 36281f198a665b04bbc42e9c9ff9070d, type: 3}
   DoorsToUnlock: []
   QuestCompleteDialogue:
-  - debug finished game in time limit
+  - You hear someone at the front door.

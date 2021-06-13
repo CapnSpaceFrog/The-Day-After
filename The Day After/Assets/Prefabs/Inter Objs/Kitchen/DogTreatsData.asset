@@ -24,9 +24,10 @@ MonoBehaviour:
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 1
   InventoryFullDialogue:
-  - debug inv full
+  - "You don\u2019t have enough space to carry this."
   AddedToInventoryDialogue:
-  - debug added to inv
+  - Samson loves these.
+  - "There\u2019s only a few left, so you decide to spoil him and take the rest."
   InventoryIcon: {fileID: 21300000, guid: b9acc5d911d1fe94c8a9088ba7721bf7, type: 3}
   DecoDialogue: []
   RequiredItem: {fileID: 0}

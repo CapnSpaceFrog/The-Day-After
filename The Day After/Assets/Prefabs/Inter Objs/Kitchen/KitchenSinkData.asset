@@ -19,9 +19,14 @@ MonoBehaviour:
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - A squeaky clean sink.
   QuestEventDialogue:
-  - debug completed quest
+  - The sink is filled to the brim with dirty plates from days ago.
+  - You roll your sleeves up and decide to dive in.
+  - You fought with mom a lot over chores when you were younger.
+  - Look at you now. It all seems so trivial.
+  - "You can\u2019t help but feel a bit excited to be cleaning."
+  - You might just feel happy.
   MissingQuestItemDialogue:
   - debug missing quest item
   ShouldBeDisabled: 0

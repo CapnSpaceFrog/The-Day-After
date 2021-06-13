@@ -19,11 +19,17 @@ MonoBehaviour:
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - The site where you made a delicious sandwhich.
   QuestEventDialogue:
-  - debug quest finished
+  - "Mom\u2019s tuna sandwiches are to die for."
+  - "You don\u2019t know how she does it, but there\u2019s something about her food
+    that just hits different."
+  - You recall cooking meals with her when you were younger too.
+  - Except she was usually the one cooking, because you kept burning everything,
+    including yourself.
+  - You slap the sandwich together and chow it down in seconds. Guess you were hungry.
   MissingQuestItemDialogue:
-  - debug quest item missing
+  - "You could go for a meal. What\u2019s in the fridge?"
   ShouldBeDisabled: 0
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []

@@ -23,4 +23,9 @@ MonoBehaviour:
   - Bathroom Hall Door
   - Bathroom Door
   QuestCompleteDialogue:
-  - debug bedroom door unlocked
+  - You look around at your cleaned room.
+  - You're surprised, it didn't take too much effort.
+  - You look at the door to your room.
+  - "It\u2019s been a while."
+  - You take a sniff of your pits.
+  - Yea, you should probably go shower.
