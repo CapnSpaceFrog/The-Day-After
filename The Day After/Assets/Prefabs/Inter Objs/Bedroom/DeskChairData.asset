@@ -17,11 +17,13 @@ MonoBehaviour:
   WhenToUpdate: 3
   DisplayDialogue:
   - debug exhuasted dialogue
-  DisplaySprite: []
+  DisplaySprite: {fileID: 0}
+  HasPJSprite: 1
   ExhaustedDialogue:
   - debug exhuasted dialogue
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
+  ShouldBeDisabled: 0
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
   InventoryIcon: {fileID: 0}

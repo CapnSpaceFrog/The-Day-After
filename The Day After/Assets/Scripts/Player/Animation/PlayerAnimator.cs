@@ -62,6 +62,7 @@ public class PlayerAnimator
         {
             PLAYER_IDLE = "PLAYER_CLOTHEDIDLE";
             PLAYER_MOVE = "PLAYER_CLOTHEDMOVE";
+            StaticGameData.IsDressed = true;
         }
 
         playerAnim.Play(newState);

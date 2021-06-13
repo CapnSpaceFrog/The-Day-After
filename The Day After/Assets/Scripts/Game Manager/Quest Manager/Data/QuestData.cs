@@ -7,7 +7,7 @@ public class QuestData : ScriptableObject
 {
     [Header("Quest Requirments")]
     public GameObject[] QuestRequirements;
-    public string[] DoorToUnlock;
+    public string[] DoorsToUnlock;
 
     [Header("Completed Quest Dialogue")]
     public string[] QuestCompleteDialogue;

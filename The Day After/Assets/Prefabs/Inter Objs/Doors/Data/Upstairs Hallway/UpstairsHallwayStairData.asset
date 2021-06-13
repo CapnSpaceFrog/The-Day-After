@@ -17,11 +17,12 @@ MonoBehaviour:
   WhenToUpdate: 3
   DisplayDialogue:
   - 'quest 2 incomplete (debug line) '
-  DisplaySprite:
-  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  DisplaySprite: {fileID: 21300000, guid: 38c3c10487aee9740acae84b31c76fcf, type: 3}
+  HasPJSprite: 0
   ExhaustedDialogue: []
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
+  ShouldBeDisabled: 0
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
   InventoryIcon: {fileID: 0}
@@ -34,4 +35,4 @@ MonoBehaviour:
   IsOpen: 1
   TargetDoor: Downstairs Hallway Stairs
   DoorLockedDialogue:
-  - 'quest 2 incomplete (debug line) '
+  - debug quest 2 incomplete

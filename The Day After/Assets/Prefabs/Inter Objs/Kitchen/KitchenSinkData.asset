@@ -13,33 +13,29 @@ MonoBehaviour:
   m_Name: KitchenSinkData
   m_EditorClassIdentifier: 
   InterObjType: 2
-  WhatToUpdate: 0
-  WhenToUpdate: 3
+  WhatToUpdate: 1
+  WhenToUpdate: 1
+  IsCollidable: 1
   DisplayDialogue: []
-  DisplaySprite:
-  - {fileID: 0}
+  DisplaySprite: {fileID: 0}
   ExhaustedDialogue:
   - debug exhausted dialogue
-  ExhaustedSprites: []
   QuestEventDialogue:
   - debug completed quest
-  QuestEventSprites: []
-  MissingQuestItemDialogue: []
-  MissingQuestItemSprites: []
+  MissingQuestItemDialogue:
+  - debug missing quest item
   ShouldBeDisabled: 0
   InventoryFullDialogue: []
-  InventoryFullSprites: []
   AddedToInventoryDialogue: []
-  AddedToInvSprites: []
   InventoryIcon: {fileID: 0}
   DecoDialogue: []
-  DecoSprites: []
   RequiredItem: {fileID: 0}
   IsExhausted: 0
   BeforeAnimsToPlay: []
-  AfterAnimsToPlay: []
+  AfterAnimsToPlay:
+  - 
+  - KITCHENSINK_CLEAN
   InterObjAnim: {fileID: 0}
   IsOpen: 0
   TargetDoor: 
   DoorLockedDialogue: []
-  DoorLockedSprites: []

@@ -12,23 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891b4a6fc961b944fa7d579264b76b5e, type: 3}
   m_Name: KitchenTrashData
   m_EditorClassIdentifier: 
-  InterObjType: 0
-  WhatToUpdate: 0
-  WhenToUpdate: 0
+  InterObjType: 2
+  WhatToUpdate: 1
+  WhenToUpdate: 1
+  IsCollidable: 1
   DisplayDialogue: []
-  DisplaySprite: []
-  ExhaustedDialogue: []
-  QuestEventDialogue: []
-  MissingQuestItemDialogue: []
+  DisplaySprite: {fileID: 0}
+  ExhaustedDialogue:
+  - debug exhausted dialogue
+  QuestEventDialogue:
+  - debug quest finished
+  MissingQuestItemDialogue:
+  - debug missing item
   ShouldBeDisabled: 0
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
   InventoryIcon: {fileID: 0}
   DecoDialogue: []
-  RequiredItem: {fileID: 0}
+  RequiredItem: {fileID: 7523922672753095590, guid: b983b617e6a7e52438363d1c304a06ef, type: 3}
   IsExhausted: 0
   BeforeAnimsToPlay: []
-  AfterAnimsToPlay: []
+  AfterAnimsToPlay:
+  - 
+  - KITCHENTRASH_FULL
   InterObjAnim: {fileID: 0}
   IsOpen: 0
   TargetDoor: 

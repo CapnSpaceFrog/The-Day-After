@@ -18,6 +18,7 @@ public static class StaticGameData
             completedWithinTime = value;
         }
     }
+    public static bool IsDressed;
 
     public static float SlowTextSpeed = 0.050f;
     public static float MediumTextSpeed = 0.025f;

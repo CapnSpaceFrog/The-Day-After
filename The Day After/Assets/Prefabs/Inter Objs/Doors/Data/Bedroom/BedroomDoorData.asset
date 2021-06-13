@@ -17,13 +17,20 @@ MonoBehaviour:
   WhenToUpdate: 3
   DisplayDialogue:
   - quest 1 is not complete (debug line)
-  DisplaySprite: []
+  DisplaySprite: {fileID: 0}
+  HasPJSprite: 0
+  ExhaustedDialogue: []
   QuestEventDialogue: []
+  QuestEventSprites: []
   MissingQuestItemDialogue: []
+  ShouldBeDisabled: 0
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
+  InventoryIcon: {fileID: 0}
   DecoDialogue: []
+  DecoSprites: []
   RequiredItem: {fileID: 0}
+  IsExhausted: 0
   BeforeAnimsToPlay: []
   AfterAnimsToPlay: []
   InterObjAnim: {fileID: 0}

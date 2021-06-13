@@ -15,32 +15,29 @@ MonoBehaviour:
   InterObjType: 2
   WhatToUpdate: 1
   WhenToUpdate: 2
+  IsCollidable: 1
   DisplayDialogue: []
-  DisplaySprite: []
-  ExhaustedDialogue: []
-  ExhaustedSprites: []
+  DisplaySprite: {fileID: 0}
+  ExhaustedDialogue:
+  - debug exhausted dialogue
   QuestEventDialogue:
   - debug quest finished
-  QuestEventSprites:
-  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   MissingQuestItemDialogue:
   - debug quest item missing
-  MissingQuestItemSprites:
-  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   ShouldBeDisabled: 0
   InventoryFullDialogue: []
-  InventoryFullSprites: []
   AddedToInventoryDialogue: []
-  AddedToInvSprites: []
   InventoryIcon: {fileID: 0}
   DecoDialogue: []
-  DecoSprites: []
   RequiredItem: {fileID: 6072679191290204036, guid: b3ca4ab2942f2d54684089c1c1621bf3, type: 3}
   IsExhausted: 0
-  BeforeAnimsToPlay: []
-  AfterAnimsToPlay: []
+  BeforeAnimsToPlay:
+  - 
+  - CUTTINGBOARD_USING
+  AfterAnimsToPlay:
+  - 
+  - CUTTINGBOARD_DONE
   InterObjAnim: {fileID: 0}
   IsOpen: 0
   TargetDoor: 
   DoorLockedDialogue: []
-  DoorLockedSprites: []

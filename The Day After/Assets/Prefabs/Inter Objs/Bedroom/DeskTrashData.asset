@@ -16,7 +16,8 @@ MonoBehaviour:
   WhatToUpdate: 0
   WhenToUpdate: 3
   DisplayDialogue: []
-  DisplaySprite: []
+  DisplaySprite: {fileID: 0}
+  HasPJSprite: 1
   ExhaustedDialogue: []
   QuestEventDialogue: []
   MissingQuestItemDialogue: []

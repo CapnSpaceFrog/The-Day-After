@@ -54,14 +54,8 @@ public class DoorHandler
         playerRef.transform.position = posToMove;
     }
 
-    public void UnlockDoor(string doorToUnlock)
+    public void UnlockDoor(GameObject doorToUnlock)
     {
-        foreach (GameObject door in GameObject.FindGameObjectsWithTag("Door"))
-        {
-            if (door.name == doorToUnlock)
-            {
-                door.GetComponent<InterObj>().Obj_Data.IsOpen = true;
-            }
-        }
+        doorToUnlock.GetComponent<InterObj>().Obj_Data.IsOpen = true;
     }
 }
