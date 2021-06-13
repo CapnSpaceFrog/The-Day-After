@@ -20,9 +20,12 @@ MonoBehaviour:
   DisplaySprite: {fileID: 0}
   ExhaustedDialogue: []
   QuestEventDialogue:
-  - debug quest finished
+  - "Upon closer inspection, what you once thought was Samson\u2019s business is
+    actually a spilled drink."
+  - You guess Samson tried to get into something and spilled it all over the floor.
   MissingQuestItemDialogue:
-  - debug missing quest item
+  - "If this is what you think it is, you\u2019re definitely not cleaning this up
+    with your hands and paper towels."
   ShouldBeDisabled: 0
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []

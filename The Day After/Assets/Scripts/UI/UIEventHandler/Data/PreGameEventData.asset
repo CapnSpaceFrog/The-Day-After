@@ -54,6 +54,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
   - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
   - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
+  - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
   IsPreEvent: 1
   FinishedInTimeDialogue: []
   FinishedInTimeSpriteDisplay: []

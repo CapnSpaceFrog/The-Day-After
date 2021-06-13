@@ -20,4 +20,7 @@ MonoBehaviour:
   - Living Room Door
   - Kitchen Door
   QuestCompleteDialogue:
-  - debug stairs accessible
+  - "You still feel a bit uneasy, and locking yourself back in your room doesn\u2019t
+    sound very smart."
+  - "You feel a bit hungry as well, and Mom\u2019s been making you food non stop."
+  - Maybe you should make a meal yourself.

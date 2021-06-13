@@ -36,22 +36,50 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   IsPreEvent: 0
   FinishedInTimeDialogue:
-  - YOU DID IT IN TIEM!
-  - asdasd
-  - assDGsgd
-  - SDFGtjytj
-  - asdfSDF
-  - jtjtg
-  - gjkukuky
-  - ghkgkujdtuyk
-  - dukdyuk
+  - You hear someone at the front door.
+  - "You panic. You didn\u2019t think Mom was going to be home so soon."
+  - "You can\u2019t run upstairs, since the front door is right there."
+  - You take a deep breath.
+  - '"Hey... Mom..."'
+  - Her eyes widen as she looks up from the lock on the door.
+  - '"I- W- Wha- Are you okay?"'
+  - She fumbles with her words for a bit, trying to find the things to say.
+  - "\"Are- Are you okay? D- Did something happen? I haven\u2019t seen you...\""
+  - "\"Yea, I\u2019m good Mom.\""
+  - "\"Are you sure!? You\u2019re feeling okay?\""
+  - "\"Yea Mom I\u2019m fine... I started cleaning my room, then I went to take a
+    shower and...\""
+  - She looks about, noticing that the house is in particularly good order.
+  - You fall silent, not knowing what else to say.
+  - Her eyes begin to well up with tears.
+  - "\"I can\u2019t believe it...\""
+  - "You can tell she\u2019s trying to hold her tears back, but it's no use."
+  - You feel awkward just standing here.
+  - Before you know it your feet are moving towards her.
+  - "You feel the onset of tears yourself. You haven\u2019t had a moment with her
+    since that day."
+  - "\u201CI love you mom.\u201D You say, sobbing in between each word."
+  - "\u201CI love you too, sweetie.\u201D"
   FinishedInTimeSpriteDisplay:
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}

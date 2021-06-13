@@ -49,14 +49,15 @@ public class UIEventHandler : MonoBehaviour
 
     private void Awake()
     {
-        StaticGameData.CompletedWithinTime = true;
-        StartCoroutine(BeginEvent());
+        OverrideDisplay(eventData.DialogueToDisplay, eventData.SpritesToDisplay);
+
         if (StaticGameData.CompletedWithinTime == true)
         {
             OverrideDisplay(eventData.FinishedInTimeDialogue, eventData.FinishedInTimeSpriteDisplay);
-        } else {
-            OverrideDisplay(eventData.DialogueToDisplay, eventData.SpritesToDisplay);
         } 
+
+        StartCoroutine(BeginEvent());
+
         skipButton.SetActive(true);
     }
 
@@ -65,11 +66,11 @@ public class UIEventHandler : MonoBehaviour
         yield return new WaitForSeconds(1.25f);
         dialogueAnim.GetComponent<Canvas>().sortingOrder = 6;
         dialogueAnim.SetBool("fadein", true);
+
         for (int i = 0; i < dialogueToDisplay.Count; i++)
         {
             displaySprite.sprite = spritesToDisplay[i]; 
             StartCoroutine(ShowText(dialogueToDisplay[i]));
-
             //Fade in at this certain dialogue mark if its the pre event
             if (eventData.IsPreEvent && dialogueToDisplay[i] == dialogueToDisplay[3])
             {
@@ -87,18 +88,18 @@ public class UIEventHandler : MonoBehaviour
                 yield return new WaitForSeconds(sceneLoaderAnim.GetCurrentAnimatorStateInfo(0).length + 0.25f);
                 dialogueAnim.GetComponent<Canvas>().sortingOrder = 4;
             }
-            
+
+            if (!eventData.IsPreEvent && StaticGameData.CompletedWithinTime && dialogueToDisplay[i] == dialogueToDisplay[18])
+            {
+                playerAnim.Play("PLAYER_MOVETOHUG");
+            }
+
             //Wait for "Show Text" to finish before continuing
             yield return new WaitUntil(() => textDisplaying == false);
 
-            if (!eventData.IsPreEvent && dialogueToDisplay[i] == dialogueToDisplay[6])
+            if (!eventData.IsPreEvent && StaticGameData.CompletedWithinTime && dialogueToDisplay[i] == dialogueToDisplay[5])
             {
                 momAnim.Play("MOM_DROPBAGS");
-            }
-
-            if (!eventData.IsPreEvent && dialogueToDisplay[i] == dialogueToDisplay[8])
-            {
-                playerAnim.Play("PLAYER_MOVETOHUG");
             }
             //Disply "press space to continue" once dialogue has displayed
 
@@ -130,6 +131,7 @@ public class UIEventHandler : MonoBehaviour
     {
         StopAllCoroutines();
 
+        Debug.Log("Reached End Dialogue Display");
         dialogueAnim.SetBool("fadein", false);
 
         StartCoroutine(FinishedScene());
@@ -140,6 +142,7 @@ public class UIEventHandler : MonoBehaviour
     {
         if (loadSceneAfterFinish)
         {
+            Debug.Log("Loading Gameplay");
             yield return new WaitForSeconds(2f);
             sceneLoader.LoadSceneByIndex(sceneIndexToLoad);
             yield break;

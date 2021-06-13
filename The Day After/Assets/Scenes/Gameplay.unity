@@ -1763,7 +1763,7 @@ Camera:
   far clip plane: 25
   field of view: 60
   orthographic: 1
-  orthographic size: 0.93632656
+  orthographic size: 0.9365003
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1787,7 +1787,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500418886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.524, y: 1.107, z: -1}
+  m_LocalPosition: {x: -6.212, y: 0.763, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1885,7 +1885,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Option A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: abb7ee76e13f2454694d590cf89caf3f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1949,7 +1949,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &640115591
@@ -2342,7 +2342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983090083}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.524, y: 1.107, z: 0}
+  m_LocalPosition: {x: -6.212, y: 0.763, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2821,8 +2821,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Medium
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: abb7ee76e13f2454694d590cf89caf3f, type: 2}
+  m_sharedMaterial: {fileID: 2356242721973571596, guid: abb7ee76e13f2454694d590cf89caf3f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6976,10 +6976,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 759739667}
     m_Modifications:
-    - target: {fileID: 1387157215369413590, guid: 9d191971996d05542b38c103d4338689, type: 3}
-      propertyPath: Obj_Data
-      value: 
-      objectReference: {fileID: 11400000, guid: 09529439a072120449a6baa47eae1443, type: 2}
     - target: {fileID: 3688624607180274456, guid: 9d191971996d05542b38c103d4338689, type: 3}
       propertyPath: m_Name
       value: Front Door

@@ -15,20 +15,18 @@ MonoBehaviour:
   InterObjType: 3
   WhatToUpdate: 0
   WhenToUpdate: 3
+  IsCollidable: 1
   DisplayDialogue:
   - quest 1 is not complete (debug line)
   DisplaySprite: {fileID: 0}
-  HasPJSprite: 0
   ExhaustedDialogue: []
   QuestEventDialogue: []
-  QuestEventSprites: []
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 0
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
   InventoryIcon: {fileID: 0}
   DecoDialogue: []
-  DecoSprites: []
   RequiredItem: {fileID: 0}
   IsExhausted: 0
   BeforeAnimsToPlay: []
@@ -37,4 +35,4 @@ MonoBehaviour:
   IsOpen: 0
   TargetDoor: Bedroom Hall Door
   DoorLockedDialogue:
-  - quest 1 is not complete (debug line)
+  - I'm not leaving my room.
