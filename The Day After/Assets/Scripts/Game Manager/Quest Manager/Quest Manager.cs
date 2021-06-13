@@ -60,13 +60,17 @@ public class QuestManager
         
         //open doors that we need too
         GameObject[] temp = GameObject.FindGameObjectsWithTag("Door");
-        for (int i = 0; i < temp.Length; i++)
+        for (int i = 0; i < questData[currentQuestInt].DoorsToUnlock.Length; i++)
         {
-            if (temp[i].name == questData[currentQuestInt].DoorToUnlock[i])
+            Debug.Log(questData[currentQuestInt].DoorsToUnlock[i]);
+            foreach (GameObject door in temp)
             {
-                gm.DoorHandler.UnlockDoor(temp[i].name);
+                if (questData[currentQuestInt].DoorsToUnlock[i] == door.name)
+                {
+                    gm.DoorHandler.UnlockDoor(door);
 
-                Debug.Log($"Door { temp[i].name } was unlocked");
+                    Debug.Log($"Door { questData[currentQuestInt].DoorsToUnlock[i] } was unlocked");
+                }
             }
         }
 

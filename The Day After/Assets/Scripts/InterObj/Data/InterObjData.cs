@@ -9,17 +9,16 @@ public class InterObjData : ScriptableObject
     public InterType InterObjType;
     public UpdateType WhatToUpdate;
     public UpdateTime WhenToUpdate;
+    public bool IsCollidable = true;
 
     [Header("Dialogue")]
     public List<string> DisplayDialogue;
     [HideInInspector]
     public Sprite DisplaySprite;
-    public bool HasPJSprite;
     public string[] ExhaustedDialogue;
 
     [Header("QuestEvent Dialogue")]
     public string[] QuestEventDialogue;
-    public Sprite[] QuestEventSprites;
     public string[] MissingQuestItemDialogue;
 
     [Header("Stored Dialogue")]
@@ -30,7 +29,6 @@ public class InterObjData : ScriptableObject
 
     [Header("Deco Dialogue")]
     public string[] DecoDialogue;
-    public Sprite[] DecoSprites;
 
     [Header("Quest Event")]
     public GameObject RequiredItem;

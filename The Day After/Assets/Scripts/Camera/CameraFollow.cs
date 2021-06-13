@@ -9,10 +9,11 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     private Transform player;
 
-    public Vector3 followOffset;
+    public float xFollowOffset;
+    public float yFollowOffset;
 
     private void LateUpdate()
     {
-        transform.position = player.position + followOffset;
+        transform.position = new Vector3(player.transform.position.x + xFollowOffset, player.transform.position.y + yFollowOffset, -1);
     }
 }

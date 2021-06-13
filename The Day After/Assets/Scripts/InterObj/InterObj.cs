@@ -13,12 +13,10 @@ public class InterObj : MonoBehaviour
         Obj_Data.InterObjAnim = GetComponent<Animator>();
         Obj_Data.IsOpen = false;
         Obj_Data.IsExhausted = false;
-        if (Obj_Data.HasPJSprite)
+
+        if (!Obj_Data.IsCollidable)
         {
-            Obj_Data.DisplaySprite = Resources.Load<Sprite>("Sprites/PJSprite");
-        } else
-        {
-            Obj_Data.DisplaySprite = Resources.Load<Sprite>("Sprites/ClothedSprite");
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GameObject.FindGameObjectWithTag("Player").GetComponent<Collider2D>());
         }
     }
 

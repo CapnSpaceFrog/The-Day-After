@@ -17,15 +17,16 @@ MonoBehaviour:
   WhenToUpdate: 1
   DisplayDialogue:
   - debug already interacted stop trying
-  DisplaySprite: []
+  DisplaySprite: {fileID: 0}
+  HasPJSprite: 1
+  ExhaustedDialogue: []
   QuestEventDialogue:
   - debug quest finished
-  MissingQuestItemDialogue:
-  - debug quest missing item
-  QuestExhaustedDialogue:
-  - The Dressers is exhausted
+  MissingQuestItemDialogue: []
+  ShouldBeDisabled: 0
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
+  InventoryIcon: {fileID: 0}
   DecoDialogue: []
   RequiredItem: {fileID: 0}
   IsExhausted: 1

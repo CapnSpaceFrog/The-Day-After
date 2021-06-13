@@ -1,0 +1,821 @@
+Using pre-set license
+Built from '2020.2/staging' branch; Version is '2020.2.3f1 (8ff31bc5bf5b) revision 9433883'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1052; Version 2009; 64bit' Language: 'en' Physical Memory: 16333 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+Z:\Unity\2020.2.3f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+Z:/GitHub/Clone Repositories/The-Day-After/The Day After
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+50025
+Successfully changed project path to: Z:/GitHub/Clone Repositories/The-Day-After/The Day After
+Z:/GitHub/Clone Repositories/The-Day-After/The Day After
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 52.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.3f1 (8ff31bc5bf5b)
+[Subsystems] Discovering subsystems at path Z:/Unity/2020.2.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path Z:/GitHub/Clone Repositories/The-Day-After/The Day After/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2080 (ID=0x1e87)
+    Vendor:   
+    VRAM:     8010 MB
+    Driver:   27.21.14.6677
+Initialize mono
+Mono path[0] = 'Z:/Unity/2020.2.3f1/Editor/Data/Managed'
+Mono path[1] = 'Z:/Unity/2020.2.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'Z:/Unity/2020.2.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56072
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: Z:/Unity/2020.2.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: Z:/Unity/2020.2.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001472 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 50.81 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.168 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000911 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 56.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.093 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2130 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.6 MB.
+System memory in use after: 97.6 MB.
+
+Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 2575.
+Total: 2.497700 ms (FindLiveObjects: 0.266600 ms CreateObjectMapping: 0.059200 ms MarkObjects: 2.031200 ms  DeleteObjects: 0.139400 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Kitchen Trash Can.prefab
+  artifactKey: Guid(fa4aaee2866ad80499263dd956e77983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Kitchen Trash Can.prefab using Guid(fa4aaee2866ad80499263dd956e77983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '107986cfed3c386f86c7be50ce4fe135') in 0.113041 seconds
+  Import took 0.117324 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Cutting Board.prefab
+  artifactKey: Guid(a64f293ed9a1b7047823b60c457c06bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Cutting Board.prefab using Guid(a64f293ed9a1b7047823b60c457c06bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dea3b075eadde12871690f578293db7') in 0.018529 seconds
+  Import took 0.022160 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Fridge Food.prefab
+  artifactKey: Guid(b3ca4ab2942f2d54684089c1c1621bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Fridge Food.prefab using Guid(b3ca4ab2942f2d54684089c1c1621bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '332128f893c2b642b2b809b4ac1a971d') in 0.030561 seconds
+  Import took 0.033958 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Kitchen Sink.prefab
+  artifactKey: Guid(0e2105db5b6d10d41a4ae979e19dbe43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Kitchen Sink.prefab using Guid(0e2105db5b6d10d41a4ae979e19dbe43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a44c0161fe1a35e9fc962e33321ebdf4') in 0.016870 seconds
+  Import took 0.020280 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.191735 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Cutting Board.prefab
+  artifactKey: Guid(a64f293ed9a1b7047823b60c457c06bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Cutting Board.prefab using Guid(a64f293ed9a1b7047823b60c457c06bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dea3b075eadde12871690f578293db7') in 0.010433 seconds
+  Import took 0.014427 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.344550 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/KitchenTrashData.asset
+  artifactKey: Guid(59294e0382d9b954f92dd4a4d12eb87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/KitchenTrashData.asset using Guid(59294e0382d9b954f92dd4a4d12eb87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46f3ca3d68ac3823da51a93606c01e8a') in 0.009695 seconds
+  Import took 0.013211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003929 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/KitchenTrashData.asset
+  artifactKey: Guid(59294e0382d9b954f92dd4a4d12eb87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/KitchenTrashData.asset using Guid(59294e0382d9b954f92dd4a4d12eb87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46f3ca3d68ac3823da51a93606c01e8a') in 0.002401 seconds
+  Import took 0.006580 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.549294 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/KitchenTrashData.asset
+  artifactKey: Guid(59294e0382d9b954f92dd4a4d12eb87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/KitchenTrashData.asset using Guid(59294e0382d9b954f92dd4a4d12eb87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0f898b41a3837898bcb2ffa0e76a26e') in 0.004666 seconds
+  Import took 0.008326 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008430 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/KitchenTrashData.asset
+  artifactKey: Guid(59294e0382d9b954f92dd4a4d12eb87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/KitchenTrashData.asset using Guid(59294e0382d9b954f92dd4a4d12eb87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0f898b41a3837898bcb2ffa0e76a26e') in 0.004062 seconds
+  Import took 0.007717 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.089778 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/KitchenSinkData.asset
+  artifactKey: Guid(119c2160b412c884298b71364fad8149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/KitchenSinkData.asset using Guid(119c2160b412c884298b71364fad8149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcf05427095ae71e3d19a823d7b9d3e7') in 0.008495 seconds
+  Import took 0.012123 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004571 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/KitchenSinkData.asset
+  artifactKey: Guid(119c2160b412c884298b71364fad8149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/KitchenSinkData.asset using Guid(119c2160b412c884298b71364fad8149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcf05427095ae71e3d19a823d7b9d3e7') in 0.002226 seconds
+  Import took 0.005648 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.138254 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/KitchenSinkData.asset
+  artifactKey: Guid(119c2160b412c884298b71364fad8149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/KitchenSinkData.asset using Guid(119c2160b412c884298b71364fad8149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f31b21e77318821d1fa2025e3d13ef42') in 0.002196 seconds
+  Import took 0.005933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011440 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/KitchenSinkData.asset
+  artifactKey: Guid(119c2160b412c884298b71364fad8149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/KitchenSinkData.asset using Guid(119c2160b412c884298b71364fad8149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f31b21e77318821d1fa2025e3d13ef42') in 0.002189 seconds
+  Import took 0.005659 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.859309 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/KitchenSinkData.asset
+  artifactKey: Guid(119c2160b412c884298b71364fad8149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/KitchenSinkData.asset using Guid(119c2160b412c884298b71364fad8149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1140a8faf847fb3eea545e74fbbbeb99') in 0.002344 seconds
+  Import took 0.005893 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011501 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/KitchenSinkData.asset
+  artifactKey: Guid(119c2160b412c884298b71364fad8149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/KitchenSinkData.asset using Guid(119c2160b412c884298b71364fad8149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1140a8faf847fb3eea545e74fbbbeb99') in 0.002167 seconds
+  Import took 0.005636 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.834350 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/CuttingBoardData.asset
+  artifactKey: Guid(cb93387463eed0e40b25f40954a4efc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/CuttingBoardData.asset using Guid(cb93387463eed0e40b25f40954a4efc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02da29c3ae131995bb319071ba052a02') in 0.010208 seconds
+  Import took 0.013856 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002337 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/CuttingBoardData.asset
+  artifactKey: Guid(cb93387463eed0e40b25f40954a4efc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/CuttingBoardData.asset using Guid(cb93387463eed0e40b25f40954a4efc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02da29c3ae131995bb319071ba052a02') in 0.003478 seconds
+  Import took 0.007128 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000945 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.981 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2112 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.7 MB.
+System memory in use after: 99.7 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2585.
+Total: 2.397300 ms (FindLiveObjects: 0.225500 ms CreateObjectMapping: 0.056900 ms MarkObjects: 1.997200 ms  DeleteObjects: 0.116500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000946 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.979 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2112 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.8 MB.
+System memory in use after: 99.8 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2588.
+Total: 2.364900 ms (FindLiveObjects: 0.228800 ms CreateObjectMapping: 0.057400 ms MarkObjects: 1.962200 ms  DeleteObjects: 0.115500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 87.130956 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Cutting Board.prefab
+  artifactKey: Guid(a64f293ed9a1b7047823b60c457c06bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Cutting Board.prefab using Guid(a64f293ed9a1b7047823b60c457c06bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27840520e1509b3f1c5df64484ce9972') in 0.070938 seconds
+  Import took 0.075227 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000873 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.967 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2112 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.8 MB.
+System memory in use after: 99.8 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2592.
+Total: 2.483700 ms (FindLiveObjects: 0.228300 ms CreateObjectMapping: 0.055200 ms MarkObjects: 2.073000 ms  DeleteObjects: 0.125600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 118.616113 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Dog Pee Stain.prefab
+  artifactKey: Guid(36281f198a665b04bbc42e9c9ff9070d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Dog Pee Stain.prefab using Guid(36281f198a665b04bbc42e9c9ff9070d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5c1cdc4d02beb078bdb6047b56dcf4b') in 0.070307 seconds
+  Import took 0.074890 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.067026 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset
+  artifactKey: Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset using Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64c8abf5670fbf5ce7cc3f83213385d0') in 0.009246 seconds
+  Import took 0.012948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004716 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset
+  artifactKey: Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset using Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64c8abf5670fbf5ce7cc3f83213385d0') in 0.002504 seconds
+  Import took 0.006161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.124432 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Dog Pee Stain.prefab
+  artifactKey: Guid(36281f198a665b04bbc42e9c9ff9070d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Dog Pee Stain.prefab using Guid(36281f198a665b04bbc42e9c9ff9070d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d0564b5e770be49fbd3fd89d6d1e6dc') in 0.010223 seconds
+  Import took 0.014156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005813 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Dog Pee Stain.prefab
+  artifactKey: Guid(36281f198a665b04bbc42e9c9ff9070d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Dog Pee Stain.prefab using Guid(36281f198a665b04bbc42e9c9ff9070d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d0564b5e770be49fbd3fd89d6d1e6dc') in 0.010069 seconds
+  Import took 0.013886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.028525 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset
+  artifactKey: Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset using Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f564d951a88ea06d5030e2126ca0f28e') in 0.002513 seconds
+  Import took 0.006115 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.024844 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset
+  artifactKey: Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset using Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f564d951a88ea06d5030e2126ca0f28e') in 0.002475 seconds
+  Import took 0.005995 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.551165 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset
+  artifactKey: Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset using Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a5c463b65d6efc711b5992ed2f5f732') in 0.002136 seconds
+  Import took 0.005608 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011082 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset
+  artifactKey: Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset using Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a5c463b65d6efc711b5992ed2f5f732') in 0.002217 seconds
+  Import took 0.005683 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.204483 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset
+  artifactKey: Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset using Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea335e1915fbebe902d0a0a11e15476f') in 0.003252 seconds
+  Import took 0.006919 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009649 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset
+  artifactKey: Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset using Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea335e1915fbebe902d0a0a11e15476f') in 0.003375 seconds
+  Import took 0.006900 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 66.889432 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/PEESTAIN_CLEANED.anim
+  artifactKey: Guid(a89eea4a3cd1f31428aad678997c7003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/PEESTAIN_CLEANED.anim using Guid(a89eea4a3cd1f31428aad678997c7003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80d4a288e6846d5cae982e3bf122de44') in 0.010033 seconds
+  Import took 0.027761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009734 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/PEESTAIN_CLEANED.anim
+  artifactKey: Guid(a89eea4a3cd1f31428aad678997c7003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/PEESTAIN_CLEANED.anim using Guid(a89eea4a3cd1f31428aad678997c7003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80d4a288e6846d5cae982e3bf122de44') in 0.002221 seconds
+  Import took 0.005653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.024330 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset
+  artifactKey: Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset using Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc98b53012fd003fec24486050634ae9') in 0.003236 seconds
+  Import took 0.006857 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010498 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset
+  artifactKey: Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogPeeStainData.asset using Guid(f5aa792e084514f429f0f5662ad48398) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc98b53012fd003fec24486050634ae9') in 0.003199 seconds
+  Import took 0.006774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.412049 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Dog Treats.prefab
+  artifactKey: Guid(8de691cc553b5d2418e0703a357994c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Dog Treats.prefab using Guid(8de691cc553b5d2418e0703a357994c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a05e5d154a16c75d94f1136c5f76c0d4') in 0.014718 seconds
+  Import took 0.018389 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003917 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Dog Treats.prefab
+  artifactKey: Guid(8de691cc553b5d2418e0703a357994c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Dog Treats.prefab using Guid(8de691cc553b5d2418e0703a357994c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a05e5d154a16c75d94f1136c5f76c0d4') in 0.006645 seconds
+  Import took 0.010328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.918871 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset
+  artifactKey: Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset using Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '518a3140b1a887c1a9db8339d5bc7f24') in 0.008953 seconds
+  Import took 0.012531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006893 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset
+  artifactKey: Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset using Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '518a3140b1a887c1a9db8339d5bc7f24') in 0.002199 seconds
+  Import took 0.005648 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.877429 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Dog Treats.prefab
+  artifactKey: Guid(8de691cc553b5d2418e0703a357994c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Dog Treats.prefab using Guid(8de691cc553b5d2418e0703a357994c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb40873c71889634c5b53d34a1506ced') in 0.007281 seconds
+  Import took 0.011008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008184 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Dog Treats.prefab
+  artifactKey: Guid(8de691cc553b5d2418e0703a357994c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Dog Treats.prefab using Guid(8de691cc553b5d2418e0703a357994c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb40873c71889634c5b53d34a1506ced') in 0.006730 seconds
+  Import took 0.010321 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.248887 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset
+  artifactKey: Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset using Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '121615200f735ffdb3feeeb4480616b8') in 0.002246 seconds
+  Import took 0.005784 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009423 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset
+  artifactKey: Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset using Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '121615200f735ffdb3feeeb4480616b8') in 0.002188 seconds
+  Import took 0.005686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.954923 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset
+  artifactKey: Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset using Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8fa9ac4959580fffb5221469ccc6fd2') in 0.002572 seconds
+  Import took 0.006070 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010270 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset
+  artifactKey: Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset using Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8fa9ac4959580fffb5221469ccc6fd2') in 0.002560 seconds
+  Import took 0.006102 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.024536 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset
+  artifactKey: Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset using Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8e28da10d508256110442edf851b9d5') in 0.002612 seconds
+  Import took 0.006133 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010445 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset
+  artifactKey: Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/DogTreatsData.asset using Guid(1968f01d536269640b8a6a7a7559d611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8e28da10d508256110442edf851b9d5') in 0.002501 seconds
+  Import took 0.006037 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 45.261495 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Bucket Duster.prefab
+  artifactKey: Guid(ad47f15d89f29da4197a59f51247eae8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Bucket Duster.prefab using Guid(ad47f15d89f29da4197a59f51247eae8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '886d6737123aec106011ff22d8f61c6b') in 0.015020 seconds
+  Import took 0.018642 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003561 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Bucket Duster.prefab
+  artifactKey: Guid(ad47f15d89f29da4197a59f51247eae8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Bucket Duster.prefab using Guid(ad47f15d89f29da4197a59f51247eae8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '886d6737123aec106011ff22d8f61c6b') in 0.006777 seconds
+  Import took 0.010403 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.536713 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset
+  artifactKey: Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset using Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd19f18b976b85aa9c8213dd93c04eed') in 0.008765 seconds
+  Import took 0.012346 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004761 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset
+  artifactKey: Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset using Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd19f18b976b85aa9c8213dd93c04eed') in 0.002329 seconds
+  Import took 0.005697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.366476 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset
+  artifactKey: Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset using Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8020d8ff1e811536c113d86a5a77daf9') in 0.002348 seconds
+  Import took 0.005886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009461 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset
+  artifactKey: Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset using Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8020d8ff1e811536c113d86a5a77daf9') in 0.002324 seconds
+  Import took 0.005881 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.672694 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset
+  artifactKey: Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset using Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24b49080a13adbbe3a7cde8fcb8ff7a2') in 0.002273 seconds
+  Import took 0.005809 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014821 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset
+  artifactKey: Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset using Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24b49080a13adbbe3a7cde8fcb8ff7a2') in 0.002291 seconds
+  Import took 0.005840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 55.952642 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Bucket Duster.prefab
+  artifactKey: Guid(ad47f15d89f29da4197a59f51247eae8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Bucket Duster.prefab using Guid(ad47f15d89f29da4197a59f51247eae8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1f4eeae6eee206fc4f7e10432277084') in 0.019795 seconds
+  Import took 0.023655 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset
+  artifactKey: Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset using Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b61ee1bf3c9887475e1898ec12927f4') in 0.002391 seconds
+  Import took 0.005571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Bucket Duster.prefab
+  artifactKey: Guid(ad47f15d89f29da4197a59f51247eae8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Bucket Duster.prefab using Guid(ad47f15d89f29da4197a59f51247eae8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1f4eeae6eee206fc4f7e10432277084') in 0.010799 seconds
+  Import took 0.014266 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.021382 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset
+  artifactKey: Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset using Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b61ee1bf3c9887475e1898ec12927f4') in 0.002351 seconds
+  Import took 0.005825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.883509 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset
+  artifactKey: Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset using Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b217674c556f958d2760c7598e95d7fc') in 0.002721 seconds
+  Import took 0.006382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015930 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset
+  artifactKey: Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset using Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b217674c556f958d2760c7598e95d7fc') in 0.002285 seconds
+  Import took 0.005716 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000930 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.934 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2112 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.9 MB.
+System memory in use after: 99.9 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2596.
+Total: 2.430800 ms (FindLiveObjects: 0.246700 ms CreateObjectMapping: 0.058700 ms MarkObjects: 2.004700 ms  DeleteObjects: 0.119800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.871516 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset
+  artifactKey: Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset using Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26950a4528b7cc6aefd01500aab50304') in 0.013847 seconds
+  Import took 0.017343 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000908 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.978 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2112 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.9 MB.
+System memory in use after: 99.9 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2599.
+Total: 2.417500 ms (FindLiveObjects: 0.230100 ms CreateObjectMapping: 0.057200 ms MarkObjects: 2.005500 ms  DeleteObjects: 0.123700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.636902 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset
+  artifactKey: Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/BucketDusterData.asset using Guid(73ff65968267b894c83e1a498ab47ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f13ad7636c99edf87f4efa88373a20f6') in 0.014015 seconds
+  Import took 0.017729 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 54.958214 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Microwave.prefab
+  artifactKey: Guid(18c27def1d4faf643944e4f8343cd3e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Microwave.prefab using Guid(18c27def1d4faf643944e4f8343cd3e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '805015df9100474b6f734c0b89bda8cd') in 0.054450 seconds
+  Import took 0.058086 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011631 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Microwave.prefab
+  artifactKey: Guid(18c27def1d4faf643944e4f8343cd3e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Microwave.prefab using Guid(18c27def1d4faf643944e4f8343cd3e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '805015df9100474b6f734c0b89bda8cd') in 0.008051 seconds
+  Import took 0.011928 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.345324 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/MicrowaveData.asset
+  artifactKey: Guid(c7a725422a8a5e94bb35ae28c1f9e9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/MicrowaveData.asset using Guid(c7a725422a8a5e94bb35ae28c1f9e9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e838ea4af860e4c0d201eb5823f3b1b0') in 0.008258 seconds
+  Import took 0.011889 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007501 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/MicrowaveData.asset
+  artifactKey: Guid(c7a725422a8a5e94bb35ae28c1f9e9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/MicrowaveData.asset using Guid(c7a725422a8a5e94bb35ae28c1f9e9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e838ea4af860e4c0d201eb5823f3b1b0') in 0.002196 seconds
+  Import took 0.005599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.454315 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Microwave.prefab
+  artifactKey: Guid(18c27def1d4faf643944e4f8343cd3e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Microwave.prefab using Guid(18c27def1d4faf643944e4f8343cd3e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f745e336630ffbc0c2985164f5151776') in 0.007167 seconds
+  Import took 0.010790 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.695991 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/MicrowaveData.asset
+  artifactKey: Guid(c7a725422a8a5e94bb35ae28c1f9e9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/MicrowaveData.asset using Guid(c7a725422a8a5e94bb35ae28c1f9e9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0855b5c7708e0f3424f82af9bf53529d') in 0.002476 seconds
+  Import took 0.006017 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012142 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/MicrowaveData.asset
+  artifactKey: Guid(c7a725422a8a5e94bb35ae28c1f9e9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/MicrowaveData.asset using Guid(c7a725422a8a5e94bb35ae28c1f9e9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0855b5c7708e0f3424f82af9bf53529d') in 0.003286 seconds
+  Import took 0.007801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.306789 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/MicrowaveData.asset
+  artifactKey: Guid(c7a725422a8a5e94bb35ae28c1f9e9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/MicrowaveData.asset using Guid(c7a725422a8a5e94bb35ae28c1f9e9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa407bad60158c530607efdfc72fe2bc') in 0.002434 seconds
+  Import took 0.006035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011917 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/MicrowaveData.asset
+  artifactKey: Guid(c7a725422a8a5e94bb35ae28c1f9e9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/MicrowaveData.asset using Guid(c7a725422a8a5e94bb35ae28c1f9e9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa407bad60158c530607efdfc72fe2bc') in 0.002302 seconds
+  Import took 0.005821 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000956 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.968 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2112 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.9 MB.
+System memory in use after: 99.9 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2603.
+Total: 2.564300 ms (FindLiveObjects: 0.246300 ms CreateObjectMapping: 0.056000 ms MarkObjects: 2.134900 ms  DeleteObjects: 0.125500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.859972 seconds.
+  path: Assets/Prefabs/Inter Objs/Kitchen/Dog Treats.prefab
+  artifactKey: Guid(8de691cc553b5d2418e0703a357994c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Kitchen/Dog Treats.prefab using Guid(8de691cc553b5d2418e0703a357994c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c543b552dc1048d6daf1d83d301d1c0d') in 0.057397 seconds
+  Import took 0.061215 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.348681 seconds.
+  path: Assets/Sprites/Inventory Visual Sprites/DogTreatItem.png
+  artifactKey: Guid(b9acc5d911d1fe94c8a9088ba7721bf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Inventory Visual Sprites/DogTreatItem.png using Guid(b9acc5d911d1fe94c8a9088ba7721bf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e680f5bb52b87909bc12ef6031305ea2') in 0.034135 seconds
+  Import took 0.037907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.834222 seconds.
+  path: Assets/Prefabs/Inter Objs/Living Room/TV.prefab
+  artifactKey: Guid(b983b617e6a7e52438363d1c304a06ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Living Room/TV.prefab using Guid(b983b617e6a7e52438363d1c304a06ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0ad5283859be95f34df7617daf543fe') in 0.018587 seconds
+  Import took 0.022497 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.435034 seconds.
+  path: Assets/Prefabs/Inter Objs/Living Room/TVData.asset
+  artifactKey: Guid(026025628c514854b99147866fd89c17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Living Room/TVData.asset using Guid(026025628c514854b99147866fd89c17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75ed0695b1b0df5d3ed9b1ed21ae91a0') in 0.008736 seconds
+  Import took 0.012530 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004837 seconds.
+  path: Assets/Prefabs/Inter Objs/Living Room/TVData.asset
+  artifactKey: Guid(026025628c514854b99147866fd89c17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Inter Objs/Living Room/TVData.asset using Guid(026025628c514854b99147866fd89c17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75ed0695b1b0df5d3ed9b1ed21ae91a0') in 0.002854 seconds
+  Import took 0.006266 seconds .
+

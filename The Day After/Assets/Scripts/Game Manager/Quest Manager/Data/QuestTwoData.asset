@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: QuestTwoData
   m_EditorClassIdentifier: 
   QuestRequirements:
-  - {fileID: 0}
-  DoorToUnlock: 
+  - {fileID: 5833964544174170375, guid: dafbfda9a95d5794390df3a141cc5ebd, type: 3}
+  DoorsToUnlock:
+  - Upstairs Hallway Stairs
+  - Downstairs Hallway Stairs
+  - Living Room Door
+  - Kitchen Door
   QuestCompleteDialogue:
   - debug stairs accessible

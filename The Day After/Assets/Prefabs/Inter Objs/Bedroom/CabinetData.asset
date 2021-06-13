@@ -12,18 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891b4a6fc961b944fa7d579264b76b5e, type: 3}
   m_Name: CabinetData
   m_EditorClassIdentifier: 
-  InterObjType: 0
+  InterObjType: 1
   WhatToUpdate: 0
   WhenToUpdate: 3
   DisplayDialogue: []
-  DisplaySprite: []
+  DisplaySprite: {fileID: 0}
+  ExhaustedDialogue:
+  - debug exhausted dialogue
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
-  InventoryFullDialogue: []
-  AddedToInventoryDialogue: []
+  ShouldBeDisabled: 0
+  InventoryFullDialogue:
+  - debug inv full
+  AddedToInventoryDialogue:
+  - debug added to inv
+  InventoryIcon: {fileID: 21300000, guid: 86cf1f32e95993f4c8f7512b4b27fa1b, type: 3}
   DecoDialogue:
   - debug deco dialogue
   RequiredItem: {fileID: 0}
+  IsExhausted: 0
   BeforeAnimsToPlay: []
   AfterAnimsToPlay: []
   InterObjAnim: {fileID: 0}

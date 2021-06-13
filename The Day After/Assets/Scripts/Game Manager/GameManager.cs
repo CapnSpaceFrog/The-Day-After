@@ -44,7 +44,6 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Game Time Expired");
             StaticGameData.CompletedWithinTime = false;
-            Debug.Log(StaticGameData.CompletedWithinTime);
             sceneLoader.LoadGameOver();
         }
     }

@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 2048767977834392874}
   - component: {fileID: 2048767977834392873}
   - component: {fileID: 2048767977834392872}
-  - component: {fileID: 2048767977834392871}
-  - component: {fileID: 2048767977834392875}
+  - component: {fileID: 8586349729676874323}
   m_Layer: 7
   m_Name: Desk Chair
   m_TagString: Untagged
@@ -104,8 +103,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &2048767977834392871
-CircleCollider2D:
+--- !u!70 &8586349729676874323
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,19 +116,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.11546934
---- !u!114 &2048767977834392875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048767977834392870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 808982311094340469da1156eb9f6f7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Obj_Data: {fileID: 11400000, guid: 33fb2c9946c69f248b85e7f0594e3519, type: 2}
+  m_Offset: {x: 0, y: -0.03997743}
+  m_Size: {x: 0.1813879, y: 0.44471478}
+  m_Direction: 0

@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8986b72a4c136b4d872f2f11ec78b9f, type: 3}
   m_Name: QuestThreeData
   m_EditorClassIdentifier: 
-  QuestRequirements: []
+  QuestRequirements:
+  - {fileID: 7523922672753095590, guid: b983b617e6a7e52438363d1c304a06ef, type: 3}
+  - {fileID: 1223696217875481654, guid: 7ec085f6024713f4188c2f31fef95761, type: 3}
+  DoorsToUnlock: []
+  QuestCompleteDialogue:
+  - debug game over

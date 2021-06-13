@@ -16,15 +16,21 @@ MonoBehaviour:
   WhatToUpdate: 1
   WhenToUpdate: 1
   DisplayDialogue: []
-  DisplaySprite: []
+  DisplaySprite: {fileID: 0}
+  HasPJSprite: 1
+  ExhaustedDialogue:
+  - debug exhausted dialogue
   QuestEventDialogue:
   - debug quest event triggered
   MissingQuestItemDialogue:
   - debug missing quest item
+  ShouldBeDisabled: 0
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
+  InventoryIcon: {fileID: 0}
   DecoDialogue: []
   RequiredItem: {fileID: 5273741588962683389, guid: bcfce5e2b23a9d746870d5316a2006d1, type: 3}
+  IsExhausted: 0
   BeforeAnimsToPlay: []
   AfterAnimsToPlay:
   - 

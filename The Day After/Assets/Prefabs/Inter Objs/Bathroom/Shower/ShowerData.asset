@@ -14,14 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InterObjType: 2
   WhatToUpdate: 2
-  DisplayDialogue: []
-  DisplaySprite: []
-  QuestEventDialogue: []
-  MissingQuestItemDialogue: []
-  StoredItem: []
-  DecoDialogue: []
+  WhenToUpdate: 2
+  DisplayDialogue:
+  - debug quest finished
+  DisplaySprite: {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
+  ExhaustedDialogue:
+  - debug exhausted dialogue
+  QuestEventDialogue:
+  - debug quest finished
+  MissingQuestItemDialogue:
+  - debug missing quest item
+  ShouldBeDisabled: 0
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
-  RequiredItem: {fileID: 0}
+  InventoryIcon: {fileID: 0}
+  DecoDialogue: []
+  RequiredItem: {fileID: 5898630004599657560, guid: f1ba5e24d08f84e43b933f5b6629cf81, type: 3}
+  IsExhausted: 0
+  BeforeAnimsToPlay:
+  - PLAYER_EMPTY
+  - SHOWER_CLOSED
+  AfterAnimsToPlay:
+  - PLAYER_CLOTHEDIDLE
+  - SHOWER_FINISHED
   InterObjAnim: {fileID: 0}
-  WhereToMove: 
+  IsOpen: 0
+  TargetDoor: 
+  DoorLockedDialogue: []

@@ -33,6 +33,15 @@ public class DialogueHandler : MonoBehaviour
         currentInterObj = objToReference;
         dialogueToDisplay = currentInterObj.Obj_Data.DisplayDialogue;
 
+        if (!StaticGameData.IsDressed)
+        {
+            currentInterObj.Obj_Data.DisplaySprite = Resources.Load<Sprite>("Sprites/PJSprite");
+        }
+        else
+        {
+            currentInterObj.Obj_Data.DisplaySprite = Resources.Load<Sprite>("Sprites/ClothedSprite");
+        }
+
         anim.SetBool("fadein", true);
         BeginDialogueDisplay();
     }
