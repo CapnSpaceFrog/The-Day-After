@@ -15,7 +15,7 @@ MonoBehaviour:
   InterObjType: 1
   WhatToUpdate: 0
   WhenToUpdate: 3
-  IsCollidable: 1
+  IsCollidable: 0
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
   ExhaustedDialogue: []
@@ -25,9 +25,8 @@ MonoBehaviour:
   InventoryFullDialogue:
   - debug inv full
   AddedToInventoryDialogue:
-  - Realizing how horrid your desk space has become, and figuring your desk is a
-    good place to start cleaning, you start picking up the bits of trash and leftover
-    food.
+  - Realizing how horrid your desk space has become, you start picking up the bits
+    of trash and leftover food.
   - "Amidst the molding pieces of food, you find an old book. It\u2019s your yearbook
     from senior year."
   - Nostalgia takes hold and you decide to flip through the pages.

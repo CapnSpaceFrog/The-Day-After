@@ -19,12 +19,10 @@ public class Quest
 
     public void CheckIfRequirementMatch(GameObject requiredObj)
     {
-        Debug.Log("Checking Requirement Match");
         foreach (GameObject req in requirements)
         {
             if (req.name == requiredObj.name)
             {
-                Debug.Log("Received Requirement Matches");
                 CompletedRequirement(requiredObj);
             }
         }
@@ -49,11 +47,9 @@ public class Quest
         {
             if (completedReq[i] == null)
             {
-                Debug.Log("Failsafe Was Triggered");
                 return;
             }
         }
         QuestComplete = true;
-        Debug.Log("Quest Completed in Quest Class");
     }
 }

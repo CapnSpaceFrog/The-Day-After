@@ -42,17 +42,14 @@ public class GameManager : MonoBehaviour
 
         if (Timer.HasTimeExpired())
         {
-            Debug.Log("Game Time Expired");
             StaticGameData.CompletedWithinTime = false;
             sceneLoader.LoadGameOver();
         }
     }
 
-    public IEnumerator GameCompleted()
+    public void GameCompleted()
     {
         StaticGameData.CompletedWithinTime = true;
-        yield return new WaitUntil(() => DialogueActionHandler.dialogueFinished == true);
-        Debug.Log(StaticGameData.CompletedWithinTime);
         sceneLoader.LoadGameOver();
     }
 

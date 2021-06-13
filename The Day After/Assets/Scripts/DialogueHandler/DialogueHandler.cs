@@ -15,8 +15,7 @@ public class DialogueHandler : MonoBehaviour
 
     private bool textDisplaying;
 
-    [SerializeField]
-    private float textDisplayDelay;
+    [SerializeField] private Animator continueAnim;
 
     public List<string> dialogueToDisplay;
 
@@ -64,8 +63,10 @@ public class DialogueHandler : MonoBehaviour
             yield return new WaitUntil(() => textDisplaying == false);
 
             //Disply "press space to continue" once dialogue has displayed
-            
+
+            continueAnim.Play("SUBMENU_FADEIN");
             yield return WaitForKeyPress(Key.Space);
+            continueAnim.Play("SUBMENU_FADEOUT");
             //Proceed to next stage of text only until key is pressed
         }
         EndDialogueDisplay();

@@ -38,7 +38,8 @@ public class UIEventHandler : MonoBehaviour
     private string[] endDialogue;
     [SerializeField]
     private TextMeshProUGUI endText;
-    //Should turn this into a constant we can access
+    [SerializeField]
+    private Animator continueAnim;
 
     private bool textDisplaying;
 
@@ -49,6 +50,8 @@ public class UIEventHandler : MonoBehaviour
 
     private void Awake()
     {
+        StaticGameData.CompletedWithinTime = true;
+
         OverrideDisplay(eventData.DialogueToDisplay, eventData.SpritesToDisplay);
 
         if (StaticGameData.CompletedWithinTime == true)
@@ -89,7 +92,7 @@ public class UIEventHandler : MonoBehaviour
                 dialogueAnim.GetComponent<Canvas>().sortingOrder = 4;
             }
 
-            if (!eventData.IsPreEvent && StaticGameData.CompletedWithinTime && dialogueToDisplay[i] == dialogueToDisplay[18])
+            if (!eventData.IsPreEvent && StaticGameData.CompletedWithinTime && dialogueToDisplay[i] == dialogueToDisplay[19])
             {
                 playerAnim.Play("PLAYER_MOVETOHUG");
             }
@@ -107,8 +110,9 @@ public class UIEventHandler : MonoBehaviour
                 momAnim.Play("MOM_DROPBAGS");
             }
             //Disply "press space to continue" once dialogue has displayed
-
+            continueAnim.Play("SUBMENU_FADEIN");
             yield return WaitForKeyPress(Key.Space);
+            continueAnim.Play("SUBMENU_FADEOUT");
             //Proceed to next stage of text only until key is pressed
         }
         EndDialogueDisplay();

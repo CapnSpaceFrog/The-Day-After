@@ -46,7 +46,7 @@ public class QuestManager
         {
             if (CurrentQuest == FinalQuest)
             {
-                gm.StartCoroutine(gm.GameCompleted());
+                gm.GameCompleted();
                 return;
             }
             UpdateActiveQuest();
