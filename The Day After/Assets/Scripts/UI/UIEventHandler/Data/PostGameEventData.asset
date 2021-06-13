@@ -13,37 +13,76 @@ MonoBehaviour:
   m_Name: PostGameEventData
   m_EditorClassIdentifier: 
   DialogueToDisplay:
-  - you did not finish in time
-  - test
-  - test2
-  - test3
-  - asdadsads
-  - SDgsdgf
-  - whrthetrh
-  - sgesrgesgr
-  - asghgdsfh
-  - dfhdghffdghj
+  - You hear someone at the front door.
+  - "You panic. You didn\u2019t think Mom was going to be home so soon."
+  - "You can\u2019t run back upstairs, the doors right there."
+  - You take a deep breath.
+  - '"Hey... Mom..."'
+  - Her eyes widen as she looks up from the door.
+  - "\u201CHoney! A- Are you okay? Is- Is something wrong?\u201D"
+  - "\u201CYea, I\u2019m fine I just...\u201D"
+  - You feel yourself starting to get a bit emotional...
+  - "\u201CI, uhm. Cleaned my room, then took a shower, and...\u201D"
+  - "You can\u2019t help but start crying. You don\u2019t really know why."
+  - "\u201CI\u2019m sorry I just... it\u2019s a lot...\u201D"
+  - You embrace your Mom tightly.
+  - Perhaps you pushed yourself a bit too much today.
+  - "\u201CI\u2019m proud of you sweetie.\u201D"
+  - Her voice breaks up as she speaks.
+  - You silently hug each other for a moment.
+  - "\u201CDo you remember when you used to help me cook in the kitchen?\u201D"
+  - You take a deep breath and sniffle before responding.
+  - "\u201CY- Yea...\u201D"
+  - "\u201CI could never turn my back on you, or else you\u2019d burn something...
+    or yourself!\u201D"
+  - "\u201CI remember how hard of a time I had learning how to make Mac-n-Cheese...\u201D"
+  - "\u201CDon\u2019t even get me started...\u201D"
+  - You both laugh between sniffles and tears, reminiscing on old memories.
+  - "\u201CYou got groceries, so...\""
+  - You clear your throat.
+  - "\"Why don\u2019t I help out cooking dinner tonight?\u201D"
+  - "\u201CYou don\u2019t have to worry about me burning myself!\u201D"
+  - '"I''d love that sweetie."'
   SpritesToDisplay:
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
   IsPreEvent: 0
   FinishedInTimeDialogue:
   - You hear someone at the front door.
   - "You panic. You didn\u2019t think Mom was going to be home so soon."
-  - "You can\u2019t run upstairs, since the front door is right there."
+  - "You can\u2019t run back upstairs, the doors right there."
   - You take a deep breath.
   - '"Hey... Mom..."'
-  - Her eyes widen as she looks up from the lock on the door.
+  - Her eyes widen as she looks up from the door.
   - '"I- W- Wha- Are you okay?"'
-  - She fumbles with her words for a bit, trying to find the things to say.
+  - She fumbles with her words for a bit, trying to find things to say.
   - "\"Are- Are you okay? D- Did something happen? I haven\u2019t seen you...\""
   - "\"Yea, I\u2019m good Mom.\""
   - "\"Are you sure!? You\u2019re feeling okay?\""
@@ -53,6 +92,7 @@ MonoBehaviour:
   - You fall silent, not knowing what else to say.
   - Her eyes begin to well up with tears.
   - "\"I can\u2019t believe it...\""
+  - "You feel a bit uncomfortable now that she\u2019s getting emotional."
   - "You can tell she\u2019s trying to hold her tears back, but it's no use."
   - You feel awkward just standing here.
   - Before you know it your feet are moving towards her.
@@ -60,6 +100,7 @@ MonoBehaviour:
     since that day."
   - "\u201CI love you mom.\u201D You say, sobbing in between each word."
   - "\u201CI love you too, sweetie.\u201D"
+  - "You feel a bit uncomfortable now that she\u2019s getting emotional."
   FinishedInTimeSpriteDisplay:
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
@@ -82,4 +123,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}
   - {fileID: 21300000, guid: 368a5017dc6b6d146b426aea93ccb4ea, type: 3}

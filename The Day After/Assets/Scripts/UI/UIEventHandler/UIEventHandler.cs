@@ -94,10 +94,15 @@ public class UIEventHandler : MonoBehaviour
                 playerAnim.Play("PLAYER_MOVETOHUG");
             }
 
+            if (!eventData.IsPreEvent && !StaticGameData.CompletedWithinTime && dialogueToDisplay[i] == dialogueToDisplay[12])
+            {
+                playerAnim.Play("PLAYER_MOVETOHUG");
+            }
+
             //Wait for "Show Text" to finish before continuing
             yield return new WaitUntil(() => textDisplaying == false);
 
-            if (!eventData.IsPreEvent && StaticGameData.CompletedWithinTime && dialogueToDisplay[i] == dialogueToDisplay[5])
+            if (!eventData.IsPreEvent && dialogueToDisplay[i] == dialogueToDisplay[5])
             {
                 momAnim.Play("MOM_DROPBAGS");
             }
