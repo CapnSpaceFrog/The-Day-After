@@ -72,20 +72,17 @@ public class QuestManager
         }
 
         //Change current quest and update current int
-        Debug.Log("Quest Complete In Quest Manager");
         ChangeActiveQuest(quests[currentQuestInt + 1]);
         currentQuestInt++;
     }
 
     public void ChangeActiveQuest(Quest newQuest)
     {
-        Debug.Log("Active Quest Updated");
         CurrentQuest = newQuest;
     }
 
     public void ReceivedRequirement(GameObject req)
     {
-        Debug.Log("Received Requirement");
         CurrentQuest.CheckIfRequirementMatch(req);
     }
 }

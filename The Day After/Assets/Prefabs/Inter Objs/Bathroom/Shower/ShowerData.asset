@@ -17,7 +17,24 @@ MonoBehaviour:
   WhenToUpdate: 2
   IsCollidable: 1
   DisplayDialogue:
-  - debug quest finished
+  - You throw off your pajamas and hop into the shower.
+  - You forgot how nice the warm water feels on your skin.
+  - Your enjoyment is interrupted by the thought of what happened two weeks ago.
+  - "You feel guilty. You don\u2019t feel like you should be thinking about it."
+  - "You start to feel panicked, or maybe you\u2019re just high."
+  - Your breathing picks up, and the confined space of the shower starts to feel
+    like it's choking you.
+  - You shut off the water and quickly jump out of the shower.
+  - "Your therapist\u2019s voice reminds you to breathe, and you do just that."
+  - You look around the bathroom and start pointing out colors that are on the rainbow
+    to yourself.
+  - "It\u2019s a dumb trick, and meant for kids, but it works for you."
+  - You keep breathing, but the cold air starts to nip at your bare skin.
+  - You change into the clothes you bought. It feels nice to get dressed.
+  - "You still feel a bit uneasy, and locking yourself back in your room doesn\u2019t
+    sound very smart."
+  - "You feel a bit hungry as well, and Mom\u2019s been making you food non stop."
+  - Maybe you should make a meal yourself.
   DisplaySprite: {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
   ExhaustedDialogue:
   - debug exhausted dialogue
@@ -35,7 +52,7 @@ MonoBehaviour:
     to yourself.
   - "It\u2019s a dumb trick, and meant for kids, but it works for you."
   - You keep breathing, but the cold air starts to nip at your bare skin.
-  - You change into the clothes you bought. It feels nice to get dressed.
+  - You change into the clothes you brought. It feels nice to get dressed.
   MissingQuestItemDialogue:
   - "You\u2019ll need a change of clothes. You probably have some clean ones in your
     closet."
@@ -45,7 +62,7 @@ MonoBehaviour:
   InventoryIcon: {fileID: 0}
   DecoDialogue: []
   RequiredItem: {fileID: 5898630004599657560, guid: f1ba5e24d08f84e43b933f5b6629cf81, type: 3}
-  IsExhausted: 0
+  IsExhausted: 1
   BeforeAnimsToPlay:
   - PLAYER_EMPTY
   - SHOWER_CLOSED

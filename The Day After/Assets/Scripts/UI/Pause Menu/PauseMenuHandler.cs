@@ -35,17 +35,14 @@ public class PauseMenuHandler : MonoBehaviour
         {
             case 0:
                 StaticGameData.CurrentDisplaySpeed = StaticGameData.SlowTextSpeed;
-                Debug.Log("Slow " + StaticGameData.CurrentDisplaySpeed);
                 break;
 
             case 1:
                 StaticGameData.CurrentDisplaySpeed = StaticGameData.MediumTextSpeed;
-                Debug.Log("Medium " + StaticGameData.CurrentDisplaySpeed);
                 break;
 
             case 2:
                 StaticGameData.CurrentDisplaySpeed = StaticGameData.FastTextSpeed;
-                Debug.Log("Fast " + StaticGameData.CurrentDisplaySpeed);
                 break;
         }
     }
