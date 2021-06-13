@@ -50,8 +50,6 @@ public class UIEventHandler : MonoBehaviour
 
     private void Awake()
     {
-        StaticGameData.CompletedWithinTime = true;
-
         OverrideDisplay(eventData.DialogueToDisplay, eventData.SpritesToDisplay);
 
         if (StaticGameData.CompletedWithinTime == true)
