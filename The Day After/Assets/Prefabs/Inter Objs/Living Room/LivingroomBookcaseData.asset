@@ -19,7 +19,7 @@ MonoBehaviour:
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - A bookshelf your mom uses.
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 0
@@ -27,7 +27,10 @@ MonoBehaviour:
   AddedToInventoryDialogue: []
   InventoryIcon: {fileID: 0}
   DecoDialogue:
-  - debug deco dialogue
+  - Mom uses this book shelf.
+  - "There\u2019s tons of classics on here like Moby Dick and Pride and Prejudice."
+  - "Amidst all the classics, however, there\u2019s a few on parenting."
+  - It makes you a bit uncomfortable seeing that.
   RequiredItem: {fileID: 0}
   IsExhausted: 0
   BeforeAnimsToPlay: []

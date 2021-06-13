@@ -19,7 +19,7 @@ MonoBehaviour:
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - A bowl of fruit, drawn by you.
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 0
@@ -27,7 +27,10 @@ MonoBehaviour:
   AddedToInventoryDialogue: []
   InventoryIcon: {fileID: 0}
   DecoDialogue:
-  - debug deco dialogue
+  - Mom put this up after...
+  - You drew it when you were a kid. You hear her laugh when she comes up the stairs
+    sometimes.
+  - "You guess that\u2019s why she put it up."
   RequiredItem: {fileID: 0}
   IsExhausted: 0
   BeforeAnimsToPlay: []

@@ -15,10 +15,11 @@ MonoBehaviour:
   InterObjType: 0
   WhatToUpdate: 0
   WhenToUpdate: 3
+  IsCollidable: 1
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - The bathroom sink.
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 0
@@ -26,7 +27,10 @@ MonoBehaviour:
   AddedToInventoryDialogue: []
   InventoryIcon: {fileID: 0}
   DecoDialogue:
-  - debug deco dialogue
+  - You take a look at your reflection.
+  - "It\u2019s you."
+  - "It doesn\u2019t feel like you though."
+  - "You start to feel uncomfortable, you don\u2019t like what you see."
   RequiredItem: {fileID: 0}
   IsExhausted: 0
   BeforeAnimsToPlay: []

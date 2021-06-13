@@ -37,9 +37,19 @@ MonoBehaviour:
   IsPreEvent: 0
   FinishedInTimeDialogue:
   - YOU DID IT IN TIEM!
-  - YOU DID IT IN TIEM!
-  - YOU DID IT IN TIEM!
+  - asdasd
+  - assDGsgd
+  - SDFGtjytj
+  - asdfSDF
+  - jtjtg
+  - gjkukuky
+  - ghkgkujdtuyk
+  - dukdyuk
   FinishedInTimeSpriteDisplay:
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
   - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}

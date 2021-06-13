@@ -15,18 +15,24 @@ MonoBehaviour:
   InterObjType: 2
   WhatToUpdate: 1
   WhenToUpdate: 1
+  IsCollidable: 1
   DisplayDialogue:
-  - Finished Bedsheets
-  - Testing the speed of dialogue.
-  - How fast is this? Does it go fast enough? Do you want it faster?
-  - What about medium? Is this just medium fast enough?
-  - What about Slow? Is slow fast enough? Wait I mean slow enough!
+  - Your bed consists of a pillow, a singular blanket, and the mattress.
+  - "It used to be a bit more organized but.... Well it\u2019s easier to make this
+    way."
+  - 'You straighten the singular sheet up and give the pillow a few solid wacks. '
+  - "The room feels significantly less unkempt now that the sheets aren\u2019t strewn
+    about. "
   DisplaySprite: {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  HasPJSprite: 1
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - Your magnificent bed, in all its glory.
   QuestEventDialogue:
-  - debug quest finished
+  - Your bed consists of a pillow, a singular blanket, and the mattress.
+  - "It used to be a bit more organized but.... Well it\u2019s easier to make this
+    way."
+  - 'You straighten the singular sheet up and give the pillow a few solid wacks. '
+  - "The room feels significantly less unkempt now that the sheets aren\u2019t strewn
+    about. "
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 0
   InventoryFullDialogue: []

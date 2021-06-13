@@ -15,10 +15,11 @@ MonoBehaviour:
   InterObjType: 0
   WhatToUpdate: 0
   WhenToUpdate: 3
+  IsCollidable: 1
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - Can you not read?
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 0
@@ -26,7 +27,7 @@ MonoBehaviour:
   AddedToInventoryDialogue: []
   InventoryIcon: {fileID: 0}
   DecoDialogue:
-  - debug deco dialogue
+  - "You don\u2019t have to use the bathroom right now."
   RequiredItem: {fileID: 0}
   IsExhausted: 0
   BeforeAnimsToPlay: []

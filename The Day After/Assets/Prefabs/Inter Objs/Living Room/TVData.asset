@@ -20,14 +20,22 @@ MonoBehaviour:
   - debug quest finished
   DisplaySprite: {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - The TV stand looks quite nice now that it's clean.
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 0
   InventoryFullDialogue:
-  - debug inv full
+  - "There\u2019s no way you can carry all that with what you have now."
   AddedToInventoryDialogue:
-  - debug added to inv
+  - "Mom really hasn\u2019t had the time to clean recently."
+  - The TV stand is covered in papers, envelopes, and other miscellaneous clutter.
+  - You start collecting papers together when you notice one of the partly opened
+    envelopes is from a hospital.
+  - The name matches the one you were at.
+  - "It\u2019s a hefty bill."
+  - It makes you feel like a burden.
+  - You organize the important looking papers together and place them inside the
+    TV stand while taking the other trash with you.
   InventoryIcon: {fileID: 21300000, guid: 0c887fa7968fdf34c8058021e3cc001c, type: 3}
   DecoDialogue: []
   RequiredItem: {fileID: 0}

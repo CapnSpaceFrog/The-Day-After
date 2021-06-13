@@ -15,13 +15,36 @@ MonoBehaviour:
   InterObjType: 2
   WhatToUpdate: 1
   WhenToUpdate: 1
+  IsCollidable: 1
   DisplayDialogue:
-  - debug already interacted stop trying
-  DisplaySprite: {fileID: 0}
-  HasPJSprite: 1
-  ExhaustedDialogue: []
+  - Old pills, a half smoked joint, a random shirt with a hole clearly burned in
+    it, nyquil, and a pack of joints.
+  - "You don\u2019t recall smoking that joint, but it smells pretty fresh."
+  - "You think hard for a moment and remember that\u2019s how you fell asleep last
+    night."
+  - Maybe you should stop smoking so much...
+  - You toss the pills, nyquil, and shirt into the drawer. You pick up the pack of
+    joints and decide to finish the joint you started the night before.
+  - Smoking used to be a big issue for you.
+  - Well, it still is, if you're honest.
+  - You smoke for a bit longer before putting the pack in the drawer.
+  DisplaySprite: {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
+  ExhaustedDialogue:
+  - "Tempting to smoke more, but you\u2019ve had enough for today."
   QuestEventDialogue:
-  - debug quest finished
+  - Old pills, a half smoked joint, a random shirt with a hole clearly burned in
+    it, nyquil, and a pack of joints.
+  - "You don\u2019t recall smoking that joint, but it smells pretty fresh."
+  - "You think hard for a moment and remember that\u2019s how you fell asleep last
+    night."
+  - Maybe you should stop smoking so much...
+  - You toss the pills, nyquil, and shirt into the drawer.
+  - You pick up the pack of joints and feel the temptation.
+  - 'To your better judgement, you decide to finish the joint you started the night
+    before. '
+  - Smoking used to be a big issue for you.
+  - "Well, it still is, if you're honest, but you\u2019ve gotten better."
+  - You smoke for a bit longer before putting the pack in the drawer.
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 0
   InventoryFullDialogue: []

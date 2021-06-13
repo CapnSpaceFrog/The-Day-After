@@ -48,9 +48,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GameCompleted()
+    public IEnumerator GameCompleted()
     {
         StaticGameData.CompletedWithinTime = true;
+        yield return new WaitUntil(() => DialogueActionHandler.dialogueFinished == true);
         Debug.Log(StaticGameData.CompletedWithinTime);
         sceneLoader.LoadGameOver();
     }
@@ -65,7 +66,6 @@ public class GameManager : MonoBehaviour
     #region Dialogue Action Methods
     public void SendToActionHandler(InterObj objToUpdate)
     {
-        Debug.Log("Received Inter Obj in Game Manager");
         DialogueActionHandler.CheckWhenToUpdate(objToUpdate);
     }
 

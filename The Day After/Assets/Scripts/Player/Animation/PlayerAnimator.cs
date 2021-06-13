@@ -50,7 +50,6 @@ public class PlayerAnimator
         }
 
         player.Interact.UpdateInteractCastPosition();
-        Debug.Log("Updated Interact Cast Position");
         CheckIfShouldFlip();
     }
 

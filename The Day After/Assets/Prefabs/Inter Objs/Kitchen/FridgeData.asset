@@ -15,32 +15,25 @@ MonoBehaviour:
   InterObjType: 1
   WhatToUpdate: 1
   WhenToUpdate: 2
+  IsCollidable: 1
   DisplayDialogue:
   - debug added item to inv
-  DisplaySprite:
-  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  DisplaySprite: {fileID: 0}
   ExhaustedDialogue:
-  - debug exhausted dialogue
-  ExhaustedSprites:
-  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - The soft hum of the fridge fills the room.
   QuestEventDialogue: []
-  QuestEventSprites: []
   MissingQuestItemDialogue: []
-  MissingQuestItemSprites: []
   ShouldBeDisabled: 0
   InventoryFullDialogue:
-  - debug inv full
-  InventoryFullSprites:
-  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - "You can\u2019t carry anything else."
   AddedToInventoryDialogue:
-  - debug added item to inv
-  AddedToInvSprites:
-  - {fileID: 21300000, guid: 6e1eff6dc05d5bc47a05f0465f4e475b, type: 3}
+  - "There isn\u2019t much in the fridge, but you scrounge enough together to make
+    a sandwich."
+  - You grab a tomato, lettuce, bread, cheese, and some left over tuna.
   InventoryIcon: {fileID: 21300000, guid: 134627b4e734c664b85a0bdc5641bb20, type: 3}
   DecoDialogue: []
-  DecoSprites: []
   RequiredItem: {fileID: 0}
-  IsExhausted: 1
+  IsExhausted: 0
   BeforeAnimsToPlay:
   - 
   - FRIDGE_OPEN
@@ -51,4 +44,3 @@ MonoBehaviour:
   IsOpen: 0
   TargetDoor: 
   DoorLockedDialogue: []
-  DoorLockedSprites: []

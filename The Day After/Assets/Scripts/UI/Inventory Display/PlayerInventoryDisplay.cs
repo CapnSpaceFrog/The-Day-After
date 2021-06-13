@@ -27,7 +27,10 @@ public class PlayerInventoryDisplay : MonoBehaviour
     {
         for (int i = 0; i < inventorySlots.Length; i++)
         {
-            if (player.InvManager.Inventory[i].name == itemToUpdate.name)
+            if (player.InvManager.Inventory[i] == null)
+            {
+                continue;
+            } else if (player.InvManager.Inventory[i].name == itemToUpdate.name)
             {
                 Sprite temp = itemToUpdate.GetComponent<InterObj>().Obj_Data.InventoryIcon;
                 if (temp == null)
@@ -45,7 +48,10 @@ public class PlayerInventoryDisplay : MonoBehaviour
     {
         for (int i = 0; i < inventorySlots.Length; i++)
         {
-            if (player.InvManager.Inventory[i].name == itemToUpdate.name)
+            if (player.InvManager.Inventory[i] == null)
+            {
+                continue;
+            } else if (player.InvManager.Inventory[i].name == itemToUpdate.name)
             {
                 inventorySlots[i].sprite = emptySprite;
                 player.InvManager.Inventory[i] = null;

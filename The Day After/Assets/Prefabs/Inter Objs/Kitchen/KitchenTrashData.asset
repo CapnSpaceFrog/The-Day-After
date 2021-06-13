@@ -19,11 +19,15 @@ MonoBehaviour:
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - The kitchen trash can.
   QuestEventDialogue:
-  - debug quest finished
+  - You toss all the garbage you collected from the TV stand into the trash.
+  - You notice the trash can looks oddly similar to one your cousins kicked you down
+    a hill in when you were younger.
+  - Willingly, of course. That was a fun day.
+  - "You haven\u2019t talked to them in a while."
   MissingQuestItemDialogue:
-  - debug missing item
+  - Looks like the trash was taken out recently.
   ShouldBeDisabled: 0
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []

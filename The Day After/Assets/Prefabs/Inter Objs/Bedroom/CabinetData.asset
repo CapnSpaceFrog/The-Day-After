@@ -15,17 +15,33 @@ MonoBehaviour:
   InterObjType: 1
   WhatToUpdate: 0
   WhenToUpdate: 3
+  IsCollidable: 1
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - Your old ragedy closet. One of the hinges is coming loose.
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 0
   InventoryFullDialogue:
   - debug inv full
   AddedToInventoryDialogue:
-  - debug added to inv
+  - Out of everything in your room, somehow your closest is the cleanest.
+  - "Probably because you\u2019ve thrown your clothes everywhere else but here."
+  - "Aside from sorting some shoes and other bits and bobs, there wasn\u2019t much
+    to clean."
+  - As you close the doors, you notice an old work shirt grumbled in the corner.
+  - "It\u2019s from your latest job. You can\u2019t quite recall the name, but it
+    rhymes with carpet."
+  - You pull it out and take a look. It still has your name badge on it.
+  - "There were some fun coworkers there, and the job wasn\u2019t half bad, but...
+    man the mistakes..."
+  - You wonder how Alex and Drew are doing after you three were arrested. Last you
+    heard they were still working at the same store.
+  - "You almost toss the shirt back into the closest, but realize there\u2019s no
+    reason for you to keep it."
+  - "You grumble it up and shoot it at your trash can from across the room. It\u2019s
+    a swish."
   InventoryIcon: {fileID: 21300000, guid: 86cf1f32e95993f4c8f7512b4b27fa1b, type: 3}
   DecoDialogue:
   - debug deco dialogue

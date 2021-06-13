@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2304460746385709293}
   - component: {fileID: 4265276886721983822}
   - component: {fileID: 4230218033709566385}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hallway Plant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808982311094340469da1156eb9f6f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obj_Data: {fileID: 0}
+  Obj_Data: {fileID: 11400000, guid: f1bfa45ee00112d49ab63481c27e0b78, type: 2}
 --- !u!61 &4230218033709566385
 BoxCollider2D:
   m_ObjectHideFlags: 0

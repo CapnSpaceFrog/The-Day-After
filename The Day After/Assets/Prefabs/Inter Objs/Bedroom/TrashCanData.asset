@@ -15,15 +15,20 @@ MonoBehaviour:
   InterObjType: 2
   WhatToUpdate: 1
   WhenToUpdate: 1
+  IsCollidable: 1
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
-  HasPJSprite: 1
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - A whole lot of useless junk.
   QuestEventDialogue:
-  - debug quest event triggered
+  - You lob your collection of garbage into the trash.
+  - You glance back at your desk, and for once you can actually see the glass.
+  - Nice.
   MissingQuestItemDialogue:
-  - debug missing quest item
+  - You stare at your empty trash can.
+  - "You wonder if there\u2019s enough space in that small can for the amount of
+    garbage lying about in your room."
+  - Only one way to find out.
   ShouldBeDisabled: 0
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []

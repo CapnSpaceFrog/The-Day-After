@@ -19,7 +19,7 @@ MonoBehaviour:
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - "Mom\u2019s room."
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 0
@@ -27,7 +27,9 @@ MonoBehaviour:
   AddedToInventoryDialogue: []
   InventoryIcon: {fileID: 0}
   DecoDialogue:
-  - debug deco dialogue
+  - Mom and da-
+  - Mom's room.
+  - "You don\u2019t need to go in there."
   RequiredItem: {fileID: 0}
   IsExhausted: 0
   BeforeAnimsToPlay: []

@@ -16,20 +16,28 @@ MonoBehaviour:
   WhatToUpdate: 0
   WhenToUpdate: 3
   IsCollidable: 1
-  DisplayDialogue: []
-  DisplaySprite: {fileID: 0}
-  ExhaustedDialogue:
-  - debug exhausted dialogue
-  QuestEventDialogue:
+  DisplayDialogue:
   - debug quest completed dialogue
+  DisplaySprite: {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
+  ExhaustedDialogue:
+  - Samson wages his tail happily.
+  QuestEventDialogue:
+  - Samson perks up at the smell of the box of cookies. He wags his tail excitedly.
+  - You pull some out and motion for him to sit, lie down, and shake.
+  - He performs all tasks eloquently. He is a very good boy, so you give him an extra
+    treat.
+  - "You remind Samson not to snitch you out to the Vet, he\u2019s supposed to be
+    on a diet."
+  - He stares back at you blankly.
   MissingQuestItemDialogue:
-  - debug missing quest item
+  - Samson seems as happy as ever.
+  - You should give him a treat for being such a good boy.
   ShouldBeDisabled: 0
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []
   InventoryIcon: {fileID: 0}
   DecoDialogue: []
-  RequiredItem: {fileID: 0}
+  RequiredItem: {fileID: 2820889846119018885, guid: 8de691cc553b5d2418e0703a357994c2, type: 3}
   IsExhausted: 0
   BeforeAnimsToPlay: []
   AfterAnimsToPlay: []

@@ -15,11 +15,11 @@ MonoBehaviour:
   InterObjType: 0
   WhatToUpdate: 0
   WhenToUpdate: 3
+  IsCollidable: 1
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
-  HasPJSprite: 1
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - "Your legendary PC, dubbed Gizmo\u2019s Machine."
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 0
@@ -27,7 +27,15 @@ MonoBehaviour:
   AddedToInventoryDialogue: []
   InventoryIcon: {fileID: 0}
   DecoDialogue:
-  - debug deco dialogue
+  - Now that the desk is nice and clean, your pride and joy looks much better.
+  - Beautiful RGB lights, double 144hz monitors, and your favorite mechanical keyboard.
+  - "You resist the temptation to sit down, because once you do, you know you won\u2019t
+    want to get back up."
+  - You wonder how your online friends have been though.
+  - "You haven\u2019t checked in to The Boys\u2019 Treehouse in a while."
+  - 'You chuckle thinking about the name. '
+  - "The Boys\u2019 Treehouse."
+  - "Crazy how you haven\u2019t met most of them, yet they mean so much to you."
   RequiredItem: {fileID: 0}
   IsExhausted: 0
   BeforeAnimsToPlay: []

@@ -19,7 +19,7 @@ MonoBehaviour:
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - An old bookshelf your sister used.
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 0
@@ -27,7 +27,14 @@ MonoBehaviour:
   AddedToInventoryDialogue: []
   InventoryIcon: {fileID: 0}
   DecoDialogue:
-  - debug deco dialogue
+  - Your sister used this bookshelf when she stayed here. She left a few yearbooks
+    and other novels behind...
+  - She was the Editor in Chief of the yearbook at school your freshman year.
+  - It was fun to have a class with her, even though you felt overshadowed.
+  - She tried to set you up with one girl in the class though.
+  - "You swore she didn\u2019t like you, but it turns out you were wrong."
+  - 'Things almost worked out, but she ended up moving. '
+  - You should call your sister.
   RequiredItem: {fileID: 0}
   IsExhausted: 0
   BeforeAnimsToPlay: []

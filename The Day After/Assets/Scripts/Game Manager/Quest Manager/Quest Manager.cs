@@ -27,11 +27,11 @@ public class QuestManager
         QuestOne = new Quest(questData[0].QuestRequirements);
         QuestTwo = new Quest(questData[1].QuestRequirements);
         QuestThree = new Quest(questData[2].QuestRequirements);
-        QuestFour = new Quest(questData[3].QuestRequirements);
-        QuestFive = new Quest(questData[4].QuestRequirements);
+        //QuestFour = new Quest(questData[3].QuestRequirements);
+        //QuestFive = new Quest(questData[4].QuestRequirements);
 
         
-        quests = new Quest[] { QuestOne, QuestTwo, QuestThree, QuestFour, QuestFive };
+        quests = new Quest[] { QuestOne, QuestTwo, QuestThree };
         FinalQuest = quests[quests.Length - 1];
 
         this.questData = questData;
@@ -46,7 +46,7 @@ public class QuestManager
         {
             if (CurrentQuest == FinalQuest)
             {
-                gm.GameCompleted();
+                gm.StartCoroutine(gm.GameCompleted());
                 return;
             }
             UpdateActiveQuest();
@@ -62,14 +62,11 @@ public class QuestManager
         GameObject[] temp = GameObject.FindGameObjectsWithTag("Door");
         for (int i = 0; i < questData[currentQuestInt].DoorsToUnlock.Length; i++)
         {
-            Debug.Log(questData[currentQuestInt].DoorsToUnlock[i]);
             foreach (GameObject door in temp)
             {
                 if (questData[currentQuestInt].DoorsToUnlock[i] == door.name)
                 {
                     gm.DoorHandler.UnlockDoor(door);
-
-                    Debug.Log($"Door { questData[currentQuestInt].DoorsToUnlock[i] } was unlocked");
                 }
             }
         }

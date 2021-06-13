@@ -51,19 +51,16 @@ public class DialogueActionHandler
             case UpdateTime.before:
                 animsToPlay[0] = currentInterObj.Obj_Data.BeforeAnimsToPlay[0];
                 animsToPlay[1] = currentInterObj.Obj_Data.BeforeAnimsToPlay[1];
-                Debug.Log("Switch Before Dialogue");
                 CheckWhatToUpdate(animsToPlay);
                 break;
 
             case UpdateTime.after:
                 animsToPlay[0] = currentInterObj.Obj_Data.AfterAnimsToPlay[0];
                 animsToPlay[1] = currentInterObj.Obj_Data.AfterAnimsToPlay[1];
-                Debug.Log("Switch After Dialogue");
                 gm.StartCoroutine(UpdateAfterDialogue(animsToPlay));
                 break;
 
             case UpdateTime.both:
-                Debug.Log("Switch Before and After Dialogue");
                 animsToPlay[0] = currentInterObj.Obj_Data.BeforeAnimsToPlay[0];
                 animsToPlay[1] = currentInterObj.Obj_Data.BeforeAnimsToPlay[1];
                 CheckWhatToUpdate(animsToPlay);
@@ -78,19 +75,16 @@ public class DialogueActionHandler
     {
         yield return new WaitUntil(() => dialogueFinished == true);
         CheckWhatToUpdate(animsToPlay);
-        Debug.Log("Dialogue Finished Trigger");
     }
 
     private void UpdatePlayer(string animToPlay)
     {
         playerRef.AnimManager.ChangeAnimationState(animToPlay);
-        Debug.Log("Updated Player");
     }
 
     private void UpdateObj(string animToPlay)
     {
         currentInterObj.ChangeAnimationState(animToPlay);
-        Debug.Log("Updated Obj");
     }
 
     #region Misc Methods

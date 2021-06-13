@@ -15,9 +15,9 @@ MonoBehaviour:
   InterObjType: 1
   WhatToUpdate: 0
   WhenToUpdate: 3
+  IsCollidable: 1
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
-  HasPJSprite: 1
   ExhaustedDialogue: []
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
@@ -25,7 +25,25 @@ MonoBehaviour:
   InventoryFullDialogue:
   - debug inv full
   AddedToInventoryDialogue:
-  - debug stored item
+  - Realizing how horrid your desk space has become, and figuring your desk is a
+    good place to start cleaning, you start picking up the bits of trash and leftover
+    food.
+  - "Amidst the molding pieces of food, you find an old book. It\u2019s your yearbook
+    from senior year."
+  - Nostalgia takes hold and you decide to flip through the pages.
+  - A few pages have your name underneath the copies, and some pictures too.
+  - You spent four years on the yearbook staff, afterall.
+  - Well, maybe not four, since you never showed up to school, but four nonetheless.
+  - You wonder what school would have been like if you never joined that class. It
+    was the source of many late nights and exuberant amounts of stress, but you enjoyed
+    the company of your peers.
+  - You reach the senior portraits section. There you are, the dashing eighteen year
+    old.
+  - You wonder how things would have turned out had you tried harder in high school.
+  - "Now you\u2019re twenty-one and still not even attending the local community
+    college."
+  - You close the book and put it with the other bits of trash you plan on throwing
+    away.
   InventoryIcon: {fileID: 21300000, guid: 0c887fa7968fdf34c8058021e3cc001c, type: 3}
   DecoDialogue: []
   RequiredItem: {fileID: 0}

@@ -49,6 +49,7 @@ public class UIEventHandler : MonoBehaviour
 
     private void Awake()
     {
+        StaticGameData.CompletedWithinTime = true;
         StartCoroutine(BeginEvent());
         if (StaticGameData.CompletedWithinTime == true)
         {

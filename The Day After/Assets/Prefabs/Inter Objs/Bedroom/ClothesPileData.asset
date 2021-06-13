@@ -15,10 +15,10 @@ MonoBehaviour:
   InterObjType: 1
   WhatToUpdate: 1
   WhenToUpdate: 3
+  IsCollidable: 1
   DisplayDialogue:
   - debug added item
   DisplaySprite: {fileID: 0}
-  HasPJSprite: 1
   ExhaustedDialogue: []
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
@@ -26,7 +26,9 @@ MonoBehaviour:
   InventoryFullDialogue:
   - debug inv full
   AddedToInventoryDialogue:
-  - debug added item
+  - Man does this reek... When was the last time you did your laundry?
+  - You ponder for a moment, and realize it was a long time ago.
+  - A very long time ago.
   InventoryIcon: {fileID: 21300000, guid: 106b418e241d71c4ea1ecc40fb52993d, type: 3}
   DecoDialogue: []
   RequiredItem: {fileID: 0}

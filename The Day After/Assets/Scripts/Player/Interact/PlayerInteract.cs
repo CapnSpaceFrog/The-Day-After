@@ -81,7 +81,6 @@ public class PlayerInteract
 
     public void OnInteract()
     {
-        Debug.Log("OnInteract");
         switch (currentInterObj.Obj_Data.InterObjType)
         {
             case InterType.QuestEvent:
@@ -120,7 +119,6 @@ public class PlayerInteract
     #region Verify Switch Cases
     private void VerifyQuestEventSwitch()
     {
-        Debug.Log("QuestEvent Switch");
         if (currentInterObj.Obj_Data.IsExhausted)
         {
             currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.ExhaustedDialogue);
@@ -157,7 +155,6 @@ public class PlayerInteract
 
     private void VerifyStorableSwitch()
     {
-        Debug.Log("Storable Switch");
         if (!currentInterObj.Obj_Data.IsExhausted && player.InvManager.AddItemToInv(currentInterObj.gameObject))
         {
             currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.AddedToInventoryDialogue);
@@ -186,7 +183,6 @@ public class PlayerInteract
 
     private void VerifyDecoSwitch()
     {
-        Debug.Log("Deco Switch");
         if (!currentInterObj.Obj_Data.IsExhausted)
         {
             currentInterObj.OverrideDisplayString(currentInterObj.Obj_Data.DecoDialogue);
@@ -200,7 +196,6 @@ public class PlayerInteract
 
     private void VerifyDoorSwitch()
     {
-        Debug.Log("Door Switch");
         //Is this door unlocked? 
         if (currentInterObj.Obj_Data.IsOpen)
         {

@@ -24,9 +24,9 @@ MonoBehaviour:
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 1
   InventoryFullDialogue:
-  - debug inv full dialogue
+  - "You\u2019re carrying too much stuff."
   AddedToInventoryDialogue:
-  - debug added to inv dialogue
+  - No house cleaning is complete without a good mop session.
   InventoryIcon: {fileID: 0}
   DecoDialogue: []
   RequiredItem: {fileID: 0}

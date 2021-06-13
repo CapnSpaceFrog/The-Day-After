@@ -19,7 +19,7 @@ MonoBehaviour:
   DisplayDialogue: []
   DisplaySprite: {fileID: 0}
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - A picture of your family.
   QuestEventDialogue: []
   MissingQuestItemDialogue: []
   ShouldBeDisabled: 0
@@ -27,7 +27,12 @@ MonoBehaviour:
   AddedToInventoryDialogue: []
   InventoryIcon: {fileID: 0}
   DecoDialogue:
-  - debug deco dialogue
+  - 'Mom, dad, your sister, and you. '
+  - "You don\u2019t have the slightest clue when this was taken, but it seems recent
+    based on your outfit."
+  - "You didn\u2019t always have a sense of style. When you were younger, for some
+    odd reason, you would only wear bermuda shorts and lego T-shirts."
+  - Everyone seems quite happy in this picture. Well, almost everyone.
   RequiredItem: {fileID: 0}
   IsExhausted: 0
   BeforeAnimsToPlay: []

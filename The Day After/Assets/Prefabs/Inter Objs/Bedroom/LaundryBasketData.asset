@@ -15,16 +15,22 @@ MonoBehaviour:
   InterObjType: 2
   WhatToUpdate: 1
   WhenToUpdate: 0
+  IsCollidable: 1
   DisplayDialogue:
-  - debug quest finished
+  - 'You dump the clothes into the basket. '
+  - "You really haven\u2019t done much, but at least the eyesore lump of clothes
+    is gone."
   DisplaySprite: {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
-  HasPJSprite: 1
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - Nice and neat.
   QuestEventDialogue:
-  - debug quest finished
+  - 'You dump the clothes into the basket. '
+  - "You really haven\u2019t done much, but at least the eyesore lump of clothes
+    is gone."
   MissingQuestItemDialogue:
-  - debug quest missing item
+  - You glance to your right at the large pile of smelly clothes sitting next to
+    the basket.
+  - You should probably put it in the basket.
   ShouldBeDisabled: 0
   InventoryFullDialogue: []
   AddedToInventoryDialogue: []

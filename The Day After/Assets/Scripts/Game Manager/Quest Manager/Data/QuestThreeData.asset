@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: QuestThreeData
   m_EditorClassIdentifier: 
   QuestRequirements:
-  - {fileID: 7523922672753095590, guid: b983b617e6a7e52438363d1c304a06ef, type: 3}
   - {fileID: 1223696217875481654, guid: 7ec085f6024713f4188c2f31fef95761, type: 3}
+  - {fileID: 1068816545477101099, guid: fa4aaee2866ad80499263dd956e77983, type: 3}
+  - {fileID: 5641821371660772447, guid: 0e2105db5b6d10d41a4ae979e19dbe43, type: 3}
+  - {fileID: 1223696217875481654, guid: 7ec085f6024713f4188c2f31fef95761, type: 3}
+  - {fileID: 1443159797880123673, guid: bd7ae01b76fe72147b984b425c208c60, type: 3}
+  - {fileID: 7586675838002976050, guid: 36281f198a665b04bbc42e9c9ff9070d, type: 3}
   DoorsToUnlock: []
   QuestCompleteDialogue:
-  - debug game over
+  - debug finished game in time limit

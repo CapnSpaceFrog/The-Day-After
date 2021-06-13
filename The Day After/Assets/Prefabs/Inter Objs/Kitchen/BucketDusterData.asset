@@ -17,8 +17,8 @@ MonoBehaviour:
   WhenToUpdate: 0
   IsCollidable: 1
   DisplayDialogue:
-  - debug exhausted dialogue
-  DisplaySprite: {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
+  - debug added to inv
+  DisplaySprite: {fileID: 21300000, guid: 38c3c10487aee9740acae84b31c76fcf, type: 3}
   ExhaustedDialogue:
   - debug exhausted dialogue
   QuestEventDialogue: []
@@ -32,10 +32,10 @@ MonoBehaviour:
   DecoDialogue: []
   RequiredItem: {fileID: 0}
   IsExhausted: 1
-  BeforeAnimsToPlay: []
-  AfterAnimsToPlay:
+  BeforeAnimsToPlay:
   - 
   - BUCKET_EMPTY
+  AfterAnimsToPlay: []
   InterObjAnim: {fileID: 0}
   IsOpen: 0
   TargetDoor: 

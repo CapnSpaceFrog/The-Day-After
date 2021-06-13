@@ -16,23 +16,24 @@ MonoBehaviour:
   - You wake up to the buzzes of your phone.
   - One new message.
   - "It\u2019s from Mom."
-  - "She\u2019s heading to the store, and to let her know if you need anything."
-  - You toss your phone and roll back over.
+  - "She\u2019s heading to the store and to let her know if you need anything."
+  - You drop your phone and roll back over.
   - The sheets feel so cozy.
   - But the midday heat creeps in from the window.
   - The cozy bliss begins to fade.
   - "You\u2019ve slept through half the day..... Again."
-  - "You haven\u2019t woken up at a \u201Creasonable hour\u201D in a while, as your
-    parents liked to put it."
-  - It almost feels like you could get up, but the moment passes.
-  - The ceiling stares blankly back at you.
-  - What am I doing.....
+  - "You haven\u2019t woken up at a reasonable hour in a while, as your parents liked
+    to put it. "
+  - It almost feels like you could get up.
+  - "You don\u2019t."
+  - Instead you stare up at the blank ceiling.
+  - "\u201CWhat am I doing?\u201D You think."
   - "A simple thought, but it unleashes feelings you don\u2019t have the energy to
     handle."
-  - Tears began to well, but this time you didn't cry.
-  - You wipe your eyes, take a deep breath, and sit yourself up.
+  - "Tears began to well, but you don\u2019t cry this time."
+  - You wipe your eyes, let out a sorry sniffle, and sit yourself up.
   - You notice, for the thousandth time, that the state of your room is... well...
-    disgusting.
+  - disgusting.
   - And today, perhaps, you might just have the energy to do something about it.
   SpritesToDisplay:
   - {fileID: 21300000, guid: 173a6c1291fa76945964eb0eb3729f70, type: 3}
