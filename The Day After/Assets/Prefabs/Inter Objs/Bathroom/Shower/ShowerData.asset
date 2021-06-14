@@ -37,7 +37,7 @@ MonoBehaviour:
   - Maybe you should make a meal yourself.
   DisplaySprite: {fileID: 21300000, guid: 823acb35eeab2f847a0ac900a15fd9ce, type: 3}
   ExhaustedDialogue:
-  - debug exhausted dialogue
+  - I've already showered.
   QuestEventDialogue:
   - You throw off your pajamas and hop into the shower.
   - You forgot how nice the warm water feels on your skin.
