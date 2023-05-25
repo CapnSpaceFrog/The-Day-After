@@ -609,7 +609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 1912745229}
-  gameTime: 480
+  gameTime: 720
   questData:
   - {fileID: 11400000, guid: f8132d24e9d847e4ea58d383870e5424, type: 2}
   - {fileID: 11400000, guid: 667cb62c0cc06e746aeeda1248ea7fbd, type: 2}
@@ -2016,7 +2016,7 @@ Camera:
   far clip plane: 25
   field of view: 60
   orthographic: 1
-  orthographic size: 0.9365003
+  orthographic size: 0.7995105
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
